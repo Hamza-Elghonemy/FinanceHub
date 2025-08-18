@@ -1,140 +1,127 @@
 import json
 
-def clean_financials(report_data):
-    """Extract and clean only key financial metrics for AI insights."""
-    
-    # Check if report_data has the expected structure
-    if not report_data or 'bs' not in report_data:
-        print("Warning: No balance sheet data found")
-        return None
 
-    # Build lookup maps for bs, ic, cf
-    bs = {item.get("concept", ""): item.get("value") for item in report_data.get("bs", [])}
-    ic = {item.get("concept", ""): item.get("value") for item in report_data.get("ic", [])}
-    cf = {item.get("concept", ""): item.get("value") for item in report_data.get("cf", [])}
+def clean_and_consolidate(bs_data, is_data, cf_data, overview_data, years_to_keep=[2023, 2024, 2025]):
+    """
+    Consolidate AlphaVantage Balance Sheet, Income Statement, Cash Flow, and Overview 
+    into a single cleaned JSON with only key metrics and ratios for given years.
+    """
 
+    def parse_year(date_str):
+        """Extract year from a YYYY-MM-DD date string."""
+        try:
+            return int(date_str.split("-")[0])
+        except Exception:
+            return None
+
+    # Filter annual reports to only target years
+    annual_bs = [r for r in bs_data.get("annualReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+    annual_is = [r for r in is_data.get("annualReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+    annual_cf = [r for r in cf_data.get("annualReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+
+    # Filter quarterly reports to only target years
+    quarterly_bs = [r for r in bs_data.get("quarterlyReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+    quarterly_is = [r for r in is_data.get("quarterlyReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+    quarterly_cf = [r for r in cf_data.get("quarterlyReports", []) if parse_year(r.get("fiscalDateEnding", "")) in years_to_keep]
+
+    def clean_single(bs, is_, cf):
+        """Helper to clean a single period’s financials."""
+        cleaned = {
+            "profitability": {
+                "Revenue": float(is_.get("totalRevenue", 0)) if is_.get("totalRevenue") else None,
+                "GrossProfit": float(is_.get("grossProfit", 0)) if is_.get("grossProfit") else None,
+                "OperatingIncome": float(is_.get("operatingIncome", 0)) if is_.get("operatingIncome") else None,
+                "NetIncome": float(is_.get("netIncome", 0)) if is_.get("netIncome") else None,
+                "EPS_Basic": float(is_.get("reportedEPS", 0)) if is_.get("reportedEPS") else None,
+            },
+            "balance_sheet": {
+                "CashAndEquivalents": float(bs.get("cashAndCashEquivalentsAtCarryingValue", 0)) if bs.get("cashAndCashEquivalentsAtCarryingValue") else None,
+                "TotalAssets": float(bs.get("totalAssets", 0)) if bs.get("totalAssets") else None,
+                "TotalLiabilities": float(bs.get("totalLiabilities", 0)) if bs.get("totalLiabilities") else None,
+                "ShareholdersEquity": float(bs.get("totalShareholderEquity", 0)) if bs.get("totalShareholderEquity") else None,
+                "LongTermDebt": float(bs.get("longTermDebt", 0)) if bs.get("longTermDebt") else None,
+                "CurrentAssets": float(bs.get("totalCurrentAssets", 0)) if bs.get("totalCurrentAssets") else None,
+                "CurrentLiabilities": float(bs.get("totalCurrentLiabilities", 0)) if bs.get("totalCurrentLiabilities") else None,
+            },
+            "cash_flow": {
+                "OperatingCashFlow": float(cf.get("operatingCashflow", 0)) if cf.get("operatingCashflow") else None,
+                "CapEx": float(cf.get("capitalExpenditures", 0)) if cf.get("capitalExpenditures") else None,
+                "FreeCashFlow": None,
+                "EarningsQuality": None,
+            },
+        }
+
+        # Compute Free Cash Flow
+        cfo = cleaned["cash_flow"]["OperatingCashFlow"]
+        capex = cleaned["cash_flow"]["CapEx"]
+        if cfo is not None and capex is not None:
+            cleaned["cash_flow"]["FreeCashFlow"] = cfo - abs(capex)
+
+        # Compute Earnings Quality
+        ni = cleaned["profitability"]["NetIncome"]
+        if ni and cfo:
+            cleaned["cash_flow"]["EarningsQuality"] = round(cfo / ni, 2)
+
+        # Strip empty (None) fields
+        for section in ["profitability", "balance_sheet", "cash_flow"]:
+            cleaned[section] = {k: v for k, v in cleaned[section].items() if v is not None}
+
+        return cleaned
+
+    # Build annual and quarterly dictionaries
+    annual_cleaned = {}
+    for bs, is_, cf in zip(annual_bs, annual_is, annual_cf):
+        year = parse_year(bs.get("fiscalDateEnding", "")) or parse_year(is_.get("fiscalDateEnding", "")) or parse_year(cf.get("fiscalDateEnding", ""))
+        if year:
+            annual_cleaned[year] = clean_single(bs, is_, cf)
+
+    quarterly_cleaned = {}
+    for bs, is_, cf in zip(quarterly_bs, quarterly_is, quarterly_cf):
+        date = bs.get("fiscalDateEnding") or is_.get("fiscalDateEnding") or cf.get("fiscalDateEnding")
+        if date:
+            quarterly_cleaned[date] = clean_single(bs, is_, cf)
+
+    # Final consolidated structure
     cleaned = {
-        "Profitability": {
-            "Revenue": ic.get("us-gaap_RevenueFromContractWithCustomerExcludingAssessedTax"),
-            "GrossProfit": ic.get("us-gaap_GrossProfit"),
-            "OperatingIncome": ic.get("us-gaap_OperatingIncomeLoss"),
-            "NetIncome": ic.get("us-gaap_NetIncomeLoss"),
-            "EPS_Basic": ic.get("us-gaap_EarningsPerShareBasic"),
-            "EPS_Diluted": ic.get("us-gaap_EarningsPerShareDiluted"),
+        "company_info": {
+            "symbol": overview_data.get("Symbol"),
+            "name": overview_data.get("Name"),
+            "cik": overview_data.get("CIK"),
+            "exchange": overview_data.get("Exchange"),
+            "sector": overview_data.get("Sector"),
+            "industry": overview_data.get("Industry"),
+            "fiscal_year_end": overview_data.get("FiscalYearEnd"),
+            "country": overview_data.get("Country"),
+            "market_cap": overview_data.get("MarketCapitalization"),
         },
-        "BalanceSheet": {
-            "CashAndEquivalents": bs.get("us-gaap_CashAndCashEquivalentsAtCarryingValue"),
-            "MarketableSecurities": bs.get("us-gaap_MarketableSecuritiesCurrent"),
-            "TotalAssets": bs.get("us-gaap_Assets"),
-            "TotalLiabilities": bs.get("us-gaap_Liabilities"),
-            "ShareholdersEquity": bs.get("us-gaap_StockholdersEquity"),
-            "LongTermDebt": bs.get("us-gaap_LongTermDebtNoncurrent"),
-            "CurrentAssets": bs.get("us-gaap_AssetsCurrent"),
-            "CurrentLiabilities": bs.get("us-gaap_LiabilitiesCurrent"),
-        },
-        "CashFlow": {
-            "OperatingCashFlow": cf.get("us-gaap_NetCashProvidedByUsedInOperatingActivities"),
-            "CapEx": cf.get("us-gaap_PaymentsToAcquirePropertyPlantAndEquipment"),
-            "FreeCashFlow": None,
-            "Change_AR": cf.get("us-gaap_IncreaseDecreaseInAccountsReceivable"),
-            "Change_AP": cf.get("us-gaap_IncreaseDecreaseInAccountsPayable"),
-            "Change_Inventory": cf.get("us-gaap_IncreaseDecreaseInInventories"),
-            "Change_OtherAssets": cf.get("us-gaap_IncreaseDecreaseInOtherOperatingAssets"),
-            "Change_OtherLiabilities": cf.get("us-gaap_IncreaseDecreaseInOtherOperatingLiabilities"),
-        },
+        "annual": annual_cleaned,
+        "quarterly": quarterly_cleaned,
+        "ratios": {
+            "PE_Ratio": float(overview_data.get("PERatio", 0)) if overview_data.get("PERatio") else None,
+            "PEG_Ratio": float(overview_data.get("PEGRatio", 0)) if overview_data.get("PEGRatio") else None,
+            "PriceToBook": float(overview_data.get("PriceToBookRatio", 0)) if overview_data.get("PriceToBookRatio") else None,
+            "ProfitMargin": float(overview_data.get("ProfitMargin", 0)) if overview_data.get("ProfitMargin") else None,
+            "ReturnOnAssets": float(overview_data.get("ReturnOnAssetsTTM", 0)) if overview_data.get("ReturnOnAssetsTTM") else None,
+            "ReturnOnEquity": float(overview_data.get("ReturnOnEquityTTM", 0)) if overview_data.get("ReturnOnEquityTTM") else None,
+            "DividendYield": float(overview_data.get("DividendYield", 0)) if overview_data.get("DividendYield") else None,
+        }
     }
 
-    # Calculate Free Cash Flow
-    cfo = cleaned["CashFlow"]["OperatingCashFlow"]
-    capex = cleaned["CashFlow"]["CapEx"]
-    if cfo is not None and capex is not None:
-        cleaned["CashFlow"]["FreeCashFlow"] = cfo - abs(capex)  # CapEx is usually negative
-
-    # Add earnings quality check
-    ni = cleaned["Profitability"]["NetIncome"]
-    if ni and cfo:
-        cleaned["CashFlow"]["EarningsQuality"] = round(cfo / ni, 2)
+    # Strip empty ratios
+    cleaned["ratios"] = {k: v for k, v in cleaned["ratios"].items() if v is not None}
 
     return cleaned
 
 
-def process_all_quarters(data):
-    """Process all quarters and organize by company information."""
-    
-    if not data.get("data") or len(data["data"]) == 0:
-        print("❌ No financial data found")
-        return None
-    
-    # Extract company information from the first record
-    first_record = data["data"][0]
-    company_info = {
-        "cik": data.get("cik"),
-        "symbol": data.get("symbol"),
-        "company_name": f"{data.get('symbol')} Inc."  # You can enhance this with actual company name
-    }
-    
-    # Process each quarter
-    quarterly_data = {}
-    
-    for record in data["data"]:
-        year = record.get("year")
-        quarter = record.get("quarter")
-        quarter_key = f"{year}_Q{quarter}"
-        
-        # Clean the financial data for this quarter
-        cleaned_financials = clean_financials(record.get("report", {}))
-        
-        if cleaned_financials:
-            quarterly_data[quarter_key] = {
-                "period_info": {
-                    "year": year,
-                    "quarter": quarter,
-                    "form": record.get("form"),
-                    "start_date": record.get("startDate"),
-                    "end_date": record.get("endDate"),
-                    "filed_date": record.get("filedDate"),
-                    "access_number": record.get("accessNumber")
-                },
-                "financials": cleaned_financials
-            }
-    
-    # Combine everything into final structure
-    result = {
-        "company_info": company_info,
-        "quarters": quarterly_data,
-        "metadata": {
-            "total_quarters": len(quarterly_data),
-            "date_range": {
-                "earliest": min([q["period_info"]["start_date"] for q in quarterly_data.values()]),
-                "latest": max([q["period_info"]["end_date"] for q in quarterly_data.values()])
-            },
-            "last_updated": "2025-08-17"
-        }
-    }
-    
-    return result
-
-
 if __name__ == "__main__":
-    # Load your original JSON
-    with open("output/financials_reported.json", "r") as f:
-        data = json.load(f)
-    
-    # Process all quarters
-    processed_data = process_all_quarters(data)
-    
-    if processed_data:
-        # Save the new structured JSON
-        with open("financials_cleaned.json", "w") as f:
-            json.dump(processed_data, f, indent=2)
-        
-        print("✅ Cleaned financials with quarterly structure saved to financials_cleaned.json")
-        print(f"📊 Processed {processed_data['metadata']['total_quarters']} quarters")
-        print(f"🏢 Company: {processed_data['company_info']['symbol']} (CIK: {processed_data['company_info']['cik']})")
-        
-        # Show available quarters
-        quarters = list(processed_data['quarters'].keys())
-        print(f"📅 Available quarters: {', '.join(sorted(quarters, reverse=True)[:5])}..." if len(quarters) > 5 else f"📅 Available quarters: {', '.join(sorted(quarters, reverse=True))}")
-        
-    else:
-        print("❌ Failed to process financial data")
+    company_symbols = ["AAPL", "MSFT","GOOGL","IBM","META"]
+    financial_statements = ["BALANCE_SHEET", "INCOME_STATEMENT", "CASH_FLOW","OVERVIEW"]
+    for company_symbol in company_symbols:
+        fin_statement = []
+        for statement in financial_statements:
+                with open(f"{company_symbol}_{statement}.json") as f: fin_statement.append(json.load(f))
+        consolidated = clean_and_consolidate(fin_statement[0], fin_statement[1], fin_statement[2], fin_statement[3])
+        with open(f"{company_symbol}_consolidated.json", "w") as f:
+            json.dump(consolidated, f, indent=2)
+
+    print("✅ Clean consolidated financials (2023–2025 only) saved to financials_consolidated.json")
