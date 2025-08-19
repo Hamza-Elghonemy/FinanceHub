@@ -114,7 +114,7 @@ def clean_and_consolidate(bs_data, is_data, cf_data, overview_data, years_to_kee
 
 
 if __name__ == "__main__":
-    company_symbols = ["AAPL", "MSFT","GOOGL","IBM","META"]
+    company_symbols = ["JNJ", "PFE","ABT","CVS","UNH", "META"]
     financial_statements = ["BALANCE_SHEET", "INCOME_STATEMENT", "CASH_FLOW","OVERVIEW"]
     for company_symbol in company_symbols:
         fin_statement = []
