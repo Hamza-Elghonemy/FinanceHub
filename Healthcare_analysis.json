@@ -1,0 +1,112 @@
+```json
+{
+  "sector": "Healthcare",
+  "companies": [
+    {
+      "symbol": "ABT",
+      "analysis": {
+        "annual_revenue": {
+          "2023": 40220000000,
+          "2024": 42600000000,
+          "growth": 5.02
+        },
+        "quarterly_trend": [
+          {"date": "2023-12-31", "Revenue": 10241000000},
+          {"date": "2023-09-30", "Revenue": 10143000000},
+          {"date": "2023-06-30", "Revenue": 9978000000},
+          {"date": "2023-03-31", "Revenue": 9747000000},
+          {"date": "2024-12-31", "Revenue": 10974000000},
+          {"date": "2024-09-30", "Revenue": 10635000000},
+          {"date": "2024-06-30", "Revenue": 10377000000},
+          {"date": "2024-03-31", "Revenue": 9964000000}
+        ],
+        "insight": "Abbott Laboratories shows a solid annual growth of 5% and a strong Q4 performance."
+      }
+    },
+    {
+      "symbol": "CVS",
+      "analysis": {
+        "annual_revenue": {
+          "2023": 358000000000,
+          "2024": 388000000000,
+          "growth": 8.38
+        },
+        "quarterly_trend": [
+          {"date": "2023-12-31", "Revenue": 93813000000},
+          {"date": "2023-09-30", "Revenue": 89764000000},
+          {"date": "2023-06-30", "Revenue": 88921000000},
+          {"date": "2023-03-31", "Revenue": 85278000000},
+          {"date": "2024-12-31", "Revenue": 97710000000},
+          {"date": "2024-09-30", "Revenue": 95428000000},
+          {"date": "2024-06-30", "Revenue": 91234000000},
+          {"date": "2024-03-31", "Revenue": 88437000000}
+        ],
+        "insight": "CVS Health demonstrates a robust annual growth of 8.38% with consistent quarterly revenue increases."
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "analysis": {
+        "annual_revenue": {
+          "2023": 86000000000,
+          "2024": 90000000000,
+          "growth": 4.65
+        },
+        "quarterly_trend": [
+          {"date": "2023-12-31", "Revenue": 21395000000},
+          {"date": "2023-09-30", "Revenue": 21351000000},
+          {"date": "2023-06-30", "Revenue": 21519000000},
+          {"date": "2023-03-31", "Revenue": 20894000000},
+          {"date": "2024-12-31", "Revenue": 22520000000},
+          {"date": "2024-09-30", "Revenue": 22471000000},
+          {"date": "2024-06-30", "Revenue": 22447000000},
+          {"date": "2024-03-31", "Revenue": 21383000000}
+        ],
+        "insight": "Johnson & Johnson shows steady annual growth of 4.65% with strong quarterly performance."
+      }
+    },
+    {
+      "symbol": "PFE",
+      "analysis": {
+        "annual_revenue": {
+          "2023": 58000000000,
+          "2024": 60000000000,
+          "growth": 3.45
+        },
+        "quarterly_trend": [
+          {"date": "2023-12-31", "Revenue": 14570000000},
+          {"date": "2023-09-30", "Revenue": 13491000000},
+          {"date": "2023-06-30", "Revenue": 12734000000},
+          {"date": "2023-03-31", "Revenue": 18486000000},
+          {"date": "2024-12-31", "Revenue": 17763000000},
+          {"date": "2024-09-30", "Revenue": 17702000000},
+          {"date": "2024-06-30", "Revenue": 13283000000},
+          {"date": "2024-03-31", "Revenue": 14879000000}
+        ],
+        "insight": "Pfizer shows modest annual growth of 3.45% with fluctuating quarterly revenues."
+      }
+    },
+    {
+      "symbol": "UNH",
+      "analysis": {
+        "annual_revenue": {
+          "2023": 370000000000,
+          "2024": 400000000000,
+          "growth": 8.11
+        },
+        "quarterly_trend": [
+          {"date": "2023-12-31", "Revenue": 94427000000},
+          {"date": "2023-09-30", "Revenue": 92361000000},
+          {"date": "2023-06-30", "Revenue": 92903000000},
+          {"date": "2023-03-31", "Revenue": 91931000000},
+          {"date": "2024-12-31", "Revenue": 100807000000},
+          {"date": "2024-09-30", "Revenue": 99177000000},
+          {"date": "2024-06-30", "Revenue": 97858000000},
+          {"date": "2024-03-31", "Revenue": 98785000000}
+        ],
+        "insight": "UnitedHealth Group exhibits strong annual growth of 8.11% with consistent quarterly performance."
+      }
+    }
+  ]
+}
+```

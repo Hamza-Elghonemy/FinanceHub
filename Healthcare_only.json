@@ -1,0 +1,1469 @@
+{
+  "Healthcare": [
+    {
+      "ABT": [
+        {
+          "2023": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 10241000000,
+                  "gross_profit": 5258000000,
+                  "operating_income": 1864000000,
+                  "net_income": 1594000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6896000000,
+                  "total_assets": 73214000000,
+                  "total_liabilities": 34387000000,
+                  "shareholders_equity": 38603000000,
+                  "long_term_debt": 13599000000,
+                  "current_assets": 22670000000,
+                  "current_liabilities": 13841000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3038000000,
+                  "capex": 755000000,
+                  "free_cash_flow": 2283000000,
+                  "earnings_quality": 1.91
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 10143000000,
+                  "gross_profit": 5034000000,
+                  "operating_income": 1678000000,
+                  "net_income": 1436000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6709000000,
+                  "total_assets": 72090000000,
+                  "total_liabilities": 34396000000,
+                  "shareholders_equity": 37481000000,
+                  "long_term_debt": 14477000000,
+                  "current_assets": 22664000000,
+                  "current_liabilities": 13042000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1877000000,
+                  "capex": 560000000,
+                  "free_cash_flow": 1317000000,
+                  "earnings_quality": 1.31
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 9978000000,
+                  "gross_profit": 4945000000,
+                  "operating_income": 1511000000,
+                  "net_income": 1375000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 7835000000,
+                  "total_assets": 73354000000,
+                  "total_liabilities": 35950000000,
+                  "shareholders_equity": 37174000000,
+                  "long_term_debt": 14562000000,
+                  "current_assets": 23505000000,
+                  "current_liabilities": 14350000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1203000000,
+                  "capex": 507000000,
+                  "free_cash_flow": 696000000,
+                  "earnings_quality": 0.87
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 9747000000,
+                  "gross_profit": 4805000000,
+                  "operating_income": 1400000000,
+                  "net_income": 1318000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 9882000000,
+                  "total_assets": 73794000000,
+                  "total_liabilities": 36562000000,
+                  "shareholders_equity": 74219000000,
+                  "long_term_debt": 14615000000,
+                  "current_assets": 25224000000,
+                  "current_liabilities": 15489000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1143000000,
+                  "capex": 380000000,
+                  "free_cash_flow": 763000000,
+                  "earnings_quality": 0.87
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 16.53,
+            "PEG_Ratio": 4.168,
+            "PriceToBook": 4.535,
+            "ProfitMargin": 0.324,
+            "ReturnOnAssets": 0.0662,
+            "ReturnOnEquity": 0.309,
+            "DividendYield": 0.0179
+          }
+        },
+        {
+          "2024": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 10974000000,
+                  "gross_profit": 5598000000,
+                  "operating_income": 1990000000,
+                  "net_income": 9229000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 7616000000,
+                  "total_assets": 81414000000,
+                  "total_liabilities": 33513000000,
+                  "shareholders_equity": 47664000000,
+                  "long_term_debt": 12625000000,
+                  "current_assets": 23656000000,
+                  "current_liabilities": 14157000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 2868000000,
+                  "capex": 720000000,
+                  "free_cash_flow": 2148000000,
+                  "earnings_quality": 0.31
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 10635000000,
+                  "gross_profit": 5426000000,
+                  "operating_income": 1818000000,
+                  "net_income": 1646000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 7558000000,
+                  "total_assets": 74356000000,
+                  "total_liabilities": 34328000000,
+                  "shareholders_equity": 39796000000,
+                  "long_term_debt": 12825000000,
+                  "current_assets": 23802000000,
+                  "current_liabilities": 14902000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 2705000000,
+                  "capex": 556000000,
+                  "free_cash_flow": 2149000000,
+                  "earnings_quality": 1.64
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 10377000000,
+                  "gross_profit": 5305000000,
+                  "operating_income": 1686000000,
+                  "net_income": 1302000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6987000000,
+                  "total_assets": 73017000000,
+                  "total_liabilities": 33457000000,
+                  "shareholders_equity": 39318000000,
+                  "long_term_debt": 13139000000,
+                  "current_assets": 23119000000,
+                  "current_liabilities": 13760000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1960000000,
+                  "capex": 533000000,
+                  "free_cash_flow": 1427000000,
+                  "earnings_quality": 1.51
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 9964000000,
+                  "gross_profit": 5022000000,
+                  "operating_income": 1385000000,
+                  "net_income": 1225000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6284000000,
+                  "total_assets": 72467000000,
+                  "total_liabilities": 33424000000,
+                  "shareholders_equity": 38810000000,
+                  "long_term_debt": 12576000000,
+                  "current_assets": 22376000000,
+                  "current_liabilities": 14021000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1025000000,
+                  "capex": 398000000,
+                  "free_cash_flow": 627000000,
+                  "earnings_quality": 0.84
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 16.53,
+            "PEG_Ratio": 4.168,
+            "PriceToBook": 4.535,
+            "ProfitMargin": 0.324,
+            "ReturnOnAssets": 0.0662,
+            "ReturnOnEquity": 0.309,
+            "DividendYield": 0.0179
+          }
+        },
+        {
+          "2025": [
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 11142000000,
+                  "gross_profit": 6344000000,
+                  "operating_income": 2099000000,
+                  "net_income": 1779000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6951000000,
+                  "total_assets": 83999000000,
+                  "total_liabilities": 33170000000,
+                  "shareholders_equity": 50565000000,
+                  "long_term_debt": 12930000000,
+                  "current_assets": 24468000000,
+                  "current_liabilities": 13439000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3464000000,
+                  "capex": 986000000,
+                  "free_cash_flow": 2478000000,
+                  "earnings_quality": 1.95
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 10358000000,
+                  "gross_profit": 5444000000,
+                  "operating_income": 1688000000,
+                  "net_income": 1325000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6532000000,
+                  "total_assets": 81448000000,
+                  "total_liabilities": 32384000000,
+                  "shareholders_equity": 48811000000,
+                  "long_term_debt": 12736000000,
+                  "current_assets": 23153000000,
+                  "current_liabilities": 13004000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1417000000,
+                  "capex": 484000000,
+                  "free_cash_flow": 933000000,
+                  "earnings_quality": 1.07
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 16.53,
+            "PEG_Ratio": 4.168,
+            "PriceToBook": 4.535,
+            "ProfitMargin": 0.324,
+            "ReturnOnAssets": 0.0662,
+            "ReturnOnEquity": 0.309,
+            "DividendYield": 0.0179
+          }
+        }
+      ]
+    },
+    {
+      "CVS": [
+        {
+          "2023": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 93813000000,
+                  "gross_profit": 13876000000,
+                  "operating_income": 3373000000,
+                  "net_income": 2046000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 8196000000,
+                  "total_assets": 249728000000,
+                  "total_liabilities": 173092000000,
+                  "shareholders_equity": 76461000000,
+                  "long_term_debt": 58638000000,
+                  "current_assets": 67858000000,
+                  "current_liabilities": 79189000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -2636000000,
+                  "capex": 911000000,
+                  "free_cash_flow": -3547000000,
+                  "earnings_quality": -1.29
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 89764000000,
+                  "gross_profit": 13577000000,
+                  "operating_income": 3690000000,
+                  "net_income": 2261000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 13043000000,
+                  "total_assets": 251306000000,
+                  "total_liabilities": 176796000000,
+                  "shareholders_equity": 74337000000,
+                  "long_term_debt": 59782000000,
+                  "current_assets": 70143000000,
+                  "current_liabilities": 81553000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 2716000000,
+                  "capex": 545000000,
+                  "free_cash_flow": 2171000000,
+                  "earnings_quality": 1.2
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 88921000000,
+                  "gross_profit": 13603000000,
+                  "operating_income": 3234000000,
+                  "net_income": 1901000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 13807000000,
+                  "total_assets": 250071000000,
+                  "total_liabilities": 177069000000,
+                  "shareholders_equity": 72726000000,
+                  "long_term_debt": 61419000000,
+                  "current_assets": 67756000000,
+                  "current_liabilities": 79206000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 5908000000,
+                  "capex": 591000000,
+                  "free_cash_flow": 5317000000,
+                  "earnings_quality": 3.11
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 85278000000,
+                  "gross_profit": 13375000000,
+                  "operating_income": 3446000000,
+                  "net_income": 2136000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 14618000000,
+                  "total_assets": 239330000000,
+                  "total_liabilities": 167750000000,
+                  "shareholders_equity": 71382000000,
+                  "long_term_debt": 56450000000,
+                  "current_assets": 68706000000,
+                  "current_liabilities": 75054000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 7438000000,
+                  "capex": 984000000,
+                  "free_cash_flow": 6454000000,
+                  "earnings_quality": 3.48
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 19.11,
+            "PEG_Ratio": 0.707,
+            "PriceToBook": 1.124,
+            "ProfitMargin": 0.0118,
+            "ReturnOnAssets": 0.0229,
+            "ReturnOnEquity": 0.0588,
+            "DividendYield": 0.0399
+          }
+        },
+        {
+          "2024": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 97710000000,
+                  "gross_profit": 12899000000,
+                  "operating_income": 2368000000,
+                  "net_income": 1644000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 8586000000,
+                  "total_assets": 253215000000,
+                  "total_liabilities": 177485000000,
+                  "shareholders_equity": 75560000000,
+                  "long_term_debt": 60527000000,
+                  "current_assets": 68645000000,
+                  "current_liabilities": 84609000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1860000000,
+                  "capex": 768000000,
+                  "free_cash_flow": 1092000000,
+                  "earnings_quality": 1.13
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 95428000000,
+                  "gross_profit": 12558000000,
+                  "operating_income": 832000000,
+                  "net_income": 87000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 6875000000,
+                  "total_assets": 252427000000,
+                  "total_liabilities": 177321000000,
+                  "shareholders_equity": 74944000000,
+                  "long_term_debt": 59824000000,
+                  "current_assets": 67343000000,
+                  "current_liabilities": 84627000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -745000000,
+                  "capex": 670000000,
+                  "free_cash_flow": -1415000000,
+                  "earnings_quality": -8.56
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 91234000000,
+                  "gross_profit": 13383000000,
+                  "operating_income": 3045000000,
+                  "net_income": 1770000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 12507000000,
+                  "total_assets": 252481000000,
+                  "total_liabilities": 177370000000,
+                  "shareholders_equity": 74930000000,
+                  "long_term_debt": 62643000000,
+                  "current_assets": 69952000000,
+                  "current_liabilities": 81386000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3089000000,
+                  "capex": 638000000,
+                  "free_cash_flow": 2451000000,
+                  "earnings_quality": 1.75
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 88437000000,
+                  "gross_profit": 12561000000,
+                  "operating_income": 2271000000,
+                  "net_income": 1113000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 9801000000,
+                  "total_assets": 249743000000,
+                  "total_liabilities": 175593000000,
+                  "shareholders_equity": 73968000000,
+                  "long_term_debt": 57694000000,
+                  "current_assets": 67473000000,
+                  "current_liabilities": 83319000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 4903000000,
+                  "capex": 705000000,
+                  "free_cash_flow": 4198000000,
+                  "earnings_quality": 4.41
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 19.11,
+            "PEG_Ratio": 0.707,
+            "PriceToBook": 1.124,
+            "ProfitMargin": 0.0118,
+            "ReturnOnAssets": 0.0229,
+            "ReturnOnEquity": 0.0588,
+            "DividendYield": 0.0399
+          }
+        },
+        {
+          "2025": [
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 98915000000,
+                  "gross_profit": 13593000000,
+                  "operating_income": 2381000000,
+                  "net_income": 1021000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 11787000000,
+                  "total_assets": 258343000000,
+                  "total_liabilities": 180792000000,
+                  "shareholders_equity": 77379000000,
+                  "long_term_debt": 57290000000,
+                  "current_assets": 75649000000,
+                  "current_liabilities": 94162000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1897000000,
+                  "capex": 607000000,
+                  "free_cash_flow": 1290000000,
+                  "earnings_quality": 1.86
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 94588000000,
+                  "gross_profit": 14396000000,
+                  "operating_income": 3374000000,
+                  "net_income": 1779000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 10076000000,
+                  "total_assets": 255585000000,
+                  "total_liabilities": 178475000000,
+                  "shareholders_equity": 76929000000,
+                  "long_term_debt": 59040000000,
+                  "current_assets": 73191000000,
+                  "current_liabilities": 88961000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 4556000000,
+                  "capex": 743000000,
+                  "free_cash_flow": 3813000000,
+                  "earnings_quality": 2.56
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 19.11,
+            "PEG_Ratio": 0.707,
+            "PriceToBook": 1.124,
+            "ProfitMargin": 0.0118,
+            "ReturnOnAssets": 0.0229,
+            "ReturnOnEquity": 0.0588,
+            "DividendYield": 0.0399
+          }
+        }
+      ]
+    },
+    {
+      "JNJ": [
+        {
+          "2023": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 21395000000,
+                  "gross_profit": 14597000000,
+                  "operating_income": 4607000000,
+                  "net_income": 4049000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 21859000000,
+                  "total_assets": 167558000000,
+                  "total_liabilities": 98784000000,
+                  "shareholders_equity": 68774000000,
+                  "long_term_debt": 25881000000,
+                  "current_assets": 53495000000,
+                  "current_liabilities": 46282000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 7863000000,
+                  "capex": 1589000000,
+                  "free_cash_flow": 6274000000,
+                  "earnings_quality": 1.94
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 21351000000,
+                  "gross_profit": 14745000000,
+                  "operating_income": 6198000000,
+                  "net_income": 26028000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 19728000000,
+                  "total_assets": 166061000000,
+                  "total_liabilities": 94833000000,
+                  "shareholders_equity": 71228000000,
+                  "long_term_debt": 26051000000,
+                  "current_assets": 53703000000,
+                  "current_liabilities": 44370000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 7489000000,
+                  "capex": 967000000,
+                  "free_cash_flow": 6522000000,
+                  "earnings_quality": 0.29
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 21519000000,
+                  "gross_profit": 15057000000,
+                  "operating_income": 6358000000,
+                  "net_income": 5144000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 21183000000,
+                  "total_assets": 191686000000,
+                  "total_liabilities": 115277000000,
+                  "shareholders_equity": 75149000000,
+                  "long_term_debt": 33901000000,
+                  "current_assets": 60567000000,
+                  "current_liabilities": 54170000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 4182000000,
+                  "capex": 1124000000,
+                  "free_cash_flow": 3058000000,
+                  "earnings_quality": 0.81
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 20894000000,
+                  "gross_profit": 14207000000,
+                  "operating_income": 6246000000,
+                  "net_income": -68000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 19170000000,
+                  "total_assets": 195969000000,
+                  "total_liabilities": 125100000000,
+                  "shareholders_equity": 70869000000,
+                  "long_term_debt": 34928000000,
+                  "current_assets": 64388000000,
+                  "current_liabilities": 60373000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3257000000,
+                  "capex": 863000000,
+                  "free_cash_flow": 2394000000,
+                  "earnings_quality": -47.9
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 18.91,
+            "PEG_Ratio": 1.075,
+            "PriceToBook": 5.42,
+            "ProfitMargin": 0.25,
+            "ReturnOnAssets": 0.0761,
+            "ReturnOnEquity": 0.302,
+            "DividendYield": 0.0287
+          }
+        },
+        {
+          "2024": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 22520000000,
+                  "gross_profit": 15392000000,
+                  "operating_income": 3841000000,
+                  "net_income": 3431000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 24105000000,
+                  "total_assets": 180104000000,
+                  "total_liabilities": 108614000000,
+                  "shareholders_equity": 71490000000,
+                  "long_term_debt": 30651000000,
+                  "current_assets": 55893000000,
+                  "current_liabilities": 50321000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 6983000000,
+                  "capex": 2145000000,
+                  "free_cash_flow": 4838000000,
+                  "earnings_quality": 2.04
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 22471000000,
+                  "gross_profit": 15508000000,
+                  "operating_income": 5278000000,
+                  "net_income": 2694000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 19980000000,
+                  "total_assets": 178287000000,
+                  "total_liabilities": 108129000000,
+                  "shareholders_equity": 70158000000,
+                  "long_term_debt": 31289000000,
+                  "current_assets": 53249000000,
+                  "current_liabilities": 51759000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 7993000000,
+                  "capex": 2279000000,
+                  "free_cash_flow": 5714000000,
+                  "earnings_quality": 2.97
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 22447000000,
+                  "gross_profit": 15578000000,
+                  "operating_income": 6657000000,
+                  "net_income": 4686000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 24878000000,
+                  "total_assets": 181088000000,
+                  "total_liabilities": 109550000000,
+                  "shareholders_equity": 71538000000,
+                  "long_term_debt": 31636000000,
+                  "current_assets": 57817000000,
+                  "current_liabilities": 53933000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 5633000000,
+                  "capex": 976000000,
+                  "free_cash_flow": 4657000000,
+                  "earnings_quality": 1.2
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 21383000000,
+                  "gross_profit": 14872000000,
+                  "operating_income": 6273000000,
+                  "net_income": 3255000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 25473000000,
+                  "total_assets": 171966000000,
+                  "total_liabilities": 101946000000,
+                  "shareholders_equity": 70020000000,
+                  "long_term_debt": 25082000000,
+                  "current_assets": 57002000000,
+                  "current_liabilities": 48725000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3657000000,
+                  "capex": 807000000,
+                  "free_cash_flow": 2850000000,
+                  "earnings_quality": 1.12
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 18.91,
+            "PEG_Ratio": 1.075,
+            "PriceToBook": 5.42,
+            "ProfitMargin": 0.25,
+            "ReturnOnAssets": 0.0761,
+            "ReturnOnEquity": 0.302,
+            "DividendYield": 0.0287
+          }
+        },
+        {
+          "2025": [
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 23743000000,
+                  "gross_profit": 16115000000,
+                  "operating_income": 6710000000,
+                  "net_income": 5537000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 18577000000,
+                  "total_assets": 193389000000,
+                  "total_liabilities": 114916000000,
+                  "shareholders_equity": 78473000000,
+                  "long_term_debt": 39235000000,
+                  "current_assets": 54498000000,
+                  "current_liabilities": 54180000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3878000000,
+                  "capex": 1398000000,
+                  "free_cash_flow": 2480000000,
+                  "earnings_quality": 0.7
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 21893000000,
+                  "gross_profit": 14536000000,
+                  "operating_income": 6299000000,
+                  "net_income": 10999000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 38474000000,
+                  "total_assets": 193671000000,
+                  "total_liabilities": 115562000000,
+                  "shareholders_equity": 78109000000,
+                  "long_term_debt": 38355000000,
+                  "current_assets": 71551000000,
+                  "current_liabilities": 56903000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 4174000000,
+                  "capex": 809000000,
+                  "free_cash_flow": 3365000000,
+                  "earnings_quality": 0.38
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 18.91,
+            "PEG_Ratio": 1.075,
+            "PriceToBook": 5.42,
+            "ProfitMargin": 0.25,
+            "ReturnOnAssets": 0.0761,
+            "ReturnOnEquity": 0.302,
+            "DividendYield": 0.0287
+          }
+        }
+      ]
+    },
+    {
+      "PFE": [
+        {
+          "2023": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 14570000000,
+                  "gross_profit": 5980000000,
+                  "operating_income": -1263000000,
+                  "net_income": -3343000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 2853000000,
+                  "total_assets": 226501000000,
+                  "total_liabilities": 137213000000,
+                  "shareholders_equity": 89014000000,
+                  "long_term_debt": 60982000000,
+                  "current_assets": 43333000000,
+                  "current_liabilities": 47794000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 5240000000,
+                  "capex": 1044000000,
+                  "free_cash_flow": 4196000000,
+                  "earnings_quality": -1.57
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 13491000000,
+                  "gross_profit": 2888000000,
+                  "operating_income": -3006000000,
+                  "net_income": -2394000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 3148000000,
+                  "total_assets": 215021000000,
+                  "total_liabilities": 117817000000,
+                  "shareholders_equity": 96934000000,
+                  "long_term_debt": 61048000000,
+                  "current_assets": 74012000000,
+                  "current_liabilities": 31136000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 3456000000,
+                  "capex": 810000000,
+                  "free_cash_flow": 2646000000,
+                  "earnings_quality": -1.44
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 12734000000,
+                  "gross_profit": 9497000000,
+                  "operating_income": 2269000000,
+                  "net_income": 2327000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 2632000000,
+                  "total_assets": 220168000000,
+                  "total_liabilities": 120875000000,
+                  "shareholders_equity": 99019000000,
+                  "long_term_debt": 61356000000,
+                  "current_assets": 73347000000,
+                  "current_liabilities": 34647000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -1208000000,
+                  "capex": 914000000,
+                  "free_cash_flow": -2122000000,
+                  "earnings_quality": -0.52
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 18486000000,
+                  "gross_profit": 12536000000,
+                  "operating_income": 6685000000,
+                  "net_income": 5542000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 2166000000,
+                  "total_assets": 195617000000,
+                  "total_liabilities": 94381000000,
+                  "shareholders_equity": 100971000000,
+                  "long_term_debt": 31704000000,
+                  "current_assets": 50078000000,
+                  "current_liabilities": 36562000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1212000000,
+                  "capex": 1139000000,
+                  "free_cash_flow": 73000000,
+                  "earnings_quality": 0.22
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.3,
+            "PEG_Ratio": 0.858,
+            "PriceToBook": 1.611,
+            "ProfitMargin": 0.168,
+            "ReturnOnAssets": 0.0525,
+            "ReturnOnEquity": 0.122,
+            "DividendYield": 0.0677
+          }
+        },
+        {
+          "2024": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 17763000000,
+                  "gross_profit": 12968000000,
+                  "operating_income": 5725000000,
+                  "net_income": 403000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 1043000000,
+                  "total_assets": 213396000000,
+                  "total_liabilities": 124899000000,
+                  "shareholders_equity": 88203000000,
+                  "long_term_debt": 56703000000,
+                  "current_assets": 50358000000,
+                  "current_liabilities": 42995000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 6721000000,
+                  "capex": 917000000,
+                  "free_cash_flow": 5804000000,
+                  "earnings_quality": 16.68
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 17702000000,
+                  "gross_profit": 10771000000,
+                  "operating_income": 4968000000,
+                  "net_income": 4473000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 1092000000,
+                  "total_assets": 219476000000,
+                  "total_liabilities": 126918000000,
+                  "shareholders_equity": 92286000000,
+                  "long_term_debt": 56918000000,
+                  "current_assets": 43223000000,
+                  "current_liabilities": 43211000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 6714000000,
+                  "capex": 651000000,
+                  "free_cash_flow": 6063000000,
+                  "earnings_quality": 1.5
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 13283000000,
+                  "gross_profit": 8243000000,
+                  "operating_income": 1879000000,
+                  "net_income": 24000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 1052000000,
+                  "total_assets": 216193000000,
+                  "total_liabilities": 128218000000,
+                  "shareholders_equity": 87700000000,
+                  "long_term_debt": 56733000000,
+                  "current_assets": 37825000000,
+                  "current_liabilities": 43819000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -1781000000,
+                  "capex": 637000000,
+                  "free_cash_flow": -2418000000,
+                  "earnings_quality": -74.21
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 14879000000,
+                  "gross_profit": 10498000000,
+                  "operating_income": 4559000000,
+                  "net_income": 3120000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 719000000,
+                  "total_assets": 221095000000,
+                  "total_liabilities": 128536000000,
+                  "shareholders_equity": 92282000000,
+                  "long_term_debt": 60951000000,
+                  "current_assets": 42415000000,
+                  "current_liabilities": 40497000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1090000000,
+                  "capex": 704000000,
+                  "free_cash_flow": 386000000,
+                  "earnings_quality": 0.35
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.3,
+            "PEG_Ratio": 0.858,
+            "PriceToBook": 1.611,
+            "ProfitMargin": 0.168,
+            "ReturnOnAssets": 0.0525,
+            "ReturnOnEquity": 0.122,
+            "DividendYield": 0.0677
+          }
+        },
+        {
+          "2025": [
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 14653000000,
+                  "gross_profit": 9420000000,
+                  "operating_income": 3575000000,
+                  "net_income": 2885000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 1638000000,
+                  "total_assets": 206095000000,
+                  "total_liabilities": 117083000000,
+                  "shareholders_equity": 88695000000,
+                  "long_term_debt": 56630000000,
+                  "current_assets": 43703000000,
+                  "current_liabilities": 37726000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -582000000,
+                  "capex": 618000000,
+                  "free_cash_flow": -1200000000,
+                  "earnings_quality": -0.2
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 13715000000,
+                  "gross_profit": 9827000000,
+                  "operating_income": 4624000000,
+                  "net_income": 2967000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 1430000000,
+                  "total_assets": 208028000000,
+                  "total_liabilities": 117391000000,
+                  "shareholders_equity": 90338000000,
+                  "long_term_debt": 56820000000,
+                  "current_assets": 45861000000,
+                  "current_liabilities": 36452000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 2335000000,
+                  "capex": 564000000,
+                  "free_cash_flow": 1771000000,
+                  "earnings_quality": 0.79
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.3,
+            "PEG_Ratio": 0.858,
+            "PriceToBook": 1.611,
+            "ProfitMargin": 0.168,
+            "ReturnOnAssets": 0.0525,
+            "ReturnOnEquity": 0.122,
+            "DividendYield": 0.0677
+          }
+        }
+      ]
+    },
+    {
+      "UNH": [
+        {
+          "2023": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 94427000000,
+                  "gross_profit": 22002000000,
+                  "operating_income": 7689000000,
+                  "net_income": 5455000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 25427000000,
+                  "total_assets": 273720000000,
+                  "total_liabilities": 174801000000,
+                  "shareholders_equity": 88756000000,
+                  "long_term_debt": 58263000000,
+                  "current_assets": 78437000000,
+                  "current_liabilities": 99054000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": -5193000000,
+                  "capex": 959000000,
+                  "free_cash_flow": -6152000000,
+                  "earnings_quality": -0.95
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 92361000000,
+                  "gross_profit": 23388000000,
+                  "operating_income": 8526000000,
+                  "net_income": 5841000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 38915000000,
+                  "total_assets": 282063000000,
+                  "total_liabilities": 188083000000,
+                  "shareholders_equity": 84494000000,
+                  "long_term_debt": 58079000000,
+                  "current_assets": 91905000000,
+                  "current_liabilities": 114179000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 6902000000,
+                  "capex": 838000000,
+                  "free_cash_flow": 6064000000,
+                  "earnings_quality": 1.18
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 92903000000,
+                  "gross_profit": 22887000000,
+                  "operating_income": 8057000000,
+                  "net_income": 5474000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 41813000000,
+                  "total_assets": 280164000000,
+                  "total_liabilities": 188008000000,
+                  "shareholders_equity": 82353000000,
+                  "long_term_debt": 59268000000,
+                  "current_assets": 89869000000,
+                  "current_liabilities": 112981000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 11032000000,
+                  "capex": 829000000,
+                  "free_cash_flow": 10203000000,
+                  "earnings_quality": 2.02
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 91931000000,
+                  "gross_profit": 22681000000,
+                  "operating_income": 8086000000,
+                  "net_income": 5611000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 41913000000,
+                  "total_assets": 283679000000,
+                  "total_liabilities": 193057000000,
+                  "shareholders_equity": 81312000000,
+                  "long_term_debt": 60657000000,
+                  "current_assets": 93895000000,
+                  "current_liabilities": 116482000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 16327000000,
+                  "capex": 760000000,
+                  "free_cash_flow": 15567000000,
+                  "earnings_quality": 2.91
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.16,
+            "PEG_Ratio": 1.241,
+            "PriceToBook": 2.907,
+            "ProfitMargin": 0.0504,
+            "ReturnOnAssets": 0.0646,
+            "ReturnOnEquity": 0.216,
+            "DividendYield": 0.0313
+          }
+        },
+        {
+          "2024": [
+            {
+              "4": {
+                "profitability": {
+                  "revenue": 100807000000,
+                  "gross_profit": 21308000000,
+                  "operating_income": 7773000000,
+                  "net_income": 5543000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 25312000000,
+                  "total_assets": 298278000000,
+                  "total_liabilities": 195687000000,
+                  "shareholders_equity": 92658000000,
+                  "long_term_debt": 72359000000,
+                  "current_assets": 85779000000,
+                  "current_liabilities": 103769000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 2369000000,
+                  "capex": 912000000,
+                  "free_cash_flow": 1457000000,
+                  "earnings_quality": 0.43
+                }
+              }
+            },
+            {
+              "3": {
+                "profitability": {
+                  "revenue": 99177000000,
+                  "gross_profit": 21386000000,
+                  "operating_income": 8708000000,
+                  "net_income": 6055000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 32400000000,
+                  "total_assets": 299309000000,
+                  "total_liabilities": 194854000000,
+                  "shareholders_equity": 94535000000,
+                  "long_term_debt": 74101000000,
+                  "current_assets": 92258000000,
+                  "current_liabilities": 101565000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 13945000000,
+                  "capex": 991000000,
+                  "free_cash_flow": 12954000000,
+                  "earnings_quality": 2.3
+                }
+              }
+            },
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 97858000000,
+                  "gross_profit": 21060000000,
+                  "operating_income": 7875000000,
+                  "net_income": 4216000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 26286000000,
+                  "total_assets": 286056000000,
+                  "total_liabilities": 186822000000,
+                  "shareholders_equity": 89359000000,
+                  "long_term_debt": 63727000000,
+                  "current_assets": 92038000000,
+                  "current_liabilities": 104670000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 6746000000,
+                  "capex": 853000000,
+                  "free_cash_flow": 5893000000,
+                  "earnings_quality": 1.6
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 98785000000,
+                  "gross_profit": 21994000000,
+                  "operating_income": 7931000000,
+                  "net_income": -1409000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 28414000000,
+                  "total_assets": 284210000000,
+                  "total_liabilities": 187292000000,
+                  "shareholders_equity": 86688000000,
+                  "long_term_debt": 63850000000,
+                  "current_assets": 88942000000,
+                  "current_liabilities": 104431000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 1144000000,
+                  "capex": 743000000,
+                  "free_cash_flow": 401000000,
+                  "earnings_quality": -0.81
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.16,
+            "PEG_Ratio": 1.241,
+            "PriceToBook": 2.907,
+            "ProfitMargin": 0.0504,
+            "ReturnOnAssets": 0.0646,
+            "ReturnOnEquity": 0.216,
+            "DividendYield": 0.0313
+          }
+        },
+        {
+          "2025": [
+            {
+              "2": {
+                "profitability": {
+                  "revenue": 111616000000,
+                  "gross_profit": 20012000000,
+                  "operating_income": 5150000000,
+                  "net_income": 3406000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 32020000000,
+                  "total_assets": 308573000000,
+                  "total_liabilities": 203789000000,
+                  "shareholders_equity": 100469000000,
+                  "long_term_debt": 73495000000,
+                  "current_assets": 93699000000,
+                  "current_liabilities": 110781000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 7188000000,
+                  "capex": 886000000,
+                  "free_cash_flow": 6302000000,
+                  "earnings_quality": 2.11
+                }
+              }
+            },
+            {
+              "1": {
+                "profitability": {
+                  "revenue": 109575000000,
+                  "gross_profit": 23774000000,
+                  "operating_income": 9119000000,
+                  "net_income": 6292000000
+                },
+                "balance_sheet": {
+                  "cash_and_equivalents": 34291000000,
+                  "total_assets": 309790000000,
+                  "total_liabilities": 204621000000,
+                  "shareholders_equity": 95038000000,
+                  "long_term_debt": 71285000000,
+                  "current_assets": 96285000000,
+                  "current_liabilities": 113471000000
+                },
+                "cash_flow": {
+                  "operating_cash_flow": 5456000000,
+                  "capex": 898000000,
+                  "free_cash_flow": 4558000000,
+                  "earnings_quality": 0.87
+                }
+              }
+            }
+          ],
+          "ratios": {
+            "PE_Ratio": 13.16,
+            "PEG_Ratio": 1.241,
+            "PriceToBook": 2.907,
+            "ProfitMargin": 0.0504,
+            "ReturnOnAssets": 0.0646,
+            "ReturnOnEquity": 0.216,
+            "DividendYield": 0.0313
+          }
+        }
+      ]
+    }
+  ]
+}
