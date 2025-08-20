@@ -3,6 +3,7 @@ import json
 from dotenv import load_dotenv
 from openai import OpenAI
 from prompt_engineering import prompt_text  
+from prompt_engineering import prompt_text2
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -17,7 +18,7 @@ topic_choice = input("Enter metric (Revenue, Gross_Profit, Operating_Income, Net
 
 
 sector_data = {sector_choice: all_data[sector_choice]}
-prompt = prompt_text(company_choice, topic_choice)
+prompt = prompt_text2(company_choice, topic_choice)
 sector_json = json.dumps(sector_data, indent=2)
 
 response = client.chat.completions.create(
