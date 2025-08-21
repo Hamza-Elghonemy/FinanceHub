@@ -3,7 +3,12 @@ import json
 from dotenv import load_dotenv
 from openai import OpenAI
 from prompt_engineering import prompt_text  
+<<<<<<< Updated upstream
 from prompt_engineering import prompt_text2
+=======
+from prompt1_allCompanies import prompt1_allCompanies  
+
+>>>>>>> Stashed changes
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -16,9 +21,17 @@ sector_choice = input("Enter sector (Tech or Healthcare): ").strip().capitalize(
 company_choice = input("Enter company symbol (e.g., AAPL, MSFT): ").strip().upper()
 topic_choice = input("Enter metric (Revenue, Gross_Profit, Operating_Income, Net_Income, etc.): ").strip()
 
+# if(company_choice.lower()=="all"):
+prompt = prompt1_allCompanies(topic_choice)
+# prompt = prompt_text(company_choice, topic_choice)
+
+
 
 sector_data = {sector_choice: all_data[sector_choice]}
+<<<<<<< Updated upstream
 prompt = prompt_text2(company_choice, topic_choice)
+=======
+>>>>>>> Stashed changes
 sector_json = json.dumps(sector_data, indent=2)
 
 response = client.chat.completions.create(
@@ -29,7 +42,7 @@ response = client.chat.completions.create(
     ],
     temperature=0
 )
-
+ 
 output_text = response.choices[0].message.content
 output_file = os.path.join("output", f"{company_choice}_{topic_choice}_analysis.json")
 with open(output_file, "w", encoding="utf-8") as f:
