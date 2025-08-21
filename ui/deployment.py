@@ -10,7 +10,7 @@ import sys
 import hashlib
 from datetime import datetime
 from pathlib import Path
-
+from profatibility_viewer import render_profitability_from_json
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -693,7 +693,7 @@ def load_real_financial_data() -> tuple[pd.DataFrame, dict[str, dict[str, str]]]
 # -----------------------------
 # AI Insights Integration
 # -----------------------------
-def generate_ai_insights(ticker: str, analysis_type: str):
+def generate_ai_insights(ticker: str, analysis_type: str, analysis_scope: str) -> dict | None:
     """Call the LLM analysis script with interactive input simulation."""
     try:
         # Get the path to llm_calling.py in src directory
@@ -707,10 +707,9 @@ def generate_ai_insights(ticker: str, analysis_type: str):
         
         # Map analysis types to metrics for your LLM script
         metric_mapping = {
-            "Profitability": "Revenue",
-            "Balance Sheet": "Total_Assets", 
-            "Cash Flow": "Operating_Cash_Flow",
-            "Financial Standing": "Total_Assets"
+            "Profitability": "Profitability",
+            "Financial Standing": "Balance Sheet",
+            "Cash Flow": "Cash Flow",
         }
         
         # Determine sector based on ticker
@@ -718,13 +717,20 @@ def generate_ai_insights(ticker: str, analysis_type: str):
             "AAPL": "Tech", "GOOGL": "Tech", "IBM": "Tech", "META": "Tech", "MSFT": "Tech",
             "JNJ": "Healthcare", "PFE": "Healthcare", "UNH": "Healthcare", "CVS": "Healthcare", "ABT": "Healthcare"
         }
-        
+
+        scope_mapping = {
+            "Sector-wide Analysis": "Sector",
+            "Company Analysis": "Company",
+            "Company vs Sector": "Company vs Sector",
+        }
+
         sector = sector_mapping.get(ticker, "Tech")
-        metric = metric_mapping.get(analysis_type, "Revenue")
+        metric = metric_mapping.get(analysis_type, "Profitability")
+        scope = scope_mapping.get(analysis_scope,"Company vs Sector")
         
         # Create input simulation for the interactive script
-        input_data = f"{sector}\n{ticker}\n{metric}\n"
-        
+        input_data = f"{sector}\n{ticker}\n{metric}\n{scope}\n"
+
         # Execute the script with simulated input
         with st.spinner(f"🤖 Generating {analysis_type} insights for {ticker}..."):
             result = subprocess.run(
@@ -740,7 +746,7 @@ def generate_ai_insights(ticker: str, analysis_type: str):
             st.success(f"✅ {analysis_type} analysis completed for {ticker}")
             
             # Try to load the generated JSON file
-            output_file = project_root / "output" / f"{ticker}_{metric}_analysis.json"
+            output_file = project_root / "output" / f"{ticker}_{metric}_{scope}_analysis.json"
             
             if output_file.exists():
                 try:
@@ -772,6 +778,9 @@ def generate_ai_insights(ticker: str, analysis_type: str):
 # -----------------------------
 # Utility Functions (Enhanced)
 # -----------------------------
+
+
+
 def add_ratios(df: pd.DataFrame) -> pd.DataFrame:
     """Add calculated ratios - now using real data"""
     return df  # Ratios already calculated in load_real_financial_data
@@ -969,42 +978,413 @@ def _normalize_ai_insights(data):
 
 
 def display_ai_insights(insights_data, company_name, ticker, analysis_type):
-    """Display AI insights in a professional UI format with auto-normalization."""
+    """Display AI insights in a professional UI format for multiple JSON formats"""
     if not insights_data:
         st.info("No AI insights available yet.")
         return
-
-    # Attempt JSON parse if a string
+    
+    # Parse JSON if it's a string
     if isinstance(insights_data, str):
         try:
             insights_data = json.loads(insights_data)
         except json.JSONDecodeError:
-            # Show graceful message and return
-            st.warning("AI returned plain text. Showing it below:")
-            st.markdown(f"""
-            <div class="ai-insight-box">
-              <p style="margin:0; line-height:1.6;">{insights_data}</p>
-            </div>
-            """, unsafe_allow_html=True)
+            st.error("Invalid JSON format in insights data")
             return
+    
+    # Determine the type of analysis based on JSON structure
+    if isinstance(insights_data, dict):
+        if "quarters" in insights_data and "company" in insights_data:
+            # Company Analysis Format
+            display_company_analysis(insights_data, company_name, ticker, analysis_type)
+        elif "companies" in insights_data and "sector_comparison" in insights_data:
+            # Sector Analysis Format
+            display_sector_analysis(insights_data, company_name, ticker, analysis_type)
+        else:
+            # Legacy format
+            display_legacy_format(insights_data, company_name, ticker, analysis_type)
+    elif isinstance(insights_data, list):
+        # Original quarterly format
+        display_quarterly_format(insights_data, company_name, ticker, analysis_type)
+    else:
+        st.error("Unrecognized data format")
 
-    # Try to normalize into the expected list-of-quarters format
-    normalized = _normalize_ai_insights(insights_data)
+def display_company_analysis(insights_data, company_name, ticker, analysis_type):
+    """Display Company Analysis format (quarters with company_insights only)"""
+    st.markdown(f"""
+    <div style="background: linear-gradient(135deg, var(--primary-color)10, var(--secondary-color)10); 
+                border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
+                border-left: 6px solid var(--primary-color);">
+        <h2 style="color: var(--text-primary); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            🤖 AI {analysis_type} Analysis: Company Focus
+            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; 
+                       border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                {company_name} ({ticker})
+            </span>
+        </h2>
+        <p style="color: var(--text-secondary); margin: 0;">
+            Quarterly company-specific performance analysis and insights
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    quarters_data = insights_data.get("quarters", [])
+    
+    # Create tabs for different views
+    tab1, tab2 = st.tabs(["📊 Overview", "📈 Quarterly Analysis"])
+    
+    with tab1:
+        # Overview metrics from KPIs (ignore averages)
+        st.markdown("### Executive Summary")
+        
+        if quarters_data:
+            total_quarters = len(quarters_data)
+            
+            # Extract key metrics from latest quarter (ignore averages)
+            latest_quarter = quarters_data[0] if quarters_data else {}
+            latest_kpis = latest_quarter.get("kpis", {})
+            
+            # Filter out average metrics and get company-specific values
+            company_kpis = {k: v for k, v in latest_kpis.items() if "Average" not in k}
+            
+            # Display KPIs in columns
+            if company_kpis:
+                kpi_items = list(company_kpis.items())
+                cols = st.columns(min(4, len(kpi_items)))
+                
+                for i, (kpi_name, kpi_value) in enumerate(kpi_items):
+                    with cols[i % 4]:
+                        # Format value based on type
+                        if isinstance(kpi_value, (int, float)):
+                            if "Ratio" in kpi_name or "Growth" in kpi_name:
+                                display_value = fmt_ratio(kpi_value)
+                            elif "Margin" in kpi_name:
+                                display_value = fmt_pct(kpi_value)
+                            elif "Cash Flow" in kpi_name or "Income" in kpi_name:
+                                display_value = fmt_money(kpi_value)
+                            else:
+                                display_value = fmt_ratio(kpi_value)
+                        else:
+                            display_value = str(kpi_value)
+                        
+                        st.markdown(f"""
+                        <div class="metric-card">
+                            <h3>{kpi_name}</h3>
+                            <div class="value">{display_value}</div>
+                            <div class="delta neutral">Q{len(quarters_data)} 2023</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+            
+            # Performance trend chart using available metrics
+            st.markdown("### Performance Trend")
+            if quarters_data:
+                # Extract chart data from quarters
+                chart_data = []
+                for quarter in quarters_data:
+                    quarter_name = quarter.get("quarter", "")
+                    charts = quarter.get("charts", {})
+                    kpis = quarter.get("kpis", {})
+                    
+                    # Combine chart metrics and KPIs for plotting
+                    quarter_metrics = {"quarter": quarter_name}
+                    
+                    # Add chart metrics
+                    for chart_name, chart_data_inner in charts.items():
+                        metrics = chart_data_inner.get("metrics", {})
+                        quarter_metrics.update(metrics)
+                    
+                    # Add non-average KPIs
+                    for k, v in kpis.items():
+                        if "Average" not in k and isinstance(v, (int, float)):
+                            quarter_metrics[k] = v
+                    
+                    chart_data.append(quarter_metrics)
+                
+                if chart_data:
+                    # Create chart based on available metrics
+                    df_chart = pd.DataFrame(chart_data)
+                    if len(df_chart) > 1:
+                        # Select numeric columns for plotting
+                        numeric_cols = df_chart.select_dtypes(include=[np.number]).columns.tolist()
+                        if numeric_cols:
+                            # Plot first few numeric metrics
+                            fig = go.Figure()
+                            colors = COLORWAY
+                            
+                            for i, col in enumerate(numeric_cols[:4]):  # Limit to 4 metrics
+                                fig.add_trace(go.Scatter(
+                                    x=df_chart["quarter"],
+                                    y=df_chart[col],
+                                    mode='lines+markers',
+                                    name=col.replace("_", " ").title(),
+                                    line=dict(color=colors[i % len(colors)], width=3),
+                                    marker=dict(size=8)
+                                ))
+                            
+                            fig = style_fig(fig)
+                            fig.update_layout(
+                                height=400,
+                                title=f"{analysis_type} Metrics Trend",
+                                xaxis_title="Quarter",
+                                yaxis_title="Value"
+                            )
+                            
+                            st.plotly_chart(fig, use_container_width=True)
+    
+    with tab2:
+        # Quarterly breakdown using company_insights only
+        st.markdown("### Quarterly Analysis")
+        
+        for i, quarter_data in enumerate(quarters_data):
+            quarter = quarter_data.get("quarter", f"Quarter {i+1}")
+            kpis = quarter_data.get("kpis", {})
+            company_insights = quarter_data.get("insights", {}).get("company_insights", "No insights available")
+            
+            # Filter out average KPIs
+            company_kpis = {k: v for k, v in kpis.items() if "Average" not in k}
+            
+            with st.expander(f"📊 {quarter} - Detailed Analysis", expanded=(i < 2)):
+                col1, col2 = st.columns([1, 2])
+                
+                with col1:
+                    # Display company KPIs
+                    for kpi_name, kpi_value in company_kpis.items():
+                        if isinstance(kpi_value, (int, float)):
+                            if "Ratio" in kpi_name or "Growth" in kpi_name:
+                                display_value = fmt_ratio(kpi_value)
+                            elif "Margin" in kpi_name:
+                                display_value = fmt_pct(kpi_value)
+                            elif "Cash Flow" in kpi_name or "Income" in kpi_name:
+                                display_value = fmt_money(kpi_value)
+                            else:
+                                display_value = fmt_ratio(kpi_value)
+                        else:
+                            display_value = str(kpi_value)
+                        
+                        st.markdown(f"""
+                        <div class="metric-card">
+                            <h3>{kpi_name}</h3>
+                            <div class="value">{display_value}</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                
+                with col2:
+                    st.markdown(f"""
+                    <div class="ai-insight-box">
+                        <h4 style="color: var(--text-primary); margin: 0 0 1rem 0;">💡 Company Insights</h4>
+                        <p style="color: var(--text-primary); line-height: 1.6; margin: 0;">
+                            {company_insights}
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
 
-    if not normalized:
-        # Not in a recognized structure — show a compact summary card + optional raw JSON
-        st.markdown(f"""
-        <div class="ai-insight-box">
-          <h4 style="margin:0 0 .75rem 0;">💡 AI Analysis Summary</h4>
-          <p style="margin:0;">The AI response didn't match expected fields for charts/tiles.
-             You can expand the raw data below, or re-run the analysis.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        with st.expander("Raw data (JSON)"):
-            st.json(insights_data)
-        return
+def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
+    """Display Sector Analysis format (use all data in JSON)"""
+    st.markdown(f"""
+    <div style="background: linear-gradient(135deg, var(--primary-color)10, var(--secondary-color)10); 
+                border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
+                border-left: 6px solid var(--primary-color);">
+        <h2 style="color: var(--text-primary); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            🤖 AI {analysis_type} Analysis: Sector Overview
+            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; 
+                       border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                {insights_data.get("sector_comparison", {}).get("sector", "Healthcare")} Sector
+            </span>
+        </h2>
+        <p style="color: var(--text-secondary); margin: 0;">
+            Comprehensive sector analysis with company comparisons and rankings
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Create tabs for sector analysis
+    tab1, tab2, tab3, tab4 = st.tabs(["📊 Sector Overview", "🏢 Company Profiles", "📈 Rankings", "💡 Insights"])
+    
+    companies_data = insights_data.get("companies", [])
+    sector_comparison = insights_data.get("sector_comparison", {})
+    
+    with tab1:
+        # Sector overview
+        st.markdown("### Sector Performance Summary")
+        
+        if companies_data:
+            # Calculate sector averages
+            total_companies = len(companies_data)
+            
+            # Aggregate metrics
+            total_revenue = sum([comp.get("annual", {}).get("profitability", {}).get("revenue", 0) for comp in companies_data])
+            total_net_income = sum([comp.get("annual", {}).get("profitability", {}).get("net_income", 0) for comp in companies_data])
+            avg_profit_margin = sum([comp.get("annual", {}).get("ratios", {}).get("ProfitMargin", 0) for comp in companies_data]) / total_companies
+            avg_roe = sum([comp.get("annual", {}).get("ratios", {}).get("ReturnOnEquity", 0) for comp in companies_data]) / total_companies
+            
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <h3>Total Revenue</h3>
+                    <div class="value">{fmt_money(total_revenue)}</div>
+                    <div class="delta neutral">Sector Total</div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col2:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <h3>Total Net Income</h3>
+                    <div class="value">{fmt_money(total_net_income)}</div>
+                    <div class="delta neutral">Sector Total</div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col3:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <h3>Avg Profit Margin</h3>
+                    <div class="value">{fmt_pct(avg_profit_margin)}</div>
+                    <div class="delta neutral">Sector Average</div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col4:
+                st.markdown(f"""
+                <div class="metric-card">
+                    <h3>Avg ROE</h3>
+                    <div class="value">{fmt_pct(avg_roe)}</div>
+                    <div class="delta neutral">Sector Average</div>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        # Sector composition chart
+        if companies_data:
+            st.markdown("### Sector Composition by Revenue")
+            
+            revenue_data = []
+            for company in companies_data:
+                comp_info = company.get("company_info", {})
+                annual = company.get("annual", {})
+                revenue = annual.get("profitability", {}).get("revenue", 0)
+                
+                revenue_data.append({
+                    "Company": comp_info.get("symbol", "N/A"),
+                    "Revenue": revenue
+                })
+            
+            df_revenue = pd.DataFrame(revenue_data)
+            fig = px.pie(df_revenue, values="Revenue", names="Company", 
+                        title="Revenue Distribution by Company")
+            fig = style_fig(fig)
+            fig.update_layout(height=400)
+            st.plotly_chart(fig, use_container_width=True)
+    
+    with tab2:
+        # Company profiles
+        st.markdown("### Company Performance Profiles")
+        
+        for company in companies_data:
+            comp_info = company.get("company_info", {})
+            annual = company.get("annual", {})
+            kpis = company.get("kpis", {})
+            insights = company.get("insights", {})
+            
+            symbol = comp_info.get("symbol", "N/A")
+            name = comp_info.get("name", "Unknown Company")
+            
+            with st.expander(f"🏢 {name} ({symbol})", expanded=(symbol == ticker)):
+                col1, col2 = st.columns([1, 2])
+                
+                with col1:
+                    # Key metrics
+                    profitability = annual.get("profitability", {})
+                    balance_sheet = annual.get("balance_sheet", {})
+                    ratios = annual.get("ratios", {})
+                    
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Revenue</h3>
+                        <div class="value">{fmt_money(profitability.get("revenue", 0))}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Net Income</h3>
+                        <div class="value">{fmt_money(profitability.get("net_income", 0))}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Profit Margin</h3>
+                        <div class="value">{fmt_pct(ratios.get("ProfitMargin", 0))}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+    with tab3:
+        # Rankings from sector comparison
+        st.markdown("### Sector Rankings")
+        
+        rankings = sector_comparison.get("rankings", {})
+        
+        for metric_name, ranking_data in rankings.items():
+            st.markdown(f"#### {metric_name.replace('_', ' ').replace('.', ' ').title()}")
+            
+            if ranking_data:
+                # Create ranking chart
+                companies = [item.get("company", "") for item in ranking_data]
+                values = [item.get("value", 0) for item in ranking_data]
+                
+                # Highlight the current company
+                colors = [COLORWAY[0] if comp == ticker else COLORWAY[1] for comp in companies]
+                
+                fig = go.Figure(data=[go.Bar(x=companies, y=values, marker_color=colors)])
+                fig = style_fig(fig)
+                fig.update_layout(
+                    height=300,
+                    title=f"{metric_name.replace('_', ' ').title()} Rankings",
+                    xaxis_title="Company",
+                    yaxis_title="Value"
+                )
+                
+                st.plotly_chart(fig, use_container_width=True)
+                
+                # Show ranking table
+                ranking_df = pd.DataFrame(ranking_data)
+                ranking_df.index = range(1, len(ranking_df) + 1)
+                ranking_df.index.name = "Rank"
+                st.dataframe(ranking_df, use_container_width=True)
+    
+    with tab4:
+        # Consolidated insights
+        st.markdown("### Sector Insights Summary")
+        
+        # Extract insights from all companies
+        for company in companies_data:
+            comp_info = company.get("company_info", {})
+            insights = company.get("insights", {})
+            symbol = comp_info.get("symbol", "N/A")
+            name = comp_info.get("name", "Unknown")
+            
+            if insights:
+                st.markdown(f"""
+                <div style="background: var(--bg-primary); border: 1px solid var(--border-color); 
+                            border-radius: 12px; padding: 1.5rem; margin: 1rem 0; 
+                            border-left: 4px solid {'var(--primary-color)' if symbol == ticker else 'var(--border-color)'};">
+                    <div style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">
+                        {name} ({symbol})
+                    </div>
+                """, unsafe_allow_html=True)
+                
+                for insight_type, insight_text in insights.items():
+                    st.markdown(f"""
+                    <div style="margin-bottom: 0.5rem;">
+                        <strong style="color: var(--text-secondary);">{insight_type.replace('_', ' ').title()}:</strong>
+                        <span style="color: var(--text-primary);"> {insight_text}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                st.markdown("</div>", unsafe_allow_html=True)
 
-    # ======== VISUAL RENDER (same look & feel as your original) ========
+def display_quarterly_format(insights_data, company_name, ticker, analysis_type):
+    """Display original quarterly format (your existing implementation)"""
     st.markdown(f"""
     <div style="background: linear-gradient(135deg, var(--primary-color)10, var(--secondary-color)10); 
                 border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
@@ -1017,123 +1397,329 @@ def display_ai_insights(insights_data, company_name, ticker, analysis_type):
             </span>
         </h2>
         <p style="color: var(--text-secondary); margin: 0;">
-            Quarterly performance vs sector + strategy notes
+            Comprehensive quarterly analysis with sector comparisons and strategic insights
         </p>
     </div>
     """, unsafe_allow_html=True)
-
-    # ---- Overview tiles
-    total_quarters = len(normalized)
-    avg_revenue = np.mean([x["required_fields"]["revenue"] for x in normalized])
-    avg_sector  = np.mean([x["required_fields"]["sector_avg"] for x in normalized])
-    outperf     = (avg_revenue - avg_sector) / (avg_sector if avg_sector else 1) * 100
-
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        st.markdown(f"""
-        <div class="metric-card">
-          <h3>Analysis Period</h3>
-          <div class="value">{total_quarters}</div>
-          <div class="delta neutral">Quarters</div>
-        </div>
-        """, unsafe_allow_html=True)
-    with c2:
-        st.markdown(f"""
-        <div class="metric-card">
-          <h3>Avg Revenue</h3>
-          <div class="value">{fmt_money(avg_revenue)}</div>
-          <div class="delta neutral">Per Quarter</div>
-        </div>
-        """, unsafe_allow_html=True)
-    with c3:
-        st.markdown(f"""
-        <div class="metric-card">
-          <h3>Sector Average</h3>
-          <div class="value">{fmt_money(avg_sector)}</div>
-          <div class="delta neutral">Per Quarter</div>
-        </div>
-        """, unsafe_allow_html=True)
-    with c4:
-        perf_class = "positive" if outperf > 0 else "negative" if outperf < 0 else "neutral"
-        st.markdown(f"""
-        <div class="metric-card">
-          <h3>Outperformance</h3>
-          <div class="value">{outperf:+.1f}%</div>
-          <div class="delta {perf_class}">vs Sector</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    # ---- Trend chart
-    quarters = [x["quarter"] for x in normalized]
-    revenues = [x["required_fields"]["revenue"] for x in normalized]
-    sector_avgs = [x["required_fields"]["sector_avg"] for x in normalized]
-
-    # Ensure chronological order if quarters are like "YYYY-Q#"
-    try:
-        sorter = sorted(zip(quarters, revenues, sector_avgs), key=lambda t: (t[0].split("-")[0], t[0].split("-")[1]))
-        quarters, revenues, sector_avgs = zip(*sorter)
-    except Exception:
-        pass
-
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(x=quarters, y=revenues, mode="lines+markers",
-                             name=f"{company_name} Revenue",
-                             line=dict(width=3), marker=dict(size=8)))
-    fig.add_trace(go.Scatter(x=quarters, y=sector_avgs, mode="lines+markers",
-                             name="Sector Average", line=dict(width=3, dash="dash"),
-                             marker=dict(size=8)))
-    fig = style_fig(fig)
-    fig.update_layout(height=400, title="Revenue vs Sector Average",
-                      xaxis_title="Quarter", yaxis_title="Revenue ($)",
-                      yaxis=dict(tickformat="$,.0f"))
-    st.plotly_chart(fig, use_container_width=True)
-
-    # ---- Quarter cards with AI commentary
-    st.markdown("### Quarterly Highlights")
-    for i, q in enumerate(
-        sorted(normalized, key=lambda x: (x["quarter"].split("-")[0], x["quarter"].split("-")[1]), reverse=True)
-    ):
-        rev = q["required_fields"]["revenue"]
-        sec = q["required_fields"]["sector_avg"]
-        perf = (rev - sec) / (sec if sec else 1) * 100
-        perf_icon = "📈" if perf > 0 else "📉" if perf < 0 else "➡️"
-        perf_class = "positive" if perf > 0 else "negative" if perf < 0 else "neutral"
-
-        with st.expander(f"{perf_icon} {q['quarter']} — {fmt_money(rev)} ({perf:+.1f}% vs sector)", expanded=(i < 2)):
-            cL, cR = st.columns([1, 2])
-            with cL:
+    
+    # Create tabs for different views
+    tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "📈 Quarterly Analysis", "🎯 Key Metrics", "💡 Strategic Insights"])
+    
+    with tab1:
+        # Overview metrics
+        st.markdown("### Executive Summary")
+        
+        # Calculate overview metrics
+        total_quarters = len(insights_data)
+        avg_revenue = sum([item['required_fields']['revenue'] for item in insights_data]) / total_quarters
+        avg_sector = sum([item['required_fields']['sector_avg'] for item in insights_data]) / total_quarters
+        outperformance = ((avg_revenue - avg_sector) / avg_sector) * 100
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Analysis Period</h3>
+                <div class="value">{total_quarters}</div>
+                <div class="delta neutral">Quarters Analyzed</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Avg Revenue</h3>
+                <div class="value">{fmt_money(avg_revenue)}</div>
+                <div class="delta neutral">Per Quarter</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col3:
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Sector Average</h3>
+                <div class="value">{fmt_money(avg_sector)}</div>
+                <div class="delta neutral">Per Quarter</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col4:
+            performance_class = "positive" if outperformance > 0 else "negative" if outperformance < 0 else "neutral"
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Outperformance</h3>
+                <div class="value">{outperformance:+.1f}%</div>
+                <div class="delta {performance_class}">vs Sector</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Revenue trend chart
+        st.markdown("### Revenue Performance Trend")
+        
+        # Prepare data for plotting
+        quarters = [item['quarter'] for item in insights_data]
+        revenues = [item['required_fields']['revenue'] for item in insights_data]
+        sector_avgs = [item['required_fields']['sector_avg'] for item in insights_data]
+        
+        # Sort by quarter
+        quarter_data = list(zip(quarters, revenues, sector_avgs))
+        quarter_data.sort(key=lambda x: (x[0].split('-')[0], x[0].split('-')[1]))
+        quarters, revenues, sector_avgs = zip(*quarter_data)
+        
+        # Create comparison chart
+        fig = go.Figure()
+        
+        fig.add_trace(go.Scatter(
+            x=quarters,
+            y=revenues,
+            mode='lines+markers',
+            name=f'{company_name} Revenue',
+            line=dict(color=COLORWAY[0], width=3),
+            marker=dict(size=8)
+        ))
+        
+        fig.add_trace(go.Scatter(
+            x=quarters,
+            y=sector_avgs,
+            mode='lines+markers',
+            name='Sector Average',
+            line=dict(color=COLORWAY[1], width=3, dash='dash'),
+            marker=dict(size=8)
+        ))
+        
+        fig = style_fig(fig)
+        fig.update_layout(
+            height=400,
+            title="Revenue Performance vs Sector Average",
+            xaxis_title="Quarter",
+            yaxis_title="Revenue ($)",
+            yaxis=dict(tickformat='$,.0f')
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+    
+    with tab2:
+        # Quarterly breakdown using company_insights only
+        st.markdown("### Quarterly Analysis")
+        
+        for i, quarter_data in enumerate(sorted(insights_data, key=lambda x: (x['quarter'].split('-')[0], x['quarter'].split('-')[1]), reverse=True)):
+            quarter = quarter_data['quarter']
+            revenue = quarter_data['required_fields']['revenue']
+            sector_avg = quarter_data['required_fields']['sector_avg']
+            insights = quarter_data['insights']
+            
+            performance = ((revenue - sector_avg) / sector_avg) * 100
+            performance_icon = "📈" if performance > 0 else "📉" if performance < 0 else "➡️"
+            performance_class = "positive" if performance > 0 else "negative" if performance < 0 else "neutral"
+            
+            with st.expander(f"{performance_icon} {quarter} - {fmt_money(revenue)} ({performance:+.1f}% vs sector)", expanded=(i < 2)):
+                col1, col2 = st.columns([1, 2])
+                
+                with col1:
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Revenue</h3>
+                        <div class="value">{fmt_money(revenue)}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Sector Average</h3>
+                        <div class="value">{fmt_money(sector_avg)}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <h3>Performance</h3>
+                        <div class="value">{performance:+.1f}%</div>
+                        <div class="delta {performance_class}">vs Sector</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col2:
+                    st.markdown(f"""
+                    <div class="ai-insight-box">
+                        <h4 style="color: var(--text-primary); margin: 0 0 1rem 0;">💡 AI Strategic Analysis</h4>
+                        <p style="color: var(--text-primary); line-height: 1.6; margin: 0;">
+                            {insights}
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+    
+    with tab3:
+        # Key metrics analysis
+        st.markdown("### Performance Metrics Analysis")
+        
+        # Performance distribution
+        performances = [((item['required_fields']['revenue'] - item['required_fields']['sector_avg']) / 
+                       item['required_fields']['sector_avg']) * 100 for item in insights_data]
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Performance distribution chart
+            fig = go.Figure(data=[go.Histogram(x=performances, nbinsx=8, name="Performance Distribution")])
+            fig.update_traces(marker_color=COLORWAY[0])
+            fig = style_fig(fig)
+            fig.update_layout(
+                height=300,
+                title="Performance Distribution (%)",
+                xaxis_title="Outperformance vs Sector (%)",
+                yaxis_title="Frequency"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        
+        with col2:
+            # Revenue growth analysis
+            revenues_sorted = [item['required_fields']['revenue'] for item in sorted(insights_data, key=lambda x: (x['quarter'].split('-')[0], x['quarter'].split('-')[1]))]
+            growth_rates = []
+            for i in range(1, len(revenues_sorted)):
+                growth = ((revenues_sorted[i] - revenues_sorted[i-1]) / revenues_sorted[i-1]) * 100
+                growth_rates.append(growth)
+            
+            if growth_rates:
+                fig = go.Figure(data=[go.Bar(x=list(range(len(growth_rates))), y=growth_rates, name="QoQ Growth")])
+                fig.update_traces(marker_color=COLORWAY[2])
+                fig = style_fig(fig)
+                fig.update_layout(
+                    height=300,
+                    title="Quarter-over-Quarter Growth (%)",
+                    xaxis_title="Quarter Sequence",
+                    yaxis_title="Growth Rate (%)"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        
+        # Summary statistics
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            avg_performance = sum(performances) / len(performances)
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Avg Outperformance</h3>
+                <div class="value">{avg_performance:+.1f}%</div>
+                <div class="delta neutral">vs Sector</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            consistency = len([p for p in performances if p > 0]) / len(performances) * 100
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Consistency</h3>
+                <div class="value">{consistency:.0f}%</div>
+                <div class="delta neutral">Quarters Above Sector</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col3:
+            max_performance = max(performances)
+            st.markdown(f"""
+            <div class="metric-card">
+                <h3>Peak Performance</h3>
+                <div class="value">{max_performance:+.1f}%</div>
+                <div class="delta positive">Best Quarter</div>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    with tab4:
+        # Strategic insights summary
+        st.markdown("### Strategic Insights & Recommendations")
+        
+        # Extract key themes from all insights
+        all_insights = " ".join([item['insights'] for item in insights_data])
+        
+        # Common themes analysis (simple keyword extraction)
+        themes = {
+            "Growth Drivers": ["growth", "strong", "robust", "success", "expansion", "innovation"],
+            "Challenges": ["challenge", "risk", "pressure", "competition", "headwind", "disruption"],
+            "Strategic Focus": ["strategy", "investment", "focus", "R&D", "partnership", "market"],
+            "Market Position": ["position", "advantage", "leadership", "ecosystem", "brand", "loyalty"]
+        }
+        
+        theme_insights = {}
+        for theme, keywords in themes.items():
+            relevance = sum([all_insights.lower().count(keyword) for keyword in keywords])
+            theme_insights[theme] = relevance
+        
+        # Display strategic themes
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("#### Key Strategic Themes")
+            for theme, relevance in sorted(theme_insights.items(), key=lambda x: x[1], reverse=True):
+                bar_width = min(100, (relevance / max(theme_insights.values())) * 100) if max(theme_insights.values()) > 0 else 0
                 st.markdown(f"""
-                <div class="metric-card">
-                  <h3>Revenue</h3>
-                  <div class="value">{fmt_money(rev)}</div>
+                <div style="margin: 1rem 0;">
+                    <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        {theme} ({relevance} mentions)
+                    </div>
+                    <div style="background: var(--border-color); border-radius: 10px; height: 10px;">
+                        <div style="background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); 
+                                    width: {bar_width}%; height: 100%; border-radius: 10px;"></div>
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown("#### Recent Quarter Highlights")
+            # Show insights from the most recent 2 quarters
+            recent_quarters = sorted(insights_data, key=lambda x: (x['quarter'].split('-')[0], x['quarter'].split('-')[1]), reverse=True)[:2]
+            
+            for quarter_data in recent_quarters:
+                quarter = quarter_data['quarter']
+                insights = quarter_data['insights']
+                # Extract first sentence as highlight
+                highlight = insights.split('.')[0] + '.' if '.' in insights else insights[:100] + '...'
+                
                 st.markdown(f"""
-                <div class="metric-card">
-                  <h3>Sector Avg</h3>
-                  <div class="value">{fmt_money(sec)}</div>
+                <div style="background: var(--bg-primary); border: 1px solid var(--border-color); 
+                            border-radius: 12px; padding: 1rem; margin: 0.5rem 0;">
+                    <div style="color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem;">
+                        {quarter}
+                    </div>
+                    <div style="color: var(--text-primary); font-size: 0.9rem; line-height: 1.5;">
+                        {highlight}
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
-                st.markdown(f"""
-                <div class="metric-card">
-                  <h3>Performance</h3>
-                  <div class="value">{perf:+.1f}%</div>
-                  <div class="delta {perf_class}">vs Sector</div>
-                </div>
-                """, unsafe_allow_html=True)
-            with cR:
-                st.markdown(f"""
-                <div class="ai-insight-box">
-                  <h4 style="margin:0 0 .75rem 0;">💡 AI Strategic Notes</h4>
-                  <p style="margin:0; line-height:1.6;">{q.get('insights','')}</p>
-                </div>
-                """, unsafe_allow_html=True)
+        
+        # Action items and recommendations
+        st.markdown("#### AI-Generated Action Items")
+        action_items = [
+            "📊 Continue monitoring quarterly performance against sector benchmarks",
+            "🎯 Focus on maintaining competitive advantages identified in the analysis",
+            "⚠️ Address potential risks highlighted across multiple quarters",
+            "🚀 Leverage identified growth drivers for strategic planning",
+            "🔍 Deep-dive into quarters with exceptional performance for best practices"
+        ]
+        
+        for item in action_items:
+            st.markdown(f"""
+            <div style="background: var(--bg-primary); border-left: 4px solid var(--primary-color); 
+                        padding: 1rem; margin: 0.5rem 0; border-radius: 0 8px 8px 0;">
+                <div style="color: var(--text-primary);">{item}</div>
+            </div>
+            """, unsafe_allow_html=True)
 
-    # Optional raw JSON tucked away
-    with st.expander("Raw data (JSON)"):
-        st.json(insights_data)
-
-
+def display_legacy_format(insights_data, company_name, ticker, analysis_type):
+    """Display legacy format (fallback)"""
+    st.markdown('<div class="ai-insight-box">', unsafe_allow_html=True)
+    st.markdown("#### 🤖 AI Analysis Results")
+    if isinstance(insights_data, dict):
+        for key, value in insights_data.items():
+            if key not in ['type', 'status', 'message']:
+                st.markdown(f"**{key.replace('_', ' ').title()}:**")
+                if isinstance(value, (list, dict)):
+                    st.json(value)
+                else:
+                    st.write(value)
+    else:
+        st.write(str(insights_data))
+    st.markdown('</div>', unsafe_allow_html=True)
 # -----------------------------
 # Load Data (Updated to use real data)
 # -----------------------------
@@ -1761,7 +2347,6 @@ elif st.session_state.current_page == "Insights":
                 avg_fcf_margin = sector_data["fcf_margin"].mean()
                 best_cash_gen = sector_data.loc[sector_data["fcf"].idxmax()]
                 st.markdown(f"""
-                <div class="ins
                 <div class="insight-box">
                     <div class="insight-text">
                         <strong>Cash Generation:</strong> {sector} sector average FCF margin is
@@ -1845,16 +2430,21 @@ else:
         st.markdown(f"### AI Analysis for **{company}** ({ticker})")
         
         # Analysis type selection
-        col1, col2, col3 = st.columns([2, 1, 1])
+        col1, col2, col3, col4 = st.columns(4) 
         
         with col1:
             analysis_type = st.selectbox(
                 "Analysis Type",
-                ["Profitability", "Financial Standing", "Cash Flow", "Ratios & Valuation"],
+                ["Profitability", "Financial Standing", "Cash Flow"],
                 help="Select the type of financial analysis to generate"
             )
-        
         with col2:
+            analysis_scope = st.selectbox(
+                "Analysis Scope",
+                ["Sector-wide Analysis", "Company Analysis", "Company vs Sector"],
+                key="analysis_scope"
+            )
+        with col3:  
             st.markdown("<br>", unsafe_allow_html=True)  # Spacing
             generate_clicked = st.button(
                 "🤖 Generate AI Insights",
@@ -1862,7 +2452,7 @@ else:
                 help=f"Generate {analysis_type} insights for {company}"
             )
         
-        with col3:
+        with col4:
             st.markdown("<br>", unsafe_allow_html=True)  # Spacing
             # Demo button to show sample data
             demo_clicked = st.button(
@@ -1889,30 +2479,28 @@ else:
             st.success("✅ Demo AI insights loaded successfully!")
         
         if generate_clicked:
-            insights = generate_ai_insights(ticker, analysis_type)
+            insights = generate_ai_insights(ticker, analysis_type,analysis_scope)
             if insights:
-                st.session_state[f"insights_{ticker}_{analysis_type}"] = insights
-        
-        insights_key = f"insights_{ticker}_{analysis_type}"
+                st.session_state[f"insights_{ticker}_{analysis_type}_{analysis_scope}"] = insights
+
+        insights_key = f"insights_{ticker}_{analysis_type}_{analysis_scope}"
         if insights_key in st.session_state:
             insights = st.session_state[insights_key]
             display_ai_insights(insights, company, ticker, analysis_type)
             
             # Export tools
             st.markdown("### 📥 Export Analysis")
-            col1, col2, col3 = st.columns(3)
+            col1, col2 = st.columns(2)
             with col1:
                 json_str = json.dumps(insights, indent=2)
                 st.download_button(
                     label="💾 Download JSON",
                     data=json_str,
-                    file_name=f"{ticker}_{analysis_type}_insights_{datetime.now().strftime('%Y%m%d')}.json",
+                    file_name=f"{ticker}_{analysis_type}_{analysis_scope}_insights_{datetime.now().strftime('%Y%m%d')}.json",
                     mime="application/json",
                     use_container_width=True
                 )
             with col2:
-                st.code(json.dumps(insights, indent=2), language="json")
-            with col3:
                 if st.button("🔄 Clear Analysis", use_container_width=True):
                     del st.session_state[insights_key]
                     st.rerun()

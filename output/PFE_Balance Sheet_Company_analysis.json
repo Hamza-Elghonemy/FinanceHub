@@ -1,0 +1,238 @@
+{
+  "company": "PFE",
+  "topic": "Balance Sheet",
+  "quarters": [
+    {
+      "quarter": "2023 Q4",
+      "kpis": {
+        "Current Ratio": 0.91,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.69,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": -0.14,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 226501000000,
+            "Total Liabilities": 137213000000,
+            "Shareholders Equity": 89014000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 2853000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q4 2023, PFE's current ratio of 0.91 indicates potential liquidity challenges, as current liabilities exceed current assets. The debt-to-equity ratio of 0.69 suggests a moderate level of leverage, but the negative equity growth of -14% raises concerns about the company's financial stability and ability to generate shareholder value. The total assets of $226.5 billion against total liabilities of $137.2 billion shows a solid asset base, but the high liabilities could pose risks if not managed effectively.",
+        "comparative_insights": "Compared to the average current ratio of 1.05 among peers, PFE's liquidity position is weaker, indicating potential difficulties in meeting short-term obligations. The debt-to-equity ratio of 0.69 is slightly above the average of 0.67, suggesting that PFE is leveraging its equity more than its peers. The negative equity growth contrasts sharply with the average positive growth of 2%, highlighting PFE's struggles in maintaining shareholder equity."
+      }
+    },
+    {
+      "quarter": "2023 Q3",
+      "kpis": {
+        "Current Ratio": 2.37,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.63,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": -0.07,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 215021000000,
+            "Total Liabilities": 117817000000,
+            "Shareholders Equity": 96934000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 3148000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q3 2023, PFE's current ratio of 2.37 indicates a strong liquidity position, with current assets significantly exceeding current liabilities. The debt-to-equity ratio of 0.63 reflects a conservative leverage strategy. However, the equity growth of -7% suggests challenges in retaining earnings or generating new equity, which could impact long-term financial health. The total assets of $215.0 billion against total liabilities of $117.8 billion shows a healthy asset base, but the declining equity growth is a concern.",
+        "comparative_insights": "PFE's current ratio of 2.37 is well above the average of 1.05, indicating superior liquidity compared to peers. The debt-to-equity ratio of 0.63 is slightly below the average of 0.67, suggesting a more conservative approach to leveraging. However, the negative equity growth contrasts with the average positive growth of 2%, indicating that PFE is struggling to enhance shareholder value relative to its competitors."
+      }
+    },
+    {
+      "quarter": "2023 Q2",
+      "kpis": {
+        "Current Ratio": 2.12,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.62,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": -0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 220168000000,
+            "Total Liabilities": 120875000000,
+            "Shareholders Equity": 99019000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 2632000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q2 2023, PFE's current ratio of 2.12 indicates a strong liquidity position, with current assets comfortably exceeding current liabilities. The debt-to-equity ratio of 0.62 suggests a conservative approach to leverage. The equity growth of -1% indicates challenges in retaining earnings or generating new equity, which could impact long-term financial health. The total assets of $220.2 billion against total liabilities of $120.9 billion shows a solid asset base, but the declining equity growth is a concern.",
+        "comparative_insights": "PFE's current ratio of 2.12 is significantly higher than the average of 1.05, indicating better liquidity compared to peers. The debt-to-equity ratio of 0.62 is slightly below the average of 0.67, suggesting a more conservative approach to leveraging. However, the negative equity growth contrasts with the average positive growth of 2%, indicating that PFE is struggling to enhance shareholder value relative to its competitors."
+      }
+    },
+    {
+      "quarter": "2023 Q1",
+      "kpis": {
+        "Current Ratio": 1.37,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.31,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": 0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 195617000000,
+            "Total Liabilities": 94381000000,
+            "Shareholders Equity": 100971000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 2166000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q1 2023, PFE's current ratio of 1.37 indicates a satisfactory liquidity position, with current assets exceeding current liabilities. The debt-to-equity ratio of 0.31 reflects a very conservative leverage strategy. The equity growth of 1% suggests a slight improvement in retaining earnings or generating new equity. The total assets of $195.6 billion against total liabilities of $94.4 billion shows a healthy asset base, indicating potential for future growth.",
+        "comparative_insights": "PFE's current ratio of 1.37 is above the average of 1.05, indicating a better liquidity position compared to peers. The debt-to-equity ratio of 0.31 is significantly lower than the average of 0.67, suggesting a very conservative approach to leveraging. The positive equity growth of 1% is in line with the average growth of 2%, indicating that PFE is on a similar trajectory as its competitors in terms of enhancing shareholder value."
+      }
+    },
+    {
+      "quarter": "2024 Q4",
+      "kpis": {
+        "Current Ratio": 1.17,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.64,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": -0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 213396000000,
+            "Total Liabilities": 124899000000,
+            "Shareholders Equity": 88203000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 1043000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q4 2024, PFE's current ratio of 1.17 indicates a satisfactory liquidity position, with current assets exceeding current liabilities. The debt-to-equity ratio of 0.64 suggests a moderate level of leverage. The equity growth of -1% indicates challenges in retaining earnings or generating new equity, which could impact long-term financial health. The total assets of $213.4 billion against total liabilities of $124.9 billion shows a solid asset base, but the declining equity growth is a concern.",
+        "comparative_insights": "PFE's current ratio of 1.17 is above the average of 1.05, indicating a better liquidity position compared to peers. The debt-to-equity ratio of 0.64 is slightly below the average of 0.67, suggesting a more conservative approach to leveraging. However, the negative equity growth contrasts with the average positive growth of 2%, indicating that PFE is struggling to enhance shareholder value relative to its competitors."
+      }
+    },
+    {
+      "quarter": "2024 Q3",
+      "kpis": {
+        "Current Ratio": 1.00,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.62,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": 0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 219476000000,
+            "Total Liabilities": 126918000000,
+            "Shareholders Equity": 92286000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 1092000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q3 2024, PFE's current ratio of 1.00 indicates a tight liquidity position, with current assets barely covering current liabilities. The debt-to-equity ratio of 0.62 reflects a conservative leverage strategy. The equity growth of 1% suggests a slight improvement in retaining earnings or generating new equity, which is a positive sign for long-term financial health. The total assets of $219.5 billion against total liabilities of $126.9 billion shows a healthy asset base.",
+        "comparative_insights": "PFE's current ratio of 1.00 is slightly below the average of 1.05, indicating a tighter liquidity position compared to peers. The debt-to-equity ratio of 0.62 is below the average of 0.67, suggesting a more conservative approach to leveraging. The positive equity growth of 1% is in line with the average growth of 2%, indicating that PFE is on a similar trajectory as its competitors in terms of enhancing shareholder value."
+      }
+    },
+    {
+      "quarter": "2024 Q2",
+      "kpis": {
+        "Current Ratio": 0.87,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.65,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": -0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 216193000000,
+            "Total Liabilities": 128218000000,
+            "Shareholders Equity": 87700000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 1052000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q2 2024, PFE's current ratio of 0.87 indicates potential liquidity challenges, as current liabilities exceed current assets. The debt-to-equity ratio of 0.65 suggests a moderate level of leverage. The equity growth of -1% indicates challenges in retaining earnings or generating new equity, which could impact long-term financial health. The total assets of $216.2 billion against total liabilities of $128.2 billion shows a solid asset base, but the declining equity growth is a concern.",
+        "comparative_insights": "Compared to the average current ratio of 1.05 among peers, PFE's liquidity position is weaker, indicating potential difficulties in meeting short-term obligations. The debt-to-equity ratio of 0.65 is slightly below the average of 0.67, suggesting that PFE is leveraging its equity more than its peers. The negative equity growth contrasts sharply with the average positive growth of 2%, highlighting PFE's struggles in maintaining shareholder equity."
+      }
+    },
+    {
+      "quarter": "2024 Q1",
+      "kpis": {
+        "Current Ratio": 1.06,
+        "Current Ratio Average": 1.05,
+        "Debt-to-Equity": 0.66,
+        "Debt-to-Equity Average": 0.67,
+        "Equity Growth %": 0.01,
+        "Equity Growth % Average": 0.02
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 221095000000,
+            "Total Liabilities": 128536000000,
+            "Shareholders Equity": 92282000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 719000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q1 2024, PFE's current ratio of 1.06 indicates a satisfactory liquidity position, with current assets exceeding current liabilities. The debt-to-equity ratio of 0.66 reflects a moderate level of leverage. The equity growth of 1% suggests a slight improvement in retaining earnings or generating new equity. The total assets of $221.1 billion against total liabilities of $128.5 billion shows a healthy asset base, indicating potential for future growth.",
+        "comparative_insights": "PFE's current ratio of 1.06 is slightly above the average of 1.05, indicating a better liquidity position compared to peers. The debt-to-equity ratio of 0.66 is slightly below the average of 0.67, suggesting a more conservative approach to leveraging. The positive equity growth of 1% is in line with the average growth of 2%, indicating that PFE is on a similar trajectory as its competitors in terms of enhancing shareholder value."
+      }
+    }
+  ]
+}

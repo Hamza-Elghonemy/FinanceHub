@@ -130,141 +130,141 @@ def fetch_yfinance_quarterlies(tickers: list[str]) -> dict[str, pd.DataFrame]:
     return result
 
 
-def _mock_sector_company_map() -> dict[str, dict[str, str]]:
-    """Sector -> {Company Name -> Ticker} for demo / fallback."""
-    return {
-        "Technology": {
-            "Apple": "AAPL",
-            "Microsoft": "MSFT",
-            "NVIDIA": "NVDA",
-        },
-        "Finance": {
-            "JPMorgan": "JPM",
-            "Bank of America": "BAC",
-            "Wells Fargo": "WFC",
-        },
-        "Healthcare": {
-            "Johnson & Johnson": "JNJ",
-            "Pfizer": "PFE",
-            "UnitedHealth": "UNH",
-        },
-    }
+# def _mock_sector_company_map() -> dict[str, dict[str, str]]:
+#     """Sector -> {Company Name -> Ticker} for demo / fallback."""
+#     return {
+#         "Technology": {
+#             "Apple": "AAPL",
+#             "Microsoft": "MSFT",
+#             "NVIDIA": "NVDA",
+#         },
+#         "Finance": {
+#             "JPMorgan": "JPM",
+#             "Bank of America": "BAC",
+#             "Wells Fargo": "WFC",
+#         },
+#         "Healthcare": {
+#             "Johnson & Johnson": "JNJ",
+#             "Pfizer": "PFE",
+#             "UnitedHealth": "UNH",
+#         },
+#     }
 
 
-@st.cache_data(show_spinner=False)
-def generate_mock_financials(sector_map: dict[str, dict[str,str]]) -> pd.DataFrame:
-    """Create realistic mock quarterly panel data (Year/Quarter) for all companies."""
-    rng = np.random.default_rng(5)
-    periods = pd.period_range('2019Q1', '2024Q4', freq='Q')
-    rows = []
-    for sector, comp_map in sector_map.items():
-        for company, ticker in comp_map.items():
-            base_rev = rng.uniform(5e9, 50e9)
-            rev_growth = rng.uniform(0.01, 0.06)
-            margin = rng.uniform(0.1, 0.3)
-            for p in periods:
-                year, q = p.year, p.quarter
-                t = (year - periods[0].year) * 4 + (q - 1)
-                revenue = base_rev * ((1 + rev_growth) ** t) * rng.uniform(0.9, 1.1)
-                cogs = revenue * rng.uniform(0.45, 0.65)
-                gross_profit = revenue - cogs
-                opex = revenue * rng.uniform(0.2, 0.3)
-                operating_income = gross_profit - opex
-                net_income = operating_income * margin * rng.uniform(0.8, 1.2)
+# @st.cache_data(show_spinner=False)
+# def generate_mock_financials(sector_map: dict[str, dict[str,str]]) -> pd.DataFrame:
+#     """Create realistic mock quarterly panel data (Year/Quarter) for all companies."""
+#     rng = np.random.default_rng(5)
+#     periods = pd.period_range('2019Q1', '2024Q4', freq='Q')
+#     rows = []
+#     for sector, comp_map in sector_map.items():
+#         for company, ticker in comp_map.items():
+#             base_rev = rng.uniform(5e9, 50e9)
+#             rev_growth = rng.uniform(0.01, 0.06)
+#             margin = rng.uniform(0.1, 0.3)
+#             for p in periods:
+#                 year, q = p.year, p.quarter
+#                 t = (year - periods[0].year) * 4 + (q - 1)
+#                 revenue = base_rev * ((1 + rev_growth) ** t) * rng.uniform(0.9, 1.1)
+#                 cogs = revenue * rng.uniform(0.45, 0.65)
+#                 gross_profit = revenue - cogs
+#                 opex = revenue * rng.uniform(0.2, 0.3)
+#                 operating_income = gross_profit - opex
+#                 net_income = operating_income * margin * rng.uniform(0.8, 1.2)
 
-                total_assets = revenue * 3 * rng.uniform(0.8, 1.2)
-                total_liabilities = total_assets * rng.uniform(0.4, 0.7)
-                equity = total_assets - total_liabilities
-                current_assets = total_assets * rng.uniform(0.35, 0.55)
-                current_liabilities = total_liabilities * rng.uniform(0.35, 0.55)
+#                 total_assets = revenue * 3 * rng.uniform(0.8, 1.2)
+#                 total_liabilities = total_assets * rng.uniform(0.4, 0.7)
+#                 equity = total_assets - total_liabilities
+#                 current_assets = total_assets * rng.uniform(0.35, 0.55)
+#                 current_liabilities = total_liabilities * rng.uniform(0.35, 0.55)
 
-                cfo = net_income * rng.uniform(0.7, 1.3)
-                capex = -revenue * rng.uniform(0.03, 0.08)
-                fcf = cfo + capex
+#                 cfo = net_income * rng.uniform(0.7, 1.3)
+#                 capex = -revenue * rng.uniform(0.03, 0.08)
+#                 fcf = cfo + capex
 
-                rows.append({
-                    'sector': sector, 'company': company, 'ticker': ticker,
-                    'Year': year, 'Quarter': q,
-                    'revenue': revenue, 'cogs': cogs, 'gross_profit': gross_profit,
-                    'operating_income': operating_income, 'net_income': net_income,
-                    'total_assets': total_assets, 'total_liabilities': total_liabilities, 'equity': equity,
-                    'current_assets': current_assets, 'current_liabilities': current_liabilities,
-                    'cfo': cfo, 'capex': capex, 'fcf': fcf
-                })
-    df = pd.DataFrame(rows)
-    # Create a "period_end" approximate for plotting continuity
-    df['period_end'] = pd.to_datetime(df['Year'].astype(str) + 'Q' + df['Quarter'].astype(str))
-    return df.sort_values(['sector','company','Year','Quarter'])
+#                 rows.append({
+#                     'sector': sector, 'company': company, 'ticker': ticker,
+#                     'Year': year, 'Quarter': q,
+#                     'revenue': revenue, 'cogs': cogs, 'gross_profit': gross_profit,
+#                     'operating_income': operating_income, 'net_income': net_income,
+#                     'total_assets': total_assets, 'total_liabilities': total_liabilities, 'equity': equity,
+#                     'current_assets': current_assets, 'current_liabilities': current_liabilities,
+#                     'cfo': cfo, 'capex': capex, 'fcf': fcf
+#                 })
+#     df = pd.DataFrame(rows)
+#     # Create a "period_end" approximate for plotting continuity
+#     df['period_end'] = pd.to_datetime(df['Year'].astype(str) + 'Q' + df['Quarter'].astype(str))
+#     return df.sort_values(['sector','company','Year','Quarter'])
 
 
-@st.cache_data(show_spinner=True)
-def assemble_financial_panel() -> tuple[pd.DataFrame, dict[str, dict[str,str]]]:
-    """Return a tidy financial panel with columns including: sector, company, ticker, Year, Quarter, metrics...
-       Tries yfinance first, merges into panel, and fills missing via mock data for consistency and a great demo.
-    """
-    sector_map = _mock_sector_company_map()
+# @st.cache_data(show_spinner=True)
+# def assemble_financial_panel() -> tuple[pd.DataFrame, dict[str, dict[str,str]]]:
+#     """Return a tidy financial panel with columns including: sector, company, ticker, Year, Quarter, metrics...
+#        Tries yfinance first, merges into panel, and fills missing via mock data for consistency and a great demo.
+#     """
+#     sector_map = _mock_sector_company_map()
 
-    # Try fetch
-    live = fetch_yfinance_quarterlies([t for m in sector_map.values() for t in m.values()])
-    # Build a harmonized panel
-    frames = []
-    for sector, comp_map in sector_map.items():
-        for company, ticker in comp_map.items():
-            if ticker in live and not live[ticker].empty:
-                df = live[ticker].copy()
-                # Inject sector/company
-                df['sector'] = sector
-                df['company'] = company
-                # Keep a consistent subset
-                keep_cols = ['sector','company','ticker','Year','Quarter','period_end',
-                             'revenue','cogs','gross_profit','operating_income','net_income',
-                             'total_assets','total_liabilities','equity',
-                             'current_assets','current_liabilities','cfo','capex','fcf']
-                for col in keep_cols:
-                    if col not in df.columns:
-                        df[col] = np.nan
-                frames.append(df[keep_cols])
-            else:
-                # Mark missing; we'll fill with mock
-                pass
+#     # Try fetch
+#     live = fetch_yfinance_quarterlies([t for m in sector_map.values() for t in m.values()])
+#     # Build a harmonized panel
+#     frames = []
+#     for sector, comp_map in sector_map.items():
+#         for company, ticker in comp_map.items():
+#             if ticker in live and not live[ticker].empty:
+#                 df = live[ticker].copy()
+#                 # Inject sector/company
+#                 df['sector'] = sector
+#                 df['company'] = company
+#                 # Keep a consistent subset
+#                 keep_cols = ['sector','company','ticker','Year','Quarter','period_end',
+#                              'revenue','cogs','gross_profit','operating_income','net_income',
+#                              'total_assets','total_liabilities','equity',
+#                              'current_assets','current_liabilities','cfo','capex','fcf']
+#                 for col in keep_cols:
+#                     if col not in df.columns:
+#                         df[col] = np.nan
+#                 frames.append(df[keep_cols])
+#             else:
+#                 # Mark missing; we'll fill with mock
+#                 pass
 
-    panel_live = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(columns=[
-        'sector','company','ticker','Year','Quarter','period_end',
-        'revenue','cogs','gross_profit','operating_income','net_income',
-        'total_assets','total_liabilities','equity',
-        'current_assets','current_liabilities','cfo','capex','fcf'
-    ])
+#     panel_live = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(columns=[
+#         'sector','company','ticker','Year','Quarter','period_end',
+#         'revenue','cogs','gross_profit','operating_income','net_income',
+#         'total_assets','total_liabilities','equity',
+#         'current_assets','current_liabilities','cfo','capex','fcf'
+#     ])
 
-    panel_mock = generate_mock_financials(sector_map)
+#     panel_mock = generate_mock_financials(sector_map)
 
-    # Merge: prefer live where available; fill others with mock
-    if not panel_live.empty:
-        key_cols = ['sector','company','Year','Quarter']
-        panel = pd.merge(
-            panel_mock, panel_live, on=key_cols, how='left', suffixes=('', '_live'),
-        )
-        # For each metric, use live where present
-        metrics = ['revenue','cogs','gross_profit','operating_income','net_income',
-                   'total_assets','total_liabilities','equity',
-                   'current_assets','current_liabilities','cfo','capex','fcf','period_end','ticker']
-        for m in metrics:
-            live_col = f"{m}_live"
-            if live_col in panel.columns:
-                panel[m] = panel[live_col].combine_first(panel[m])
-                panel.drop(columns=[live_col], inplace=True)
-    else:
-        panel = panel_mock
+#     # Merge: prefer live where available; fill others with mock
+#     if not panel_live.empty:
+#         key_cols = ['sector','company','Year','Quarter']
+#         panel = pd.merge(
+#             panel_mock, panel_live, on=key_cols, how='left', suffixes=('', '_live'),
+#         )
+#         # For each metric, use live where present
+#         metrics = ['revenue','cogs','gross_profit','operating_income','net_income',
+#                    'total_assets','total_liabilities','equity',
+#                    'current_assets','current_liabilities','cfo','capex','fcf','period_end','ticker']
+#         for m in metrics:
+#             live_col = f"{m}_live"
+#             if live_col in panel.columns:
+#                 panel[m] = panel[live_col].combine_first(panel[m])
+#                 panel.drop(columns=[live_col], inplace=True)
+#     else:
+#         panel = panel_mock
 
-    # Ensure dtypes
-    num_cols = ['revenue','cogs','gross_profit','operating_income','net_income',
-                'total_assets','total_liabilities','equity','current_assets','current_liabilities',
-                'cfo','capex','fcf']
-    for c in num_cols:
-        panel[c] = pd.to_numeric(panel[c], errors='coerce')
+#     # Ensure dtypes
+#     num_cols = ['revenue','cogs','gross_profit','operating_income','net_income',
+#                 'total_assets','total_liabilities','equity','current_assets','current_liabilities',
+#                 'cfo','capex','fcf']
+#     for c in num_cols:
+#         panel[c] = pd.to_numeric(panel[c], errors='coerce')
 
-    # Clip to latest available through (and including) Oct 2023 if desired for guaranteed recency in demo
-    # (We keep newer data too if present; the spec says "ensure up-to-date as of Oct 2023".)
-    return panel, sector_map
+#     # Clip to latest available through (and including) Oct 2023 if desired for guaranteed recency in demo
+#     # (We keep newer data too if present; the spec says "ensure up-to-date as of Oct 2023".)
+#     return panel, sector_map
 
 
 # -----------------------------
