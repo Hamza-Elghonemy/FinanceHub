@@ -1318,6 +1318,22 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
                         <div class="value">{fmt_pct(ratios.get("ProfitMargin", 0))}</div>
                     </div>
                     """, unsafe_allow_html=True)
+                
+                with col2:
+                    # Company insights
+                    st.markdown("#### Key Insights")
+                    for insight_type, insight_text in insights.items():
+                        st.markdown(f"""
+                        <div style="background: var(--bg-tertiary); border-radius: 8px; padding: 1rem; margin: 0.5rem 0;">
+                            <div style="color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem;">
+                                {insight_type.replace('_', ' ').title()}
+                            </div>
+                            <div style="color: var(--text-primary); font-size: 0.9rem;">
+                                {insight_text}
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+    
     with tab3:
         # Rankings from sector comparison
         st.markdown("### Sector Rankings")
@@ -1327,30 +1343,47 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
         for metric_name, ranking_data in rankings.items():
             st.markdown(f"#### {metric_name.replace('_', ' ').replace('.', ' ').title()}")
             
-            if ranking_data:
-                # Create ranking chart
-                companies = [item.get("company", "") for item in ranking_data]
-                values = [item.get("value", 0) for item in ranking_data]
+            if ranking_data and len(ranking_data) > 0:
+                # Debug: Show the structure of ranking_data
+                st.write("Debug - Ranking data structure:", ranking_data[:2] if len(ranking_data) > 1 else ranking_data)
                 
-                # Highlight the current company
-                colors = [COLORWAY[0] if comp == ticker else COLORWAY[1] for comp in companies]
+                # Extract companies and values with better error handling
+                companies = []
+                values = []
                 
-                fig = go.Figure(data=[go.Bar(x=companies, y=values, marker_color=colors)])
-                fig = style_fig(fig)
-                fig.update_layout(
-                    height=300,
-                    title=f"{metric_name.replace('_', ' ').title()} Rankings",
-                    xaxis_title="Company",
-                    yaxis_title="Value"
-                )
+                for item in ranking_data:
+                    # Try different possible keys for company and value
+                    try:
+                        company = item.get("company") or item.get("Company") or ""
+                        value = item.get("value") or item.get("Value") or 0
+                        
+                        if company and isinstance(value, (int, float)):
+                            companies.append(company)
+                            values.append(value)
+                    except Exception as e:
+                        st.write(f"Error processing ranking item: {e}")  # Debugging line
                 
-                st.plotly_chart(fig, use_container_width=True)
-                
-                # Show ranking table
-                ranking_df = pd.DataFrame(ranking_data)
-                ranking_df.index = range(1, len(ranking_df) + 1)
-                ranking_df.index.name = "Rank"
-                st.dataframe(ranking_df, use_container_width=True)
+                if companies and values:
+                    # Highlight the current company
+                    colors = [COLORWAY[0] if comp == ticker else COLORWAY[1] for comp in companies]
+                    
+                    fig = go.Figure(data=[go.Bar(x=companies, y=values, marker_color=colors)])
+                    fig = style_fig(fig)
+                    fig.update_layout(
+                        height=300,
+                        title=f"{metric_name.replace('_', ' ').title()} Rankings",
+                        xaxis_title="Company",
+                        yaxis_title="Value"
+                    )
+                    
+                    st.plotly_chart(fig, use_container_width=True)
+                    
+                    # Show ranking table
+                    ranking_df = pd.DataFrame(ranking_data)
+                    print(ranking_df)
+                    ranking_df.index = range(1, len(ranking_df) + 1)
+                    ranking_df.index.name = "Rank"
+                    st.dataframe(ranking_df, use_container_width=True)
     
     with tab4:
         # Consolidated insights
@@ -1453,7 +1486,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
                 <div class="delta {performance_class}">vs Sector</div>
             </div>
             """, unsafe_allow_html=True)
-        
+
         # Revenue trend chart
         st.markdown("### Revenue Performance Trend")
         

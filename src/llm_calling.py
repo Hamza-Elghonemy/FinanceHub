@@ -2,11 +2,7 @@ import os
 import json
 from dotenv import load_dotenv
 from openai import OpenAI
-from prompt_engineering import prompt_Company
-from prompt_engineering import prompt_allCompanies
-from prompt_engineering import prompt_text  
-from prompt_engineering import prompt_text2
-from prompt1_allCompanies import prompt1_allCompanies  
+from prompt_engineering import prompt_Company,prompt_allCompanies 
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -20,18 +16,11 @@ company_choice = input("Enter company symbol (e.g., AAPL, MSFT): ").strip().uppe
 topic_choice = input("Enter metric (Revenue, Gross_Profit, Operating_Income, Net_Income, etc.): ").strip()
 scope_choice = input("Enter analysis scope (Company or Sector): ").strip().capitalize()
 
-# if(company_choice.lower()=="all"):
-prompt = prompt1_allCompanies(topic_choice)
-# prompt = prompt_text(company_choice, topic_choice)
-
-
-
 sector_data = {sector_choice: all_data[sector_choice]}
 prompt = prompt_Company(company_choice, topic_choice)
 if(scope_choice == "Sector"):
     prompt = prompt_allCompanies(topic_choice)
 
-prompt = prompt_text2(company_choice, topic_choice)
 sector_json = json.dumps(sector_data, indent=2)
 
 response = client.chat.completions.create(

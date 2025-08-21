@@ -1,0 +1,482 @@
+{
+  "dashboard": {
+    "pages": [
+      {
+        "name": "Profitability",
+        "layout": ["kpis", "charts", "insights"],
+        "kpis": [
+          {
+            "name": "Net Income",
+            "source": "profitability.net_income",
+            "growth": {
+              "qoq": -0.156,
+              "yoy": 0.0
+            }
+          },
+          {
+            "name": "Operating Margin %",
+            "calculation": 0.181
+          },
+          {
+            "name": "Return on Equity (ROE)",
+            "source": "ratios.ReturnOnEquity"
+          }
+        ],
+        "charts": [
+          {
+            "type": "line",
+            "metrics": ["profitability.revenue", "profitability.gross_profit"],
+            "dimension": "quarter"
+          },
+          {
+            "type": "stacked_bar",
+            "metrics": ["profitability.revenue", "profitability.operating_income", "profitability.net_income"],
+            "dimension": "quarter"
+          },
+          {
+            "type": "bar_comparison",
+            "metric": "ratios.ProfitMargin",
+            "comparison": "sector"
+          }
+        ],
+        "insights": "Strictly factual highlights based on revenue, income, and margins. No opinions."
+      }
+    ]
+  },
+  "companies": [
+    {
+      "company_info": {
+        "symbol": "ABT",
+        "name": "Abbott Laboratories",
+        "cik": null,
+        "exchange": null,
+        "sector": "Healthcare",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 10241000000,
+          "gross_profit": 5258000000,
+          "operating_income": 1864000000,
+          "net_income": 1594000000
+        },
+        "balance_sheet": {
+          "cash": 6896000000,
+          "assets": 73214000000,
+          "liabilities": 34387000000,
+          "equity": 38603000000,
+          "debt": 13599000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 3038000000,
+          "capex": 755000000,
+          "free_cash_flow": 2283000000,
+          "earnings_quality": 1.91
+        },
+        "ratios": {
+          "PE_Ratio": 16.53,
+          "PEG_Ratio": 4.168,
+          "PriceToBook": 4.535,
+          "ProfitMargin": 0.324,
+          "ReturnOnAssets": 0.0662,
+          "ReturnOnEquity": 0.309,
+          "DividendYield": 0.0179
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 1594000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.181,
+        "Return on Equity (ROE)": 0.309,
+        "Free Cash Flow": {
+          "value": 2283000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.222
+      },
+      "insights": {
+        "profitability": "Abbott Laboratories reported a net income of $1,594,000,000 with an operating margin of 18.1%.",
+        "financial_standing": "The company has total assets of $73,214,000,000 and total liabilities of $34,387,000,000, resulting in equity of $38,603,000,000.",
+        "cash_flow": "Abbott's free cash flow stands at $2,283,000,000, indicating strong cash generation.",
+        "ratios": "The PE ratio is 16.53, and the return on equity is 30.9%."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "CVS",
+        "name": "CVS Health Corporation",
+        "cik": null,
+        "exchange": null,
+        "sector": "Healthcare",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 93813000000,
+          "gross_profit": 13876000000,
+          "operating_income": 3373000000,
+          "net_income": 2046000000
+        },
+        "balance_sheet": {
+          "cash": 8196000000,
+          "assets": 249728000000,
+          "liabilities": 173092000000,
+          "equity": 76461000000,
+          "debt": 58638000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": -2636000000,
+          "capex": 911000000,
+          "free_cash_flow": -3547000000,
+          "earnings_quality": -1.29
+        },
+        "ratios": {
+          "PE_Ratio": 19.11,
+          "PEG_Ratio": 0.707,
+          "PriceToBook": 1.124,
+          "ProfitMargin": 0.0118,
+          "ReturnOnAssets": 0.0229,
+          "ReturnOnEquity": 0.0588,
+          "DividendYield": 0.0399
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 2046000000,
+          "growth": {
+            "qoq": -0.091,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.036,
+        "Return on Equity (ROE)": 0.0588,
+        "Free Cash Flow": {
+          "value": -3547000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": -0.038
+      },
+      "insights": {
+        "profitability": "CVS Health Corporation reported a net income of $2,046,000,000 with an operating margin of 3.6%.",
+        "financial_standing": "The company has total assets of $249,728,000,000 and total liabilities of $173,092,000,000, resulting in equity of $76,461,000,000.",
+        "cash_flow": "CVS's free cash flow stands at -$3,547,000,000, indicating cash outflows.",
+        "ratios": "The PE ratio is 19.11, and the return on equity is 5.88%."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "JNJ",
+        "name": "Johnson & Johnson",
+        "cik": null,
+        "exchange": null,
+        "sector": "Healthcare",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 21395000000,
+          "gross_profit": 14597000000,
+          "operating_income": 4607000000,
+          "net_income": 4049000000
+        },
+        "balance_sheet": {
+          "cash": 21859000000,
+          "assets": 167558000000,
+          "liabilities": 98784000000,
+          "equity": 68774000000,
+          "debt": 25881000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 7863000000,
+          "capex": 1589000000,
+          "free_cash_flow": 6274000000,
+          "earnings_quality": 1.94
+        },
+        "ratios": {
+          "PE_Ratio": 18.91,
+          "PEG_Ratio": 1.075,
+          "PriceToBook": 5.42,
+          "ProfitMargin": 0.25,
+          "ReturnOnAssets": 0.0761,
+          "ReturnOnEquity": 0.302,
+          "DividendYield": 0.0287
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 4049000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.216,
+        "Return on Equity (ROE)": 0.302,
+        "Free Cash Flow": {
+          "value": 6274000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.293
+      },
+      "insights": {
+        "profitability": "Johnson & Johnson reported a net income of $4,049,000,000 with an operating margin of 21.6%.",
+        "financial_standing": "The company has total assets of $167,558,000,000 and total liabilities of $98,784,000,000, resulting in equity of $68,774,000,000.",
+        "cash_flow": "Johnson & Johnson's free cash flow stands at $6,274,000,000, indicating strong cash generation.",
+        "ratios": "The PE ratio is 18.91, and the return on equity is 30.2%."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "PFE",
+        "name": "Pfizer Inc.",
+        "cik": null,
+        "exchange": null,
+        "sector": "Healthcare",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 14570000000,
+          "gross_profit": 5980000000,
+          "operating_income": -1263000000,
+          "net_income": -3343000000
+        },
+        "balance_sheet": {
+          "cash": 2853000000,
+          "assets": 226501000000,
+          "liabilities": 137213000000,
+          "equity": 89014000000,
+          "debt": 60982000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 5240000000,
+          "capex": 1044000000,
+          "free_cash_flow": 4196000000,
+          "earnings_quality": -1.57
+        },
+        "ratios": {
+          "PE_Ratio": 13.3,
+          "PEG_Ratio": 0.858,
+          "PriceToBook": 1.611,
+          "ProfitMargin": 0.168,
+          "ReturnOnAssets": 0.0525,
+          "ReturnOnEquity": 0.122,
+          "DividendYield": 0.0677
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": -3343000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": -0.087,
+        "Return on Equity (ROE)": 0.122,
+        "Free Cash Flow": {
+          "value": 4196000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.288
+      },
+      "insights": {
+        "profitability": "Pfizer Inc. reported a net loss of $3,343,000,000 with an operating margin of -8.7%.",
+        "financial_standing": "The company has total assets of $226,501,000,000 and total liabilities of $137,213,000,000, resulting in equity of $89,014,000,000.",
+        "cash_flow": "Pfizer's free cash flow stands at $4,196,000,000, indicating strong cash generation despite the net loss.",
+        "ratios": "The PE ratio is 13.3, and the return on equity is 12.2%."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "UNH",
+        "name": "UnitedHealth Group Incorporated",
+        "cik": null,
+        "exchange": null,
+        "sector": "Healthcare",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 94427000000,
+          "gross_profit": 22002000000,
+          "operating_income": 7689000000,
+          "net_income": 5455000000
+        },
+        "balance_sheet": {
+          "cash": 25427000000,
+          "assets": 273720000000,
+          "liabilities": 174801000000,
+          "equity": 88756000000,
+          "debt": 58263000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": -5193000000,
+          "capex": 959000000,
+          "free_cash_flow": -6152000000,
+          "earnings_quality": -0.95
+        },
+        "ratios": {
+          "PE_Ratio": 13.16,
+          "PEG_Ratio": 1.241,
+          "PriceToBook": 2.907,
+          "ProfitMargin": 0.0504,
+          "ReturnOnAssets": 0.0646,
+          "ReturnOnEquity": 0.216,
+          "DividendYield": 0.0313
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 5455000000,
+          "growth": {
+            "qoq": 0.0,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.081,
+        "Return on Equity (ROE)": 0.216,
+        "Free Cash Flow": {
+          "value": -6152000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": -0.065
+      },
+      "insights": {
+        "profitability": "UnitedHealth Group Incorporated reported a net income of $5,455,000,000 with an operating margin of 8.1%.",
+        "financial_standing": "The company has total assets of $273,720,000,000 and total liabilities of $174,801,000,000, resulting in equity of $88,756,000,000.",
+        "cash_flow": "UnitedHealth's free cash flow stands at -$6,152,000,000, indicating cash outflows.",
+        "ratios": "The PE ratio is 13.16, and the return on equity is 21.6%."
+      }
+    }
+  ],
+  "sector_comparison": {
+    "sector": "Healthcare",
+    "rankings": {
+      "ratios.ProfitMargin": [
+        {
+          "symbol": "ABT",
+          "value": 0.324
+        },
+        {
+          "symbol": "JNJ",
+          "value": 0.25
+        },
+        {
+          "symbol": "PFE",
+          "value": 0.168
+        },
+        {
+          "symbol": "CVS",
+          "value": 0.0118
+        },
+        {
+          "symbol": "UNH",
+          "value": 0.0504
+        }
+      ],
+      "balance_sheet.long_term_debt": [
+        {
+          "symbol": "ABT",
+          "value": 13599000000
+        },
+        {
+          "symbol": "JNJ",
+          "value": 25881000000
+        },
+        {
+          "symbol": "PFE",
+          "value": 60982000000
+        },
+        {
+          "symbol": "CVS",
+          "value": 58638000000
+        },
+        {
+          "symbol": "UNH",
+          "value": 58263000000
+        }
+      ],
+      "ratios.PE_Ratio": [
+        {
+          "symbol": "PFE",
+          "value": 13.3
+        },
+        {
+          "symbol": "ABT",
+          "value": 16.53
+        },
+        {
+          "symbol": "JNJ",
+          "value": 18.91
+        },
+        {
+          "symbol": "CVS",
+          "value": 19.11
+        },
+        {
+          "symbol": "UNH",
+          "value": 13.16
+        }
+      ],
+      "cash_flow.fcf_margin": [
+        {
+          "symbol": "PFE",
+          "value": 0.288
+        },
+        {
+          "symbol": "ABT",
+          "value": 0.222
+        },
+        {
+          "symbol": "JNJ",
+          "value": 0.293
+        },
+        {
+          "symbol": "CVS",
+          "value": -0.038
+        },
+        {
+          "symbol": "UNH",
+          "value": -0.065
+        }
+      ]
+    },
+    "notes": "Rankings are ordered highest_to_lowest by metric value; ties retain input order; nulls are listed last."
+  }
+}
