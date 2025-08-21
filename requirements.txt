@@ -1,0 +1,33 @@
+# Core Streamlit and Web Framework
+streamlit>=1.28.0
+streamlit-option-menu>=0.3.6
+
+# Data Processing and Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data Visualization
+plotly>=5.17.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Date and Time Handling
+python-dateutil>=2.8.2
+
+# File and Path Operations
+pathlib2>=2.3.7
+
+# JSON Processing (built-in, but for compatibility)
+jsonschema>=4.17.0
+
+# Type Hints and Annotations
+typing-extensions>=4.5.0
+
+# Development and Testing (optional)
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# AI/LLM Integration (likely missing)
+openai>=1.3.0

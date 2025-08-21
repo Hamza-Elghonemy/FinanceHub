@@ -4,4 +4,4 @@ apikey.env
 frontend
 backend
 output
-__pycache__
+*.pyc
