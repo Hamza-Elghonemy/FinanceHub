@@ -1,2 +1,7 @@
-node_modules
 *venv
+.env
+apikey.env
+frontend
+backend
+output
+__pycache__

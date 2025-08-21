@@ -1,0 +1,302 @@
+{
+  "company_info": {
+    "symbol": "AAPL",
+    "name": "Apple Inc",
+    "cik": "320193",
+    "exchange": "NASDAQ",
+    "sector": "TECHNOLOGY",
+    "industry": "ELECTRONIC COMPUTERS",
+    "fiscal_year_end": "September",
+    "country": "USA",
+    "market_cap": "3436888195000"
+  },
+  "annual": {
+    "2024": {
+      "profitability": {
+        "Revenue": 391035000000.0,
+        "GrossProfit": 180683000000.0,
+        "OperatingIncome": 123216000000.0,
+        "NetIncome": 93736000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 29943000000.0,
+        "TotalAssets": 364980000000.0,
+        "TotalLiabilities": 308030000000.0,
+        "ShareholdersEquity": 56950000000.0,
+        "LongTermDebt": 85750000000.0,
+        "CurrentAssets": 152987000000.0,
+        "CurrentLiabilities": 176392000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 118254000000.0,
+        "CapEx": 9447000000.0,
+        "FreeCashFlow": 108807000000.0,
+        "EarningsQuality": 1.26
+      }
+    },
+    "2023": {
+      "profitability": {
+        "Revenue": 383285000000.0,
+        "GrossProfit": 169148000000.0,
+        "OperatingIncome": 114301000000.0,
+        "NetIncome": 96995000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 29965000000.0,
+        "TotalAssets": 352583000000.0,
+        "TotalLiabilities": 290437000000.0,
+        "ShareholdersEquity": 62146000000.0,
+        "LongTermDebt": 95281000000.0,
+        "CurrentAssets": 143566000000.0,
+        "CurrentLiabilities": 145308000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 110543000000.0,
+        "CapEx": 10959000000.0,
+        "FreeCashFlow": 99584000000.0,
+        "EarningsQuality": 1.14
+      }
+    }
+  },
+  "quarterly": {
+    "2025-06-30": {
+      "profitability": {
+        "Revenue": 94036000000.0,
+        "GrossProfit": 43718000000.0,
+        "OperatingIncome": 28202000000.0,
+        "NetIncome": 23434000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 30465000000.0,
+        "TotalAssets": 331495000000.0,
+        "TotalLiabilities": 265665000000.0,
+        "ShareholdersEquity": 65830000000.0,
+        "LongTermDebt": 82430000000.0,
+        "CurrentAssets": 122491000000.0,
+        "CurrentLiabilities": 141120000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 27867000000.0,
+        "CapEx": 3462000000.0,
+        "FreeCashFlow": 24405000000.0,
+        "EarningsQuality": 1.19
+      }
+    },
+    "2025-03-31": {
+      "profitability": {
+        "Revenue": 95359000000.0,
+        "GrossProfit": 44867000000.0,
+        "OperatingIncome": 29589000000.0,
+        "NetIncome": 24780000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 28162000000.0,
+        "TotalAssets": 331233000000.0,
+        "TotalLiabilities": 264437000000.0,
+        "ShareholdersEquity": 66796000000.0,
+        "LongTermDebt": 78566000000.0,
+        "CurrentAssets": 118674000000.0,
+        "CurrentLiabilities": 144571000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 23952000000.0,
+        "CapEx": 3071000000.0,
+        "FreeCashFlow": 20881000000.0,
+        "EarningsQuality": 0.97
+      }
+    },
+    "2024-12-31": {
+      "profitability": {
+        "Revenue": 124300000000.0,
+        "GrossProfit": 58275000000.0,
+        "OperatingIncome": 42832000000.0,
+        "NetIncome": 36330000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 30299000000.0,
+        "TotalAssets": 344085000000.0,
+        "TotalLiabilities": 277327000000.0,
+        "ShareholdersEquity": 66758000000.0,
+        "LongTermDebt": 83956000000.0,
+        "CurrentAssets": 133240000000.0,
+        "CurrentLiabilities": 144365000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 29935000000.0,
+        "CapEx": 2940000000.0,
+        "FreeCashFlow": 26995000000.0,
+        "EarningsQuality": 0.82
+      }
+    },
+    "2024-09-30": {
+      "profitability": {
+        "Revenue": 94930000000.0,
+        "GrossProfit": 43879000000.0,
+        "OperatingIncome": 29591000000.0,
+        "NetIncome": 14736000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 29943000000.0,
+        "TotalAssets": 364980000000.0,
+        "TotalLiabilities": 308030000000.0,
+        "ShareholdersEquity": 56950000000.0,
+        "LongTermDebt": 85750000000.0,
+        "CurrentAssets": 152987000000.0,
+        "CurrentLiabilities": 176392000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 26811000000.0,
+        "CapEx": 2908000000.0,
+        "FreeCashFlow": 23903000000.0,
+        "EarningsQuality": 1.82
+      }
+    },
+    "2024-06-30": {
+      "profitability": {
+        "Revenue": 85777000000.0,
+        "GrossProfit": 39678000000.0,
+        "OperatingIncome": 25352000000.0,
+        "NetIncome": 21448000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 25565000000.0,
+        "TotalAssets": 331612000000.0,
+        "TotalLiabilities": 264904000000.0,
+        "ShareholdersEquity": 66708000000.0,
+        "LongTermDebt": 86196000000.0,
+        "CurrentAssets": 125435000000.0,
+        "CurrentLiabilities": 131624000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 28858000000.0,
+        "CapEx": 2151000000.0,
+        "FreeCashFlow": 26707000000.0,
+        "EarningsQuality": 1.35
+      }
+    },
+    "2024-03-31": {
+      "profitability": {
+        "Revenue": 90753000000.0,
+        "GrossProfit": 42271000000.0,
+        "OperatingIncome": 27900000000.0,
+        "NetIncome": 23636000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 32695000000.0,
+        "TotalAssets": 337411000000.0,
+        "TotalLiabilities": 263217000000.0,
+        "ShareholdersEquity": 74194000000.0,
+        "LongTermDebt": 91831000000.0,
+        "CurrentAssets": 128416000000.0,
+        "CurrentLiabilities": 123822000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 22690000000.0,
+        "CapEx": 1996000000.0,
+        "FreeCashFlow": 20694000000.0,
+        "EarningsQuality": 0.96
+      }
+    },
+    "2023-12-31": {
+      "profitability": {
+        "Revenue": 119575000000.0,
+        "GrossProfit": 54855000000.0,
+        "OperatingIncome": 40373000000.0,
+        "NetIncome": 33916000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 40760000000.0,
+        "TotalAssets": 353514000000.0,
+        "TotalLiabilities": 279414000000.0,
+        "ShareholdersEquity": 74100000000.0,
+        "LongTermDebt": 95088000000.0,
+        "CurrentAssets": 143692000000.0,
+        "CurrentLiabilities": 133973000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 39895000000.0,
+        "CapEx": 2392000000.0,
+        "FreeCashFlow": 37503000000.0,
+        "EarningsQuality": 1.18
+      }
+    },
+    "2023-09-30": {
+      "profitability": {
+        "Revenue": 89498000000.0,
+        "GrossProfit": 40427000000.0,
+        "OperatingIncome": 26969000000.0,
+        "NetIncome": 22956000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 29965000000.0,
+        "TotalAssets": 352583000000.0,
+        "TotalLiabilities": 290437000000.0,
+        "ShareholdersEquity": 62146000000.0,
+        "LongTermDebt": 95281000000.0,
+        "CurrentAssets": 143566000000.0,
+        "CurrentLiabilities": 145308000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 21598000000.0,
+        "CapEx": 2163000000.0,
+        "FreeCashFlow": 19435000000.0,
+        "EarningsQuality": 0.94
+      }
+    },
+    "2023-06-30": {
+      "profitability": {
+        "Revenue": 81797000000.0,
+        "GrossProfit": 36413000000.0,
+        "OperatingIncome": 22998000000.0,
+        "NetIncome": 19881000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 28408000000.0,
+        "TotalAssets": 335038000000.0,
+        "TotalLiabilities": 274764000000.0,
+        "ShareholdersEquity": 60274000000.0,
+        "LongTermDebt": 98071000000.0,
+        "CurrentAssets": 122659000000.0,
+        "CurrentLiabilities": 124963000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 26380000000.0,
+        "CapEx": 2093000000.0,
+        "FreeCashFlow": 24287000000.0,
+        "EarningsQuality": 1.33
+      }
+    },
+    "2023-03-31": {
+      "profitability": {
+        "Revenue": 94836000000.0,
+        "GrossProfit": 41976000000.0,
+        "OperatingIncome": 28318000000.0,
+        "NetIncome": 24160000000.0
+      },
+      "balance_sheet": {
+        "CashAndEquivalents": 24687000000.0,
+        "TotalAssets": 332160000000.0,
+        "TotalLiabilities": 270002000000.0,
+        "ShareholdersEquity": 62158000000.0,
+        "LongTermDebt": 97041000000.0,
+        "CurrentAssets": 112913000000.0,
+        "CurrentLiabilities": 120075000000.0
+      },
+      "cash_flow": {
+        "OperatingCashFlow": 28560000000.0,
+        "CapEx": 2916000000.0,
+        "FreeCashFlow": 25644000000.0,
+        "EarningsQuality": 1.18
+      }
+    }
+  },
+  "ratios": {
+    "PE_Ratio": 35.09,
+    "PEG_Ratio": 2.091,
+    "PriceToBook": 52.21,
+    "ProfitMargin": 0.243,
+    "ReturnOnAssets": 0.245,
+    "ReturnOnEquity": 1.498,
+    "DividendYield": 0.0043
+  }
+}
