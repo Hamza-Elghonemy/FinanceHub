@@ -1,7 +1,3 @@
-# streamlit_app.py
-# Financial Insights Hub — Enhanced with Real Data & AI Integration
-# Palette: purple/teal gradient + light/dark theme CSS
-
 from __future__ import annotations
 import io
 import json
