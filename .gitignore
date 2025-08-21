@@ -2,3 +2,4 @@ venv
 .env
 apikey.env
 frontend
+backend
