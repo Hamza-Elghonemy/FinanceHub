@@ -9,7 +9,7 @@
             "name": "Net Income",
             "source": "profitability.net_income",
             "growth": {
-              "qoq": -0.156,
+              "qoq": -0.64,
               "yoy": 0.0
             }
           },
@@ -99,7 +99,7 @@
         "Free Cash Flow": {
           "value": 2283000000,
           "growth": {
-            "qoq": 0.0,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -108,8 +108,8 @@
       "insights": {
         "profitability": "Abbott Laboratories reported a net income of $1,594,000,000 with an operating margin of 18.1%.",
         "financial_standing": "The company has total assets of $73,214,000,000 and total liabilities of $34,387,000,000, resulting in equity of $38,603,000,000.",
-        "cash_flow": "Abbott's free cash flow stands at $2,283,000,000, indicating strong cash generation.",
-        "ratios": "The PE ratio is 16.53, and the return on equity is 30.9%."
+        "cash_flow": "Abbott Laboratories generated a free cash flow of $2,283,000,000.",
+        "ratios": "The PE ratio stands at 16.53, with a profit margin of 32.4%."
       }
     },
     {
@@ -158,7 +158,7 @@
         "Net Income": {
           "value": 2046000000,
           "growth": {
-            "qoq": -0.091,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -176,8 +176,8 @@
       "insights": {
         "profitability": "CVS Health Corporation reported a net income of $2,046,000,000 with an operating margin of 3.6%.",
         "financial_standing": "The company has total assets of $249,728,000,000 and total liabilities of $173,092,000,000, resulting in equity of $76,461,000,000.",
-        "cash_flow": "CVS's free cash flow stands at -$3,547,000,000, indicating cash outflows.",
-        "ratios": "The PE ratio is 19.11, and the return on equity is 5.88%."
+        "cash_flow": "CVS Health Corporation reported a negative free cash flow of $3,547,000,000.",
+        "ratios": "The PE ratio stands at 19.11, with a profit margin of 1.18%."
       }
     },
     {
@@ -226,7 +226,7 @@
         "Net Income": {
           "value": 4049000000,
           "growth": {
-            "qoq": 0.0,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -235,7 +235,7 @@
         "Free Cash Flow": {
           "value": 6274000000,
           "growth": {
-            "qoq": 0.0,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -244,8 +244,8 @@
       "insights": {
         "profitability": "Johnson & Johnson reported a net income of $4,049,000,000 with an operating margin of 21.6%.",
         "financial_standing": "The company has total assets of $167,558,000,000 and total liabilities of $98,784,000,000, resulting in equity of $68,774,000,000.",
-        "cash_flow": "Johnson & Johnson's free cash flow stands at $6,274,000,000, indicating strong cash generation.",
-        "ratios": "The PE ratio is 18.91, and the return on equity is 30.2%."
+        "cash_flow": "Johnson & Johnson generated a free cash flow of $6,274,000,000.",
+        "ratios": "The PE ratio stands at 18.91, with a profit margin of 25%."
       }
     },
     {
@@ -303,7 +303,7 @@
         "Free Cash Flow": {
           "value": 4196000000,
           "growth": {
-            "qoq": 0.0,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -312,8 +312,8 @@
       "insights": {
         "profitability": "Pfizer Inc. reported a net loss of $3,343,000,000 with an operating margin of -8.7%.",
         "financial_standing": "The company has total assets of $226,501,000,000 and total liabilities of $137,213,000,000, resulting in equity of $89,014,000,000.",
-        "cash_flow": "Pfizer's free cash flow stands at $4,196,000,000, indicating strong cash generation despite the net loss.",
-        "ratios": "The PE ratio is 13.3, and the return on equity is 12.2%."
+        "cash_flow": "Pfizer Inc. generated a free cash flow of $4,196,000,000.",
+        "ratios": "The PE ratio stands at 13.3, with a profit margin of 16.8%."
       }
     },
     {
@@ -362,7 +362,7 @@
         "Net Income": {
           "value": 5455000000,
           "growth": {
-            "qoq": 0.0,
+            "qoq": null,
             "yoy": null
           }
         },
@@ -380,8 +380,8 @@
       "insights": {
         "profitability": "UnitedHealth Group Incorporated reported a net income of $5,455,000,000 with an operating margin of 8.1%.",
         "financial_standing": "The company has total assets of $273,720,000,000 and total liabilities of $174,801,000,000, resulting in equity of $88,756,000,000.",
-        "cash_flow": "UnitedHealth's free cash flow stands at -$6,152,000,000, indicating cash outflows.",
-        "ratios": "The PE ratio is 13.16, and the return on equity is 21.6%."
+        "cash_flow": "UnitedHealth Group Incorporated reported a negative free cash flow of $6,152,000,000.",
+        "ratios": "The PE ratio stands at 13.16, with a profit margin of 5.04%."
       }
     }
   ],
@@ -390,89 +390,89 @@
     "rankings": {
       "ratios.ProfitMargin": [
         {
-          "symbol": "ABT",
+          "company": "ABT",
           "value": 0.324
         },
         {
-          "symbol": "JNJ",
+          "company": "JNJ",
           "value": 0.25
         },
         {
-          "symbol": "PFE",
+          "company": "PFE",
           "value": 0.168
         },
         {
-          "symbol": "CVS",
-          "value": 0.0118
+          "company": "UNH",
+          "value": 0.0504
         },
         {
-          "symbol": "UNH",
-          "value": 0.0504
+          "company": "CVS",
+          "value": 0.0118
         }
       ],
       "balance_sheet.long_term_debt": [
         {
-          "symbol": "ABT",
+          "company": "ABT",
           "value": 13599000000
         },
         {
-          "symbol": "JNJ",
+          "company": "JNJ",
           "value": 25881000000
         },
         {
-          "symbol": "PFE",
+          "company": "PFE",
           "value": 60982000000
         },
         {
-          "symbol": "CVS",
+          "company": "CVS",
           "value": 58638000000
         },
         {
-          "symbol": "UNH",
+          "company": "UNH",
           "value": 58263000000
         }
       ],
       "ratios.PE_Ratio": [
         {
-          "symbol": "PFE",
+          "company": "PFE",
           "value": 13.3
         },
         {
-          "symbol": "ABT",
-          "value": 16.53
-        },
-        {
-          "symbol": "JNJ",
-          "value": 18.91
-        },
-        {
-          "symbol": "CVS",
+          "company": "CVS",
           "value": 19.11
         },
         {
-          "symbol": "UNH",
+          "company": "JNJ",
+          "value": 18.91
+        },
+        {
+          "company": "UNH",
           "value": 13.16
+        },
+        {
+          "company": "ABT",
+          "value": 16.53
         }
       ],
       "cash_flow.fcf_margin": [
         {
-          "symbol": "PFE",
+          "company": "PFE",
           "value": 0.288
         },
         {
-          "symbol": "ABT",
-          "value": 0.222
-        },
-        {
-          "symbol": "JNJ",
+          "company": "JNJ",
           "value": 0.293
         },
         {
-          "symbol": "CVS",
+          "company": "ABT",
+          "value": 0.222
+        },
+        {
+          "company": "CVS",
           "value": -0.038
         },
         {
-          "symbol": "UNH",
+          "company": "UNH",
           "value": -0.065
         }
       ]

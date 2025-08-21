@@ -1197,7 +1197,7 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
     """, unsafe_allow_html=True)
     
     # Create tabs for sector analysis
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Sector Overview", "🏢 Company Profiles", "📈 Rankings", "💡 Insights"])
+    tab1, tab2, tab3 = st.tabs(["📊 Sector Overview", "🏢 Company Profiles", "📈 Rankings"])
     
     companies_data = insights_data.get("companies", [])
     sector_comparison = insights_data.get("sector_comparison", {})
@@ -1264,16 +1264,45 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
                 annual = company.get("annual", {})
                 revenue = annual.get("profitability", {}).get("revenue", 0)
                 
+                # Use company name instead of symbol, with fallback to symbol
+                company_name = comp_info.get("name", comp_info.get("symbol", "Unknown"))
+                
                 revenue_data.append({
-                    "Company": comp_info.get("symbol", "N/A"),
+                    "Company": company_name,
                     "Revenue": revenue
                 })
             
             df_revenue = pd.DataFrame(revenue_data)
+            
+            # Filter out companies with zero revenue to clean up the chart
+            df_revenue = df_revenue[df_revenue["Revenue"] > 0]
+            
             fig = px.pie(df_revenue, values="Revenue", names="Company", 
                         title="Revenue Distribution by Company")
             fig = style_fig(fig)
-            fig.update_layout(height=400)
+            fig.update_layout(
+                height=400,
+                # Improve legend positioning and formatting
+                legend=dict(
+                    orientation="v",
+                    yanchor="middle",
+                    y=0.5,
+                    xanchor="left",
+                    x=1.05,
+                    font=dict(size=12)
+                ),
+                # Add margin for legend
+                margin=dict(l=20, r=150, t=50, b=20)
+            )
+            
+            # Improve hover information
+            fig.update_traces(
+                hovertemplate="<b>%{label}</b><br>" +
+                             "Revenue: %{value:$,.0f}<br>" +
+                             "Percentage: %{percent}<br>" +
+                             "<extra></extra>"
+            )
+            
             st.plotly_chart(fig, use_container_width=True)
     
     with tab2:
@@ -1344,8 +1373,8 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
             st.markdown(f"#### {metric_name.replace('_', ' ').replace('.', ' ').title()}")
             
             if ranking_data and len(ranking_data) > 0:
-                # Debug: Show the structure of ranking_data
-                st.write("Debug - Ranking data structure:", ranking_data[:2] if len(ranking_data) > 1 else ranking_data)
+                # # Debug: Show the structure of ranking_data
+                # st.write("Debug - Ranking data structure:", ranking_data[:2] if len(ranking_data) > 1 else ranking_data)
                 
                 # Extract companies and values with better error handling
                 companies = []
@@ -1384,37 +1413,6 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
                     ranking_df.index = range(1, len(ranking_df) + 1)
                     ranking_df.index.name = "Rank"
                     st.dataframe(ranking_df, use_container_width=True)
-    
-    with tab4:
-        # Consolidated insights
-        st.markdown("### Sector Insights Summary")
-        
-        # Extract insights from all companies
-        for company in companies_data:
-            comp_info = company.get("company_info", {})
-            insights = company.get("insights", {})
-            symbol = comp_info.get("symbol", "N/A")
-            name = comp_info.get("name", "Unknown")
-            
-            if insights:
-                st.markdown(f"""
-                <div style="background: var(--bg-primary); border: 1px solid var(--border-color); 
-                            border-radius: 12px; padding: 1.5rem; margin: 1rem 0; 
-                            border-left: 4px solid {'var(--primary-color)' if symbol == ticker else 'var(--border-color)'};">
-                    <div style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">
-                        {name} ({symbol})
-                    </div>
-                """, unsafe_allow_html=True)
-                
-                for insight_type, insight_text in insights.items():
-                    st.markdown(f"""
-                    <div style="margin-bottom: 0.5rem;">
-                        <strong style="color: var(--text-secondary);">{insight_type.replace('_', ' ').title()}:</strong>
-                        <span style="color: var(--text-primary);"> {insight_text}</span>
-                    </div>
-                    """, unsafe_allow_html=True)
-                
-                st.markdown("</div>", unsafe_allow_html=True)
 
 def display_quarterly_format(insights_data, company_name, ticker, analysis_type):
     """Display original quarterly format (your existing implementation)"""

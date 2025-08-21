@@ -3,3 +3,4 @@ venv
 apikey.env
 frontend
 backend
+output
