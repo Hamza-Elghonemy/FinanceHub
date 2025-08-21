@@ -224,15 +224,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Deloitte** for design inspiration and color schemes
 - **Open Source Community** for various Python packages used
 
-## 📞 Support
-
-For support and questions:
-- Create an [Issue](https://github.com/yourusername/FinanceHub/issues)
-- Email: your.email@example.com
-- Documentation: [Wiki](https://github.com/yourusername/FinanceHub/wiki)
-
----
-
 **Made with ❤️ for the financial analysis community**
 
 *Last updated: August 2025*
