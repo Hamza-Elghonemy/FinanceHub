@@ -43,7 +43,7 @@ A sophisticated financial analysis platform that provides comprehensive insights
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/FinanceHub.git
+   git clone https://github.com/Hamza-Elghonemy/FinanceHub.git
    cd FinanceHub
    ```
 
@@ -207,15 +207,8 @@ We welcome contributions to FinanceHub! Please follow these guidelines:
 ## 🗺️ Roadmap
 
 - [ ] **Real-time Data Integration**: Connect to financial APIs
-- [ ] **Enhanced AI Models**: More sophisticated analysis algorithms
-- [ ] **Export Functionality**: PDF and Excel report generation
-- [ ] **User Authentication**: Multi-user support with role-based access
-- [ ] **Database Integration**: PostgreSQL/MongoDB support
-- [ ] **Mobile App**: React Native companion app
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [ ] **Enhanced AI Models**: More sophisticated analysis algorithm
+- [ ] **Export Functionality**: Excel report generation
 
 ## 🙏 Acknowledgments
 
@@ -223,16 +216,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Plotly** for powerful visualization capabilities
 - **Deloitte** for design inspiration and color schemes
 - **Open Source Community** for various Python packages used
-
-## 📞 Support
-
-For support and questions:
-- Create an [Issue](https://github.com/yourusername/FinanceHub/issues)
-- Email: your.email@example.com
-- Documentation: [Wiki](https://github.com/yourusername/FinanceHub/wiki)
-
----
-
+- 
 **Made with ❤️ for the financial analysis community**
 
 *Last updated: August 2025*
