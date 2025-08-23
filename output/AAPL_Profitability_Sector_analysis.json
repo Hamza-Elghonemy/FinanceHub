@@ -1,0 +1,482 @@
+{
+  "dashboard": {
+    "pages": [
+      {
+        "name": "Profitability",
+        "layout": ["kpis", "charts", "insights"],
+        "kpis": [
+          {
+            "name": "Net Income",
+            "source": "profitability.net_income",
+            "growth": {
+              "qoq": 0.058,
+              "yoy": 0.052
+            }
+          },
+          {
+            "name": "Operating Margin %",
+            "calculation": 0.433
+          },
+          {
+            "name": "Return on Equity (ROE)",
+            "source": "ratios.ReturnOnEquity"
+          }
+        ],
+        "charts": [
+          {
+            "type": "line",
+            "metrics": ["profitability.revenue", "profitability.gross_profit"],
+            "dimension": "quarter"
+          },
+          {
+            "type": "stacked_bar",
+            "metrics": ["profitability.revenue", "profitability.operating_income", "profitability.net_income"],
+            "dimension": "quarter"
+          },
+          {
+            "type": "bar_comparison",
+            "metric": "ratios.ProfitMargin",
+            "comparison": "sector"
+          }
+        ],
+        "insights": "Strictly factual highlights based on revenue, income, and margins. No opinions."
+      }
+    ]
+  },
+  "companies": [
+    {
+      "company_info": {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "cik": null,
+        "exchange": null,
+        "sector": "Tech",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 124300000000,
+          "gross_profit": 58275000000,
+          "operating_income": 42832000000,
+          "net_income": 36330000000
+        },
+        "balance_sheet": {
+          "cash": 30299000000,
+          "assets": 344085000000,
+          "liabilities": 277327000000,
+          "equity": 66758000000,
+          "debt": 83956000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 29935000000,
+          "capex": 2940000000,
+          "free_cash_flow": 26995000000,
+          "earnings_quality": 0.82
+        },
+        "ratios": {
+          "PE_Ratio": 35.09,
+          "PEG_Ratio": 2.091,
+          "PriceToBook": 52.21,
+          "ProfitMargin": 0.243,
+          "ReturnOnAssets": 0.245,
+          "ReturnOnEquity": 1.498,
+          "DividendYield": 0.0043
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 36330000000,
+          "growth": {
+            "qoq": 0.058,
+            "yoy": 0.052
+          }
+        },
+        "Operating Margin %": 0.433,
+        "Return on Equity (ROE)": 1.498,
+        "Free Cash Flow": {
+          "value": 26995000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.217
+      },
+      "insights": {
+        "profitability": "Apple Inc. reported a net income of $36.33 billion with an operating margin of 43.3%.",
+        "financial_standing": "The company has total assets of $344.09 billion and total liabilities of $277.33 billion, resulting in equity of $66.76 billion.",
+        "cash_flow": "Apple's free cash flow stands at $26.99 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 149.8%, reflecting effective management of shareholder funds."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "cik": null,
+        "exchange": null,
+        "sector": "Tech",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 96469000000,
+          "gross_profit": 55856000000,
+          "operating_income": 30972000000,
+          "net_income": 26536000000
+        },
+        "balance_sheet": {
+          "cash": 23466000000,
+          "assets": 450256000000,
+          "liabilities": 125172000000,
+          "equity": 325084000000,
+          "debt": 10883000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 39113000000,
+          "capex": 14276000000,
+          "free_cash_flow": 24837000000,
+          "earnings_quality": 1.47
+        },
+        "ratios": {
+          "PE_Ratio": 21.74,
+          "PEG_Ratio": 1.516,
+          "PriceToBook": 6.79,
+          "ProfitMargin": 0.311,
+          "ReturnOnAssets": 0.168,
+          "ReturnOnEquity": 0.348,
+          "DividendYield": 0.005
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 26536000000,
+          "growth": {
+            "qoq": 0.028,
+            "yoy": 0.028
+          }
+        },
+        "Operating Margin %": 0.321,
+        "Return on Equity (ROE)": 0.348,
+        "Free Cash Flow": {
+          "value": 24837000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.257
+      },
+      "insights": {
+        "profitability": "Alphabet Inc. reported a net income of $26.54 billion with an operating margin of 32.1%.",
+        "financial_standing": "The company has total assets of $450.26 billion and total liabilities of $125.17 billion, resulting in equity of $325.08 billion.",
+        "cash_flow": "Alphabet's free cash flow stands at $24.84 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 34.8%, reflecting effective management of shareholder funds."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "IBM",
+        "name": "International Business Machines Corporation",
+        "cik": null,
+        "exchange": null,
+        "sector": "Tech",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 17553000000,
+          "gross_profit": 10439000000,
+          "operating_income": 3901000000,
+          "net_income": 2914000000
+        },
+        "balance_sheet": {
+          "cash": 13947000000,
+          "assets": 137175000000,
+          "liabilities": 109782000000,
+          "equity": 27307000000,
+          "debt": 49884000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 4330000000,
+          "capex": 444000000,
+          "free_cash_flow": 3886000000,
+          "earnings_quality": 1.49
+        },
+        "ratios": {
+          "PE_Ratio": 38.6,
+          "PEG_Ratio": 1.825,
+          "PriceToBook": 8.12,
+          "ProfitMargin": 0.0911,
+          "ReturnOnAssets": 0.0481,
+          "ReturnOnEquity": 0.227,
+          "DividendYield": 0.0282
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 2914000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.222,
+        "Return on Equity (ROE)": 0.227,
+        "Free Cash Flow": {
+          "value": 3886000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.221
+      },
+      "insights": {
+        "profitability": "IBM reported a net income of $2.91 billion with an operating margin of 22.2%.",
+        "financial_standing": "The company has total assets of $137.18 billion and total liabilities of $109.78 billion, resulting in equity of $27.31 billion.",
+        "cash_flow": "IBM's free cash flow stands at $3.89 billion, indicating moderate cash generation.",
+        "ratios": "The return on equity is 22.7%, reflecting effective management of shareholder funds."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "cik": null,
+        "exchange": null,
+        "sector": "Tech",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 48385000000,
+          "gross_profit": 39546000000,
+          "operating_income": 23364000000,
+          "net_income": 20838000000
+        },
+        "balance_sheet": {
+          "cash": 43889000000,
+          "assets": 276054000000,
+          "liabilities": 93417000000,
+          "equity": 182637000000,
+          "debt": 28826000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 27988000000,
+          "capex": 14425000000,
+          "free_cash_flow": 13563000000,
+          "earnings_quality": 1.34
+        },
+        "ratios": {
+          "PE_Ratio": 28.49,
+          "PEG_Ratio": 2.472,
+          "PriceToBook": 10.11,
+          "ProfitMargin": 0.4,
+          "ReturnOnAssets": 0.185,
+          "ReturnOnEquity": 0.406,
+          "DividendYield": 0.0026
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 20838000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.483,
+        "Return on Equity (ROE)": 0.406,
+        "Free Cash Flow": {
+          "value": 13563000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.28
+      },
+      "insights": {
+        "profitability": "Meta Platforms, Inc. reported a net income of $20.84 billion with an operating margin of 48.3%.",
+        "financial_standing": "The company has total assets of $276.05 billion and total liabilities of $93.42 billion, resulting in equity of $182.64 billion.",
+        "cash_flow": "Meta's free cash flow stands at $13.56 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 40.6%, reflecting effective management of shareholder funds."
+      }
+    },
+    {
+      "company_info": {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "cik": null,
+        "exchange": null,
+        "sector": "Tech",
+        "industry": null,
+        "fiscal_year_end": null,
+        "country": null,
+        "market_cap": null
+      },
+      "annual": {
+        "profitability": {
+          "revenue": 69632000000,
+          "gross_profit": 47833000000,
+          "operating_income": 31653000000,
+          "net_income": 24108000000
+        },
+        "balance_sheet": {
+          "cash": 17482000000,
+          "assets": 533898000000,
+          "liabilities": 231203000000,
+          "equity": 302695000000,
+          "debt": 39722000000
+        },
+        "cash_flow": {
+          "operating_cash_flow": 22291000000,
+          "capex": 15804000000,
+          "free_cash_flow": 6487000000,
+          "earnings_quality": 0.92
+        },
+        "ratios": {
+          "PE_Ratio": 38.16,
+          "PEG_Ratio": 2.341,
+          "PriceToBook": 11.26,
+          "ProfitMargin": 0.361,
+          "ReturnOnAssets": 0.142,
+          "ReturnOnEquity": 0.333,
+          "DividendYield": 0.0064
+        }
+      },
+      "kpis": {
+        "Net Income": {
+          "value": 24108000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "Operating Margin %": 0.454,
+        "Return on Equity (ROE)": 0.333,
+        "Free Cash Flow": {
+          "value": 6487000000,
+          "growth": {
+            "qoq": null,
+            "yoy": null
+          }
+        },
+        "FCF Margin": 0.093
+      },
+      "insights": {
+        "profitability": "Microsoft Corporation reported a net income of $24.11 billion with an operating margin of 45.4%.",
+        "financial_standing": "The company has total assets of $533.90 billion and total liabilities of $231.20 billion, resulting in equity of $302.70 billion.",
+        "cash_flow": "Microsoft's free cash flow stands at $6.49 billion, indicating moderate cash generation.",
+        "ratios": "The return on equity is 33.3%, reflecting effective management of shareholder funds."
+      }
+    }
+  ],
+  "sector_comparison": {
+    "sector": "Tech",
+    "rankings": {
+      "ratios.ProfitMargin": [
+        {
+          "company": "META",
+          "value": 0.4
+        },
+        {
+          "company": "GOOGL",
+          "value": 0.311
+        },
+        {
+          "company": "AAPL",
+          "value": 0.243
+        },
+        {
+          "company": "MSFT",
+          "value": 0.361
+        },
+        {
+          "company": "IBM",
+          "value": 0.0911
+        }
+      ],
+      "balance_sheet.long_term_debt": [
+        {
+          "company": "GOOGL",
+          "value": 10883000000
+        },
+        {
+          "company": "META",
+          "value": 28826000000
+        },
+        {
+          "company": "AAPL",
+          "value": 83956000000
+        },
+        {
+          "company": "MSFT",
+          "value": 39722000000
+        },
+        {
+          "company": "IBM",
+          "value": 50121000000
+        }
+      ],
+      "ratios.PE_Ratio": [
+        {
+          "company": "GOOGL",
+          "value": 21.74
+        },
+        {
+          "company": "META",
+          "value": 28.49
+        },
+        {
+          "company": "AAPL",
+          "value": 35.09
+        },
+        {
+          "company": "MSFT",
+          "value": 38.16
+        },
+        {
+          "company": "IBM",
+          "value": 38.6
+        }
+      ],
+      "cash_flow.fcf_margin": [
+        {
+          "company": "AAPL",
+          "value": 0.217
+        },
+        {
+          "company": "GOOGL",
+          "value": 0.257
+        },
+        {
+          "company": "META",
+          "value": 0.28
+        },
+        {
+          "company": "MSFT",
+          "value": 0.093
+        },
+        {
+          "company": "IBM",
+          "value": 0.221
+        }
+      ]
+    },
+    "notes": "Rankings are ordered highest_to_lowest by metric value; ties retain input order; nulls are listed last."
+  }
+}

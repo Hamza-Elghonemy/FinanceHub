@@ -1,0 +1,1982 @@
+{
+  "company_info": {
+    "cik": "320193",
+    "symbol": "AAPL",
+    "company_name": "AAPL Inc."
+  },
+  "quarters": {
+    "2025_Q3": {
+      "period_info": {
+        "year": 2025,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2024-09-29 00:00:00",
+        "end_date": "2025-06-28 00:00:00",
+        "filed_date": "2025-08-01 00:00:00",
+        "access_number": "0000320193-25-000073"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 313695000000.0,
+          "GrossProfit": 146860000000,
+          "OperatingIncome": 100623000000.0,
+          "NetIncome": 84544000000.0,
+          "EPS_Basic": 5.64,
+          "EPS_Diluted": 5.62
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 36269000000.0,
+          "MarketableSecurities": 19103000000.0,
+          "TotalAssets": 331495000000,
+          "TotalLiabilities": 265665000000,
+          "ShareholdersEquity": 65830000000.0,
+          "LongTermDebt": 82430000000,
+          "CurrentAssets": 122491000000,
+          "CurrentLiabilities": 141120000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 81754000000,
+          "CapEx": 9473000000,
+          "FreeCashFlow": 72281000000,
+          "Change_AR": -5685000000,
+          "Change_AP": -18479000000,
+          "Change_Inventory": -1223000000,
+          "Change_OtherAssets": 6116000000,
+          "Change_OtherLiabilities": -15161000000,
+          "EarningsQuality": 0.97
+        }
+      }
+    },
+    "2025_Q2": {
+      "period_info": {
+        "year": 2025,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2024-09-29 00:00:00",
+        "end_date": "2025-03-29 00:00:00",
+        "filed_date": "2025-05-02 00:00:00",
+        "access_number": "0000320193-25-000057"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 219659000000.0,
+          "GrossProfit": 103142000000,
+          "OperatingIncome": 72421000000.0,
+          "NetIncome": 61110000000.0,
+          "EPS_Basic": 4.06,
+          "EPS_Diluted": 4.05
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 28162000000.0,
+          "MarketableSecurities": 20336000000.0,
+          "TotalAssets": 331233000000,
+          "TotalLiabilities": 264437000000,
+          "ShareholdersEquity": 66796000000.0,
+          "LongTermDebt": 78566000000,
+          "CurrentAssets": 118674000000,
+          "CurrentLiabilities": 144571000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 53887000000,
+          "CapEx": 6011000000,
+          "FreeCashFlow": 47876000000,
+          "Change_AR": -7266000000,
+          "Change_AP": -14604000000,
+          "Change_Inventory": -858000000,
+          "Change_OtherAssets": 4371000000,
+          "Change_OtherLiabilities": -15579000000,
+          "EarningsQuality": 0.88
+        }
+      }
+    },
+    "2025_Q1": {
+      "period_info": {
+        "year": 2025,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2024-09-29 00:00:00",
+        "end_date": "2024-12-28 00:00:00",
+        "filed_date": "2025-01-31 00:00:00",
+        "access_number": "0000320193-25-000008"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 124300000000.0,
+          "GrossProfit": 58275000000,
+          "OperatingIncome": 42832000000.0,
+          "NetIncome": 36330000000.0,
+          "EPS_Basic": 2.41,
+          "EPS_Diluted": 2.4
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 30299000000.0,
+          "MarketableSecurities": 23476000000.0,
+          "TotalAssets": 344085000000,
+          "TotalLiabilities": 277327000000,
+          "ShareholdersEquity": 66758000000.0,
+          "LongTermDebt": 83956000000,
+          "CurrentAssets": 133240000000,
+          "CurrentLiabilities": 144365000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 29935000000,
+          "CapEx": 2940000000,
+          "FreeCashFlow": 26995000000,
+          "Change_AR": -3597000000,
+          "Change_AP": -6671000000,
+          "Change_Inventory": -215000000,
+          "Change_OtherAssets": -939000000,
+          "Change_OtherLiabilities": -11998000000,
+          "EarningsQuality": 0.82
+        }
+      }
+    },
+    "2024_Q3": {
+      "period_info": {
+        "year": 2024,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2023-10-01 00:00:00",
+        "end_date": "2024-06-29 00:00:00",
+        "filed_date": "2024-08-02 00:00:00",
+        "access_number": "0000320193-24-000081"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 296105000000.0,
+          "GrossProfit": 136804000000,
+          "OperatingIncome": 93625000000.0,
+          "NetIncome": 79000000000.0,
+          "EPS_Basic": 5.13,
+          "EPS_Diluted": 5.11
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 25565000000.0,
+          "MarketableSecurities": 36236000000.0,
+          "TotalAssets": 331612000000,
+          "TotalLiabilities": 264904000000,
+          "ShareholdersEquity": 66708000000.0,
+          "LongTermDebt": 86196000000,
+          "CurrentAssets": 125435000000,
+          "CurrentLiabilities": 131624000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 91443000000,
+          "CapEx": 6539000000,
+          "FreeCashFlow": 84904000000,
+          "Change_AR": -6697000000,
+          "Change_AP": -15171000000,
+          "Change_Inventory": -41000000,
+          "Change_OtherAssets": 5626000000,
+          "Change_OtherLiabilities": 2000000,
+          "EarningsQuality": 1.16
+        }
+      }
+    },
+    "2024_Q2": {
+      "period_info": {
+        "year": 2024,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2023-10-01 00:00:00",
+        "end_date": "2024-03-30 00:00:00",
+        "filed_date": "2024-05-03 00:00:00",
+        "access_number": "0000320193-24-000069"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 210328000000.0,
+          "GrossProfit": 97126000000,
+          "OperatingIncome": 68273000000.0,
+          "NetIncome": 57552000000.0,
+          "EPS_Basic": 3.72,
+          "EPS_Diluted": 3.71
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 32695000000.0,
+          "MarketableSecurities": 34455000000.0,
+          "TotalAssets": 337411000000,
+          "TotalLiabilities": 263217000000,
+          "ShareholdersEquity": 74194000000.0,
+          "LongTermDebt": 91831000000,
+          "CurrentAssets": 128416000000,
+          "CurrentLiabilities": 123822000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 62585000000,
+          "CapEx": 4388000000,
+          "FreeCashFlow": 58197000000,
+          "Change_AR": -7727000000,
+          "Change_AP": -16710000000,
+          "Change_Inventory": -53000000,
+          "Change_OtherAssets": 4438000000,
+          "Change_OtherLiabilities": -3437000000,
+          "EarningsQuality": 1.09
+        }
+      }
+    },
+    "2024_Q1": {
+      "period_info": {
+        "year": 2024,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2023-10-01 00:00:00",
+        "end_date": "2023-12-30 00:00:00",
+        "filed_date": "2024-02-02 00:00:00",
+        "access_number": "0000320193-24-000006"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 119575000000.0,
+          "GrossProfit": 54855000000,
+          "OperatingIncome": 40373000000.0,
+          "NetIncome": 33916000000.0,
+          "EPS_Basic": 2.19,
+          "EPS_Diluted": 2.18
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 40760000000.0,
+          "MarketableSecurities": 32340000000.0,
+          "TotalAssets": 353514000000,
+          "TotalLiabilities": 279414000000,
+          "ShareholdersEquity": 74100000000.0,
+          "LongTermDebt": 95088000000,
+          "CurrentAssets": 143692000000,
+          "CurrentLiabilities": 133973000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 39895000000,
+          "CapEx": 2392000000,
+          "FreeCashFlow": 37503000000,
+          "Change_AR": -6555000000,
+          "Change_AP": -4542000000,
+          "Change_Inventory": 137000000,
+          "Change_OtherAssets": 1457000000,
+          "Change_OtherLiabilities": -3865000000,
+          "EarningsQuality": 1.18
+        }
+      }
+    },
+    "2023_Q3": {
+      "period_info": {
+        "year": 2023,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2022-09-25 00:00:00",
+        "end_date": "2023-07-01 00:00:00",
+        "filed_date": "2023-08-04 00:00:00",
+        "access_number": "0000320193-23-000077"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 293787000000.0,
+          "GrossProfit": 128721000000,
+          "OperatingIncome": 87332000000.0,
+          "NetIncome": 74039000000.0,
+          "EPS_Basic": 4.69,
+          "EPS_Diluted": 4.67
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 28408000000.0,
+          "MarketableSecurities": 34074000000.0,
+          "TotalAssets": 335038000000,
+          "TotalLiabilities": 274764000000,
+          "ShareholdersEquity": 60274000000.0,
+          "LongTermDebt": 98071000000,
+          "CurrentAssets": 122659000000,
+          "CurrentLiabilities": 124963000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 88945000000,
+          "CapEx": 8796000000,
+          "FreeCashFlow": 80149000000,
+          "Change_AR": -7609000000,
+          "Change_AP": -16790000000,
+          "Change_Inventory": 2570000000,
+          "Change_OtherAssets": 4863000000,
+          "Change_OtherLiabilities": 2986000000,
+          "EarningsQuality": 1.2
+        }
+      }
+    },
+    "2023_Q2": {
+      "period_info": {
+        "year": 2023,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2022-09-25 00:00:00",
+        "end_date": "2023-04-01 00:00:00",
+        "filed_date": "2023-05-05 00:00:00",
+        "access_number": "0000320193-23-000064"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 211990000000.0,
+          "GrossProfit": 92308000000,
+          "OperatingIncome": 64334000000.0,
+          "NetIncome": 54158000000.0,
+          "EPS_Basic": 3.42,
+          "EPS_Diluted": 3.41
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 24687000000.0,
+          "MarketableSecurities": 31185000000.0,
+          "TotalAssets": 332160000000,
+          "TotalLiabilities": 270002000000,
+          "ShareholdersEquity": 62158000000.0,
+          "LongTermDebt": 97041000000,
+          "CurrentAssets": 112913000000,
+          "CurrentLiabilities": 120075000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 62565000000,
+          "CapEx": 6703000000,
+          "FreeCashFlow": 55862000000,
+          "Change_AR": -9596000000,
+          "Change_AP": -20764000000,
+          "Change_Inventory": 2548000000,
+          "Change_OtherAssets": 4092000000,
+          "Change_OtherLiabilities": 1757000000,
+          "EarningsQuality": 1.16
+        }
+      }
+    },
+    "2023_Q1": {
+      "period_info": {
+        "year": 2023,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2022-09-25 00:00:00",
+        "end_date": "2022-12-31 00:00:00",
+        "filed_date": "2023-02-03 00:00:00",
+        "access_number": "0000320193-23-000006"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 117154000000.0,
+          "GrossProfit": 50332000000,
+          "OperatingIncome": 36016000000.0,
+          "NetIncome": 29998000000.0,
+          "EPS_Basic": 1.89,
+          "EPS_Diluted": 1.88
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 20535000000.0,
+          "MarketableSecurities": 30820000000.0,
+          "TotalAssets": 346747000000,
+          "TotalLiabilities": 290020000000,
+          "ShareholdersEquity": 56727000000.0,
+          "LongTermDebt": 99627000000,
+          "CurrentAssets": 128777000000,
+          "CurrentLiabilities": 137286000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 34005000000,
+          "CapEx": 3787000000,
+          "FreeCashFlow": 30218000000,
+          "Change_AR": -4275000000,
+          "Change_AP": -6075000000,
+          "Change_Inventory": 1807000000,
+          "Change_OtherAssets": 4099000000,
+          "Change_OtherLiabilities": 3758000000,
+          "EarningsQuality": 1.13
+        }
+      }
+    },
+    "2022_Q3": {
+      "period_info": {
+        "year": 2022,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2021-09-26 00:00:00",
+        "end_date": "2022-06-25 00:00:00",
+        "filed_date": "2022-07-29 00:00:00",
+        "access_number": "0000320193-22-000070"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 304182000000.0,
+          "GrossProfit": 132687000000,
+          "OperatingIncome": 94543000000.0,
+          "NetIncome": 79082000000.0,
+          "EPS_Basic": 4.86,
+          "EPS_Diluted": 4.82
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 27502000000.0,
+          "MarketableSecurities": 20729000000.0,
+          "TotalAssets": 336309000000,
+          "TotalLiabilities": 278202000000,
+          "ShareholdersEquity": 58107000000.0,
+          "LongTermDebt": 94700000000,
+          "CurrentAssets": 112292000000,
+          "CurrentLiabilities": 129873000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 98024000000,
+          "CapEx": 7419000000,
+          "FreeCashFlow": 90605000000,
+          "Change_AR": -4561000000,
+          "Change_AP": -6108000000,
+          "Change_Inventory": -1049000000,
+          "Change_OtherAssets": 3289000000,
+          "Change_OtherLiabilities": -14000000,
+          "EarningsQuality": 1.24
+        }
+      }
+    },
+    "2022_Q2": {
+      "period_info": {
+        "year": 2022,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2021-09-26 00:00:00",
+        "end_date": "2022-03-26 00:00:00",
+        "filed_date": "2022-04-29 00:00:00",
+        "access_number": "0000320193-22-000059"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 221223000000.0,
+          "GrossProfit": 96802000000,
+          "OperatingIncome": 71467000000.0,
+          "NetIncome": 59640000000.0,
+          "EPS_Basic": 3.65,
+          "EPS_Diluted": 3.62
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 28098000000.0,
+          "MarketableSecurities": 23413000000.0,
+          "TotalAssets": 350662000000,
+          "TotalLiabilities": 283263000000,
+          "ShareholdersEquity": 67399000000.0,
+          "LongTermDebt": 103323000000,
+          "CurrentAssets": 118180000000,
+          "CurrentLiabilities": 127508000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 75132000000,
+          "CapEx": 5317000000,
+          "FreeCashFlow": 69815000000,
+          "Change_AR": -5542000000,
+          "Change_AP": -1750000000,
+          "Change_Inventory": -1065000000,
+          "Change_OtherAssets": 3542000000,
+          "Change_OtherLiabilities": 1888000000,
+          "EarningsQuality": 1.26
+        }
+      }
+    },
+    "2022_Q1": {
+      "period_info": {
+        "year": 2022,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2021-09-26 00:00:00",
+        "end_date": "2021-12-25 00:00:00",
+        "filed_date": "2022-01-28 00:00:00",
+        "access_number": "0000320193-22-000007"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 123945000000.0,
+          "GrossProfit": 54243000000,
+          "OperatingIncome": 41488000000.0,
+          "NetIncome": 34630000000.0,
+          "EPS_Basic": 2.11,
+          "EPS_Diluted": 2.1
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 37119000000.0,
+          "MarketableSecurities": 26794000000.0,
+          "TotalAssets": 381191000000,
+          "TotalLiabilities": 309259000000,
+          "ShareholdersEquity": 71932000000.0,
+          "LongTermDebt": 106629000000,
+          "CurrentAssets": 153154000000,
+          "CurrentLiabilities": 147574000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 46966000000,
+          "CapEx": 2803000000,
+          "FreeCashFlow": 44163000000,
+          "Change_AR": 3934000000,
+          "Change_AP": 19813000000,
+          "Change_Inventory": -681000000,
+          "Change_OtherAssets": 4921000000,
+          "Change_OtherLiabilities": 4236000000,
+          "EarningsQuality": 1.36
+        }
+      }
+    },
+    "2021_Q3": {
+      "period_info": {
+        "year": 2021,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2020-09-27 00:00:00",
+        "end_date": "2021-06-26 00:00:00",
+        "filed_date": "2021-07-28 00:00:00",
+        "access_number": "0000320193-21-000065"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 282457000000.0,
+          "GrossProfit": 117662000000,
+          "OperatingIncome": 85163000000.0,
+          "NetIncome": 74129000000.0,
+          "EPS_Basic": 4.42,
+          "EPS_Diluted": 4.38
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 34050000000.0,
+          "MarketableSecurities": 27646000000.0,
+          "TotalAssets": 329840000000,
+          "TotalLiabilities": 265560000000,
+          "ShareholdersEquity": 64280000000.0,
+          "LongTermDebt": 105752000000.0,
+          "CurrentAssets": 114423000000,
+          "CurrentLiabilities": 107754000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 83838000000,
+          "CapEx": 7862000000,
+          "FreeCashFlow": 75976000000,
+          "Change_AR": 1316000000,
+          "Change_AP": -1786000000,
+          "Change_Inventory": 1213000000,
+          "Change_OtherAssets": 5899000000,
+          "Change_OtherLiabilities": 463000000,
+          "EarningsQuality": 1.13
+        }
+      }
+    },
+    "2021_Q2": {
+      "period_info": {
+        "year": 2021,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2020-09-27 00:00:00",
+        "end_date": "2021-03-27 00:00:00",
+        "filed_date": "2021-04-29 00:00:00",
+        "access_number": "0000320193-21-000056"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 201023000000.0,
+          "GrossProfit": 82407000000,
+          "OperatingIncome": 61037000000.0,
+          "NetIncome": 52385000000.0,
+          "EPS_Basic": 3.11,
+          "EPS_Diluted": 3.08
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 38466000000.0,
+          "MarketableSecurities": 31368000000.0,
+          "TotalAssets": 337158000000,
+          "TotalLiabilities": 267980000000,
+          "ShareholdersEquity": 69178000000.0,
+          "LongTermDebt": 108642000000.0,
+          "CurrentAssets": 121465000000,
+          "CurrentLiabilities": 106385000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 62744000000,
+          "CapEx": 5769000000,
+          "FreeCashFlow": 56975000000,
+          "Change_AR": 2347000000,
+          "Change_AP": -1997000000,
+          "Change_Inventory": 1226000000,
+          "Change_OtherAssets": 4333000000,
+          "Change_OtherLiabilities": 3045000000,
+          "EarningsQuality": 1.2
+        }
+      }
+    },
+    "2021_Q1": {
+      "period_info": {
+        "year": 2021,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2020-09-27 00:00:00",
+        "end_date": "2020-12-26 00:00:00",
+        "filed_date": "2021-01-28 00:00:00",
+        "access_number": "0000320193-21-000010"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 111439000000.0,
+          "GrossProfit": 44328000000,
+          "OperatingIncome": 33534000000.0,
+          "NetIncome": 28755000000.0,
+          "EPS_Basic": 1.7,
+          "EPS_Diluted": 1.68
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 36010000000.0,
+          "MarketableSecurities": 40816000000.0,
+          "TotalAssets": 354054000000,
+          "TotalLiabilities": 287830000000,
+          "ShareholdersEquity": 66224000000.0,
+          "LongTermDebt": 99281000000.0,
+          "CurrentAssets": 154106000000,
+          "CurrentLiabilities": 132507000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 38763000000,
+          "CapEx": 3500000000,
+          "FreeCashFlow": 35263000000,
+          "Change_AR": 10945000000,
+          "Change_AP": 21670000000,
+          "Change_Inventory": 950000000,
+          "Change_OtherAssets": 3526000000,
+          "Change_OtherLiabilities": 7959000000,
+          "EarningsQuality": 1.35
+        }
+      }
+    },
+    "2020_Q3": {
+      "period_info": {
+        "year": 2020,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2019-09-29 00:00:00",
+        "end_date": "2020-06-27 00:00:00",
+        "filed_date": "2020-07-31 00:00:00",
+        "access_number": "0000320193-20-000062"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 209817000000.0,
+          "GrossProfit": 80267000000,
+          "OperatingIncome": 51513000000.0,
+          "NetIncome": 44738000000.0,
+          "EPS_Basic": 10.25,
+          "EPS_Diluted": 10.16
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 33383000000.0,
+          "MarketableSecurities": 59642000000.0,
+          "TotalAssets": 317344000000,
+          "TotalLiabilities": 245062000000,
+          "ShareholdersEquity": 72282000000.0,
+          "LongTermDebt": 94048000000.0,
+          "CurrentAssets": 140065000000,
+          "CurrentLiabilities": 95318000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 60098000000,
+          "CapEx": 5525000000,
+          "FreeCashFlow": 54573000000,
+          "Change_AR": -5149000000,
+          "Change_AP": -10787000000,
+          "Change_Inventory": -10000000,
+          "Change_OtherAssets": 6760000000,
+          "Change_OtherLiabilities": 3867000000,
+          "EarningsQuality": 1.34
+        }
+      }
+    },
+    "2020_Q2": {
+      "period_info": {
+        "year": 2020,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2019-09-29 00:00:00",
+        "end_date": "2020-03-28 00:00:00",
+        "filed_date": "2020-05-01 00:00:00",
+        "access_number": "0000320193-20-000052"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 150132000000.0,
+          "GrossProfit": 57587000000,
+          "OperatingIncome": 38422000000.0,
+          "NetIncome": 33485000000.0,
+          "EPS_Basic": 7.63,
+          "EPS_Diluted": 7.56
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 40174000000.0,
+          "MarketableSecurities": 53877000000.0,
+          "TotalAssets": 320400000000,
+          "TotalLiabilities": 241975000000,
+          "ShareholdersEquity": 78425000000.0,
+          "LongTermDebt": 89086000000.0,
+          "CurrentAssets": 143753000000,
+          "CurrentLiabilities": 96094000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 43827000000,
+          "CapEx": 3960000000,
+          "FreeCashFlow": 39867000000,
+          "Change_AR": -7284000000,
+          "Change_AP": -13520000000,
+          "Change_Inventory": -699000000,
+          "Change_OtherAssets": 8866000000,
+          "Change_OtherLiabilities": 7500000000,
+          "EarningsQuality": 1.31
+        }
+      }
+    },
+    "2020_Q1": {
+      "period_info": {
+        "year": 2020,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2019-09-29 00:00:00",
+        "end_date": "2019-12-28 00:00:00",
+        "filed_date": "2020-01-29 00:00:00",
+        "access_number": "0000320193-20-000010"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 91819000000.0,
+          "GrossProfit": 35217000000,
+          "OperatingIncome": 25569000000.0,
+          "NetIncome": 22236000000.0,
+          "EPS_Basic": 5.04,
+          "EPS_Diluted": 4.99
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 39771000000.0,
+          "MarketableSecurities": 67391000000.0,
+          "TotalAssets": 340618000000,
+          "TotalLiabilities": 251087000000,
+          "ShareholdersEquity": 89531000000.0,
+          "LongTermDebt": 93078000000.0,
+          "CurrentAssets": 163231000000,
+          "CurrentLiabilities": 102161000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 30516000000,
+          "CapEx": 2107000000,
+          "FreeCashFlow": 28409000000,
+          "Change_AR": -2015000000,
+          "Change_AP": -1089000000,
+          "Change_Inventory": 28000000,
+          "Change_OtherAssets": 7054000000,
+          "Change_OtherLiabilities": 5514000000,
+          "EarningsQuality": 1.37
+        }
+      }
+    },
+    "2019_Q3": {
+      "period_info": {
+        "year": 2019,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2018-09-30 00:00:00",
+        "end_date": "2019-06-29 00:00:00",
+        "filed_date": "2019-07-31 00:00:00",
+        "access_number": "0000320193-19-000076"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 196134000000.0,
+          "GrossProfit": 74079000000,
+          "OperatingIncome": 48305000000.0,
+          "NetIncome": 41570000000.0,
+          "EPS_Basic": 8.92,
+          "EPS_Diluted": 8.86
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 50530000000.0,
+          "MarketableSecurities": 44084000000.0,
+          "TotalAssets": 322239000000,
+          "TotalLiabilities": 225783000000,
+          "ShareholdersEquity": 96456000000.0,
+          "LongTermDebt": 84936000000.0,
+          "CurrentAssets": 134973000000,
+          "CurrentLiabilities": 89704000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 49481000000,
+          "CapEx": 7718000000,
+          "FreeCashFlow": 41763000000,
+          "Change_AR": -9013000000,
+          "Change_AP": -19804000000,
+          "Change_Inventory": -496000000,
+          "Change_OtherAssets": -693000000,
+          "Change_OtherLiabilities": -8753000000,
+          "EarningsQuality": 1.19
+        }
+      }
+    },
+    "2019_Q2": {
+      "period_info": {
+        "year": 2019,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2018-09-30 00:00:00",
+        "end_date": "2019-03-30 00:00:00",
+        "filed_date": "2019-05-01 00:00:00",
+        "access_number": "0000320193-19-000066"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 142325000000.0,
+          "GrossProfit": 53852000000,
+          "OperatingIncome": 36761000000.0,
+          "NetIncome": 31526000000.0,
+          "EPS_Basic": 6.7,
+          "EPS_Diluted": 6.66
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 37988000000.0,
+          "MarketableSecurities": 42104000000.0,
+          "TotalAssets": 341998000000,
+          "TotalLiabilities": 236138000000,
+          "ShareholdersEquity": 105860000000.0,
+          "LongTermDebt": 90201000000.0,
+          "CurrentAssets": 123346000000,
+          "CurrentLiabilities": 93772000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 37845000000,
+          "CapEx": 5718000000,
+          "FreeCashFlow": 32127000000,
+          "Change_AR": -8094000000,
+          "Change_AP": -20024000000,
+          "Change_Inventory": 1006000000,
+          "Change_OtherAssets": 717000000,
+          "Change_OtherLiabilities": -3273000000,
+          "EarningsQuality": 1.2
+        }
+      }
+    },
+    "2019_Q1": {
+      "period_info": {
+        "year": 2019,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2018-09-30 00:00:00",
+        "end_date": "2018-12-29 00:00:00",
+        "filed_date": "2019-01-30 00:00:00",
+        "access_number": "0000320193-19-000010"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": 84310000000.0,
+          "GrossProfit": 32031000000,
+          "OperatingIncome": 23346000000,
+          "NetIncome": 19965000000,
+          "EPS_Basic": 4,
+          "EPS_Diluted": 4
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 44771000000,
+          "MarketableSecurities": 41656000000,
+          "TotalAssets": 373719000000,
+          "TotalLiabilities": 255827000000,
+          "ShareholdersEquity": 117892000000,
+          "LongTermDebt": 92989000000,
+          "CurrentAssets": 140828000000,
+          "CurrentLiabilities": 108283000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 26690000000,
+          "CapEx": 3355000000,
+          "FreeCashFlow": 23335000000,
+          "Change_AR": -5130000000,
+          "Change_AP": -8501000000,
+          "Change_Inventory": 1076000000,
+          "Change_OtherAssets": 886000000,
+          "Change_OtherLiabilities": 570000000,
+          "EarningsQuality": 1.34
+        }
+      }
+    },
+    "2018_Q3": {
+      "period_info": {
+        "year": 2018,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2017-10-01 00:00:00",
+        "end_date": "2018-06-30 00:00:00",
+        "filed_date": "2018-08-01 00:00:00",
+        "access_number": "0000320193-18-000100"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 77755000000,
+          "OperatingIncome": 54780000000,
+          "NetIncome": 45406000000,
+          "EPS_Basic": 9,
+          "EPS_Diluted": 8
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 31971000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 349197000000,
+          "TotalLiabilities": 234248000000,
+          "ShareholdersEquity": 114949000000,
+          "LongTermDebt": 97128000000,
+          "CurrentAssets": 115761000000,
+          "CurrentLiabilities": 88548000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 57911000000,
+          "CapEx": 10272000000,
+          "FreeCashFlow": 47639000000,
+          "Change_AR": -3756000000,
+          "Change_AP": -11139000000,
+          "Change_Inventory": 1114000000,
+          "Change_OtherAssets": 65000000,
+          "Change_OtherLiabilities": 37009000000,
+          "EarningsQuality": 1.28
+        }
+      }
+    },
+    "2018_Q2": {
+      "period_info": {
+        "year": 2018,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2017-10-01 00:00:00",
+        "end_date": "2018-03-31 00:00:00",
+        "filed_date": "2018-05-02 00:00:00",
+        "access_number": "0000320193-18-000070"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 57334000000,
+          "OperatingIncome": 42168000000,
+          "NetIncome": 33887000000,
+          "EPS_Basic": 6,
+          "EPS_Diluted": 6
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 45059000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 367502000000,
+          "TotalLiabilities": 240624000000,
+          "ShareholdersEquity": 126878000000,
+          "LongTermDebt": 101362000000,
+          "CurrentAssets": 130053000000,
+          "CurrentLiabilities": 89320000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 43423000000,
+          "CapEx": 7005000000,
+          "FreeCashFlow": 36418000000,
+          "Change_AR": -3523000000,
+          "Change_AP": -13220000000,
+          "Change_Inventory": 2807000000,
+          "Change_OtherAssets": 1053000000,
+          "Change_OtherLiabilities": 39158000000,
+          "EarningsQuality": 1.28
+        }
+      }
+    },
+    "2018_Q1": {
+      "period_info": {
+        "year": 2018,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2017-10-01 00:00:00",
+        "end_date": "2017-12-30 00:00:00",
+        "filed_date": "2018-02-02 00:00:00",
+        "access_number": "0000320193-18-000007"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 33912000000,
+          "OperatingIncome": 26274000000,
+          "NetIncome": 20065000000,
+          "EPS_Basic": 3,
+          "EPS_Diluted": 3
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 27491000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 406794000000,
+          "TotalLiabilities": 266595000000,
+          "ShareholdersEquity": 140199000000,
+          "LongTermDebt": 103922000000,
+          "CurrentAssets": 143810000000,
+          "CurrentLiabilities": 115788000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 28293000000,
+          "CapEx": 2810000000,
+          "FreeCashFlow": 25483000000,
+          "Change_AR": 5570000000,
+          "Change_AP": 14588000000,
+          "Change_Inventory": -434000000,
+          "Change_OtherAssets": 197000000,
+          "Change_OtherLiabilities": 37549000000,
+          "EarningsQuality": 1.41
+        }
+      }
+    },
+    "2017_Q3": {
+      "period_info": {
+        "year": 2017,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2016-09-25 00:00:00",
+        "end_date": "2017-07-01 00:00:00",
+        "filed_date": "2017-08-02 00:00:00",
+        "access_number": "0000320193-17-000009"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 68255000000,
+          "OperatingIncome": 48224000000,
+          "NetIncome": 37637000000,
+          "EPS_Basic": 7,
+          "EPS_Diluted": 7
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 18571000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 345173000000,
+          "TotalLiabilities": 212748000000,
+          "ShareholdersEquity": 132425000000,
+          "LongTermDebt": 89864000000,
+          "CurrentAssets": 112875000000,
+          "CurrentLiabilities": 81302000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 47942000000,
+          "CapEx": 8586000000,
+          "FreeCashFlow": 39356000000,
+          "Change_AR": -3381000000,
+          "Change_AP": -5212000000,
+          "Change_Inventory": 1014000000,
+          "Change_OtherAssets": 3229000000,
+          "Change_OtherLiabilities": -2476000000,
+          "EarningsQuality": 1.27
+        }
+      }
+    },
+    "2017_Q2": {
+      "period_info": {
+        "year": 2017,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2016-09-25 00:00:00",
+        "end_date": "2017-04-01 00:00:00",
+        "filed_date": "2017-05-03 00:00:00",
+        "access_number": "0001628280-17-004790"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 50767000000,
+          "OperatingIncome": 37456000000,
+          "NetIncome": 28920000000,
+          "EPS_Basic": 5,
+          "EPS_Diluted": 5
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 15157000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 334532000000,
+          "TotalLiabilities": 200450000000,
+          "ShareholdersEquity": 134082000000,
+          "LongTermDebt": 84531000000,
+          "CurrentAssets": 101990000000,
+          "CurrentLiabilities": 73342000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 39579000000,
+          "CapEx": 6309000000,
+          "FreeCashFlow": 33270000000,
+          "Change_AR": -4183000000,
+          "Change_AP": -6862000000,
+          "Change_Inventory": 778000000,
+          "Change_OtherAssets": 896000000,
+          "Change_OtherLiabilities": 316000000,
+          "EarningsQuality": 1.37
+        }
+      }
+    },
+    "2017_Q1": {
+      "period_info": {
+        "year": 2017,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2016-09-25 00:00:00",
+        "end_date": "2016-12-31 00:00:00",
+        "filed_date": "2017-02-01 00:00:00",
+        "access_number": "0001628280-17-000717"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 30176000000,
+          "OperatingIncome": 23359000000,
+          "NetIncome": 17891000000,
+          "EPS_Basic": 3,
+          "EPS_Diluted": 3
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 16371000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 331141000000,
+          "TotalLiabilities": 198751000000,
+          "ShareholdersEquity": 132390000000,
+          "LongTermDebt": 73557000000,
+          "CurrentAssets": 103332000000,
+          "CurrentLiabilities": 84130000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 3334000000,
+          "FreeCashFlow": null,
+          "Change_AR": -1697000000,
+          "Change_AP": 2460000000,
+          "Change_Inventory": 580000000,
+          "Change_OtherAssets": 1446000000,
+          "Change_OtherLiabilities": 1946000000
+        }
+      }
+    },
+    "2016_Q3": {
+      "period_info": {
+        "year": 2016,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2015-09-27 00:00:00",
+        "end_date": "2016-06-25 00:00:00",
+        "filed_date": "2016-07-27 00:00:00",
+        "access_number": "0001628280-16-017809"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 66450000000,
+          "OperatingIncome": 48263000000,
+          "NetIncome": 36673000000,
+          "EPS_Basic": 6,
+          "EPS_Diluted": 6
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 18237000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 305602000000,
+          "TotalLiabilities": 179061000000,
+          "ShareholdersEquity": 126541000000,
+          "LongTermDebt": 68939000000,
+          "CurrentAssets": 93761000000,
+          "CurrentLiabilities": 71486000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 8757000000,
+          "FreeCashFlow": null,
+          "Change_AR": -5135000000,
+          "Change_AP": -9622000000,
+          "Change_Inventory": -518000000,
+          "Change_OtherAssets": -1143000000,
+          "Change_OtherLiabilities": -5495000000
+        }
+      }
+    },
+    "2016_Q2": {
+      "period_info": {
+        "year": 2016,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2015-09-27 00:00:00",
+        "end_date": "2016-03-26 00:00:00",
+        "filed_date": "2016-04-27 00:00:00",
+        "access_number": "0001193125-16-559625"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 50344000000,
+          "OperatingIncome": 38158000000,
+          "NetIncome": 28877000000,
+          "EPS_Basic": 5,
+          "EPS_Diluted": 5
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 21514000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 305277000000,
+          "TotalLiabilities": 174820000000,
+          "ShareholdersEquity": 130457000000,
+          "LongTermDebt": 69374000000,
+          "CurrentAssets": 87592000000,
+          "CurrentLiabilities": 68265000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 5948000000,
+          "FreeCashFlow": null,
+          "Change_AR": -4620000000,
+          "Change_AP": -9475000000,
+          "Change_Inventory": -68000000,
+          "Change_OtherAssets": -300000000,
+          "Change_OtherLiabilities": -2093000000
+        }
+      }
+    },
+    "2016_Q1": {
+      "period_info": {
+        "year": 2016,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2015-09-27 00:00:00",
+        "end_date": "2015-12-26 00:00:00",
+        "filed_date": "2016-01-27 00:00:00",
+        "access_number": "0001193125-16-439878"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 30423000000,
+          "OperatingIncome": 24171000000,
+          "NetIncome": 18361000000,
+          "EPS_Basic": 3,
+          "EPS_Diluted": 3
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 16689000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 293284000000,
+          "TotalLiabilities": 165017000000,
+          "ShareholdersEquity": 128267000000,
+          "LongTermDebt": 53204000000,
+          "CurrentAssets": 76219000000,
+          "CurrentLiabilities": 76092000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 3612000000,
+          "FreeCashFlow": null,
+          "Change_AR": -3896000000,
+          "Change_AP": -852000000,
+          "Change_Inventory": 102000000,
+          "Change_OtherAssets": 893000000,
+          "Change_OtherLiabilities": -368000000
+        }
+      }
+    },
+    "2015_Q3": {
+      "period_info": {
+        "year": 2015,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2014-09-28 00:00:00",
+        "end_date": "2015-06-27 00:00:00",
+        "filed_date": "2015-07-22 00:00:00",
+        "access_number": "0001193125-15-259935"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 73078000000,
+          "OperatingIncome": 56607000000,
+          "NetIncome": 42270000000,
+          "EPS_Basic": 7,
+          "EPS_Diluted": 7
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 15319000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 273151000000,
+          "TotalLiabilities": 147474000000,
+          "ShareholdersEquity": 125677000000,
+          "LongTermDebt": 47419000000,
+          "CurrentAssets": 70953000000,
+          "CurrentLiabilities": 65285000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 7629000000,
+          "FreeCashFlow": null,
+          "Change_AR": -7090000000,
+          "Change_AP": -3263000000,
+          "Change_Inventory": -69000000,
+          "Change_OtherAssets": -2286000000,
+          "Change_OtherLiabilities": 4448000000
+        }
+      }
+    },
+    "2015_Q2": {
+      "period_info": {
+        "year": 2015,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2014-09-28 00:00:00",
+        "end_date": "2015-03-28 00:00:00",
+        "filed_date": "2015-04-28 00:00:00",
+        "access_number": "0001193125-15-153166"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 53397000000,
+          "OperatingIncome": 42524000000,
+          "NetIncome": 31593000000,
+          "EPS_Basic": 5,
+          "EPS_Diluted": 5
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 14489000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 261194000000,
+          "TotalLiabilities": 132188000000,
+          "ShareholdersEquity": 129006000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 67891000000,
+          "CurrentLiabilities": 58729000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 5586000000,
+          "FreeCashFlow": null,
+          "Change_AR": -6555000000,
+          "Change_AP": -5428000000,
+          "Change_Inventory": 285000000,
+          "Change_OtherAssets": -2448000000,
+          "Change_OtherLiabilities": 5679000000
+        }
+      }
+    },
+    "2015_Q1": {
+      "period_info": {
+        "year": 2015,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2014-09-28 00:00:00",
+        "end_date": "2014-12-27 00:00:00",
+        "filed_date": "2015-01-28 00:00:00",
+        "access_number": "0001193125-15-023697"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 29741000000,
+          "OperatingIncome": 24246000000,
+          "NetIncome": 18024000000,
+          "EPS_Basic": 3,
+          "EPS_Diluted": 3
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 19478000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 261894000000,
+          "TotalLiabilities": 138566000000,
+          "ShareholdersEquity": 123328000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 83403000000,
+          "CurrentLiabilities": 73611000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": 3217000000,
+          "FreeCashFlow": null,
+          "Change_AR": -751000000,
+          "Change_AP": 9003000000,
+          "Change_Inventory": 172000000,
+          "Change_OtherAssets": 1648000000,
+          "Change_OtherLiabilities": 4667000000
+        }
+      }
+    },
+    "2014_Q3": {
+      "period_info": {
+        "year": 2014,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2013-09-29 00:00:00",
+        "end_date": "2014-06-28 00:00:00",
+        "filed_date": "2014-07-23 00:00:00",
+        "access_number": "0001193125-14-277160"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 54528000000,
+          "OperatingIncome": 41338000000,
+          "NetIncome": 31043000000,
+          "EPS_Basic": 5,
+          "EPS_Diluted": 5
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 12977000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 222520000000,
+          "TotalLiabilities": 101580000000,
+          "ShareholdersEquity": 120940000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 67949000000,
+          "CurrentLiabilities": 46205000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": -2314000000,
+          "Change_AP": -2531000000,
+          "Change_Inventory": -170000000,
+          "Change_OtherAssets": -931000000,
+          "Change_OtherLiabilities": 424000000
+        }
+      }
+    },
+    "2014_Q2": {
+      "period_info": {
+        "year": 2014,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2013-09-29 00:00:00",
+        "end_date": "2014-03-29 00:00:00",
+        "filed_date": "2014-04-24 00:00:00",
+        "access_number": "0001193125-14-157311"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 39793000000,
+          "OperatingIncome": 31056000000,
+          "NetIncome": 23295000000,
+          "EPS_Basic": 26,
+          "EPS_Diluted": 26
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 18949000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 205989000000,
+          "TotalLiabilities": 85810000000,
+          "ShareholdersEquity": 120179000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 70541000000,
+          "CurrentLiabilities": 43208000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": null,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": -3401000000,
+          "Change_AP": -2375000000,
+          "Change_Inventory": 65000000,
+          "Change_OtherAssets": -14000000,
+          "Change_OtherLiabilities": 1638000000
+        }
+      }
+    },
+    "2014_Q1": {
+      "period_info": {
+        "year": 2014,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2013-09-29 00:00:00",
+        "end_date": "2013-12-28 00:00:00",
+        "filed_date": "2014-01-28 00:00:00",
+        "access_number": "0001193125-14-024487"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 21846000000,
+          "OperatingIncome": 17463000000,
+          "NetIncome": 13072000000,
+          "EPS_Basic": 14,
+          "EPS_Diluted": 14
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 14077000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 225184000000,
+          "TotalLiabilities": 95500000000,
+          "ShareholdersEquity": 129684000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 80347000000,
+          "CurrentLiabilities": 53769000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 22670000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 1098000000,
+          "Change_AP": 8191000000,
+          "Change_Inventory": 358000000,
+          "Change_OtherAssets": 319000000,
+          "Change_OtherLiabilities": 1195000000,
+          "EarningsQuality": 1.73
+        }
+      }
+    },
+    "2013_Q3": {
+      "period_info": {
+        "year": 2013,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2012-09-30 00:00:00",
+        "end_date": "2013-06-29 00:00:00",
+        "filed_date": "2013-07-24 00:00:00",
+        "access_number": "0001193125-13-300670"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 50433000000,
+          "OperatingIncome": 38969000000,
+          "NetIncome": 29525000000,
+          "EPS_Basic": 31,
+          "EPS_Diluted": 31
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 11248000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 199856000000,
+          "TotalLiabilities": 76502000000,
+          "ShareholdersEquity": 123354000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 68219000000,
+          "CurrentLiabilities": 36319000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 43758000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": -2091000000,
+          "Change_AP": -4740000000,
+          "Change_Inventory": 906000000,
+          "Change_OtherAssets": -484000000,
+          "Change_OtherLiabilities": 3556000000,
+          "EarningsQuality": 1.48
+        }
+      }
+    },
+    "2013_Q2": {
+      "period_info": {
+        "year": 2013,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2012-09-30 00:00:00",
+        "end_date": "2013-03-30 00:00:00",
+        "filed_date": "2013-04-24 00:00:00",
+        "access_number": "0001193125-13-168288"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 37409000000,
+          "OperatingIncome": 29768000000,
+          "NetIncome": 22625000000,
+          "EPS_Basic": 24,
+          "EPS_Diluted": 23
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 12053000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 194743000000,
+          "TotalLiabilities": 59253000000,
+          "ShareholdersEquity": 135490000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 63337000000,
+          "CurrentLiabilities": 35508000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 35930000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": -3846000000,
+          "Change_AP": -4422000000,
+          "Change_Inventory": 454000000,
+          "Change_OtherAssets": -1269000000,
+          "Change_OtherLiabilities": 3658000000,
+          "EarningsQuality": 1.59
+        }
+      }
+    },
+    "2013_Q1": {
+      "period_info": {
+        "year": 2013,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2012-09-30 00:00:00",
+        "end_date": "2012-12-29 00:00:00",
+        "filed_date": "2013-01-24 00:00:00",
+        "access_number": "0001193125-13-022339"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 21060000000,
+          "OperatingIncome": 17210000000,
+          "NetIncome": 13078000000,
+          "EPS_Basic": 13,
+          "EPS_Diluted": 13
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 16154000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 196088000000,
+          "TotalLiabilities": 68742000000,
+          "ShareholdersEquity": 127346000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 72348000000,
+          "CurrentLiabilities": 46879000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 23426000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 668000000,
+          "Change_AP": 6145000000,
+          "Change_Inventory": 664000000,
+          "Change_OtherAssets": -413000000,
+          "Change_OtherLiabilities": 2373000000,
+          "EarningsQuality": 1.79
+        }
+      }
+    },
+    "2012_Q3": {
+      "period_info": {
+        "year": 2012,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2011-09-25 00:00:00",
+        "end_date": "2012-06-30 00:00:00",
+        "filed_date": "2012-07-25 00:00:00",
+        "access_number": "0001193125-12-314552"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 54261000000,
+          "OperatingIncome": 44297000000,
+          "NetIncome": 33510000000,
+          "EPS_Basic": 35,
+          "EPS_Diluted": 35
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 7945000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 162896000000,
+          "TotalLiabilities": 51150000000,
+          "ShareholdersEquity": 111746000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 51943000000,
+          "CurrentLiabilities": 33060000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 41720000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 2278000000,
+          "Change_AP": 2450000000,
+          "Change_Inventory": 346000000,
+          "Change_OtherAssets": 3238000000,
+          "Change_OtherLiabilities": 1686000000,
+          "EarningsQuality": 1.25
+        }
+      }
+    },
+    "2012_Q2": {
+      "period_info": {
+        "year": 2012,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2011-09-25 00:00:00",
+        "end_date": "2012-03-31 00:00:00",
+        "filed_date": "2012-04-25 00:00:00",
+        "access_number": "0001193125-12-182321"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 39267000000,
+          "OperatingIncome": 32724000000,
+          "NetIncome": 24686000000,
+          "EPS_Basic": 26,
+          "EPS_Diluted": 26
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 10121000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 150934000000,
+          "TotalLiabilities": 48436000000,
+          "ShareholdersEquity": 102498000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 50712000000,
+          "CurrentLiabilities": 32036000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 31531000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 1663000000,
+          "Change_AP": 2809000000,
+          "Change_Inventory": 326000000,
+          "Change_OtherAssets": 1510000000,
+          "Change_OtherLiabilities": 778000000,
+          "EarningsQuality": 1.28
+        }
+      }
+    },
+    "2012_Q1": {
+      "period_info": {
+        "year": 2012,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2011-09-25 00:00:00",
+        "end_date": "2011-12-31 00:00:00",
+        "filed_date": "2012-01-25 00:00:00",
+        "access_number": "0001193125-12-023398"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 20703000000,
+          "OperatingIncome": 17340000000,
+          "NetIncome": 13064000000,
+          "EPS_Basic": 14,
+          "EPS_Diluted": 13
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 10310000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 138681000000,
+          "TotalLiabilities": 48627000000,
+          "ShareholdersEquity": 90054000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 54771000000,
+          "CurrentLiabilities": 34607000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 17554000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 3561000000,
+          "Change_AP": 4314000000,
+          "Change_Inventory": 460000000,
+          "Change_OtherAssets": 962000000,
+          "Change_OtherLiabilities": 2472000000,
+          "EarningsQuality": 1.34
+        }
+      }
+    },
+    "2011_Q3": {
+      "period_info": {
+        "year": 2011,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2010-09-26 00:00:00",
+        "end_date": "2011-06-25 00:00:00",
+        "filed_date": "2011-07-20 00:00:00",
+        "access_number": "0001193125-11-192493"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 32438000000,
+          "OperatingIncome": 25080000000,
+          "NetIncome": 19299000000,
+          "EPS_Basic": 20,
+          "EPS_Diluted": 20
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 12091000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 106758000000,
+          "TotalLiabilities": 37415000000,
+          "ShareholdersEquity": 69343000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 46898000000,
+          "CurrentLiabilities": 26859000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 27100000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 592000000,
+          "Change_AP": 2480000000,
+          "Change_Inventory": -162000000,
+          "Change_OtherAssets": 1551000000,
+          "Change_OtherLiabilities": 2608000000,
+          "EarningsQuality": 1.4
+        }
+      }
+    },
+    "2011_Q2": {
+      "period_info": {
+        "year": 2011,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2010-09-26 00:00:00",
+        "end_date": "2011-03-26 00:00:00",
+        "filed_date": "2011-04-21 00:00:00",
+        "access_number": "0001193125-11-104388"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 20516000000,
+          "OperatingIncome": 15701000000,
+          "NetIncome": 11991000000,
+          "EPS_Basic": 13,
+          "EPS_Diluted": 12
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 15978000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 94904000000,
+          "TotalLiabilities": 33427000000,
+          "ShareholdersEquity": 61477000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 46997000000,
+          "CurrentLiabilities": 24327000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 15992000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 288000000,
+          "Change_AP": 1626000000,
+          "Change_Inventory": -121000000,
+          "Change_OtherAssets": 1886000000,
+          "Change_OtherLiabilities": 1674000000,
+          "EarningsQuality": 1.33
+        }
+      }
+    },
+    "2011_Q1": {
+      "period_info": {
+        "year": 2011,
+        "quarter": 1,
+        "form": "10-Q",
+        "start_date": "2010-09-26 00:00:00",
+        "end_date": "2010-12-25 00:00:00",
+        "filed_date": "2011-01-19 00:00:00",
+        "access_number": "0001193125-11-010144"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 10298000000,
+          "OperatingIncome": 7827000000,
+          "NetIncome": 6004000000,
+          "EPS_Basic": 6,
+          "EPS_Diluted": 6
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 10734000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 86742000000,
+          "TotalLiabilities": 32076000000,
+          "ShareholdersEquity": 54666000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 43927000000,
+          "CurrentLiabilities": 23795000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 9773000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 517000000,
+          "Change_AP": 2346000000,
+          "Change_Inventory": -166000000,
+          "Change_OtherAssets": 558000000,
+          "Change_OtherLiabilities": 653000000,
+          "EarningsQuality": 1.63
+        }
+      }
+    },
+    "2010_Q3": {
+      "period_info": {
+        "year": 2010,
+        "quarter": 3,
+        "form": "10-Q",
+        "start_date": "2009-09-27 00:00:00",
+        "end_date": "2010-06-26 00:00:00",
+        "filed_date": "2010-07-21 00:00:00",
+        "access_number": "0001193125-10-162840"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 18172000000,
+          "OperatingIncome": 12938000000,
+          "NetIncome": 9705000000,
+          "EPS_Basic": 10,
+          "EPS_Diluted": 10
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 9705000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 64725000000,
+          "TotalLiabilities": 21614000000,
+          "ShareholdersEquity": 43111000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 36033000000,
+          "CurrentLiabilities": 15612000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 12912000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": 79000000,
+          "Change_AP": 2812000000,
+          "Change_Inventory": 487000000,
+          "Change_OtherAssets": 71000000,
+          "Change_OtherLiabilities": -239000000,
+          "EarningsQuality": 1.33
+        }
+      }
+    },
+    "2010_Q2": {
+      "period_info": {
+        "year": 2010,
+        "quarter": 2,
+        "form": "10-Q",
+        "start_date": "2009-09-27 00:00:00",
+        "end_date": "2010-03-27 00:00:00",
+        "filed_date": "2010-04-21 00:00:00",
+        "access_number": "0001193125-10-088957"
+      },
+      "financials": {
+        "Profitability": {
+          "Revenue": null,
+          "GrossProfit": 12036000000,
+          "OperatingIncome": 8704000000,
+          "NetIncome": 6452000000,
+          "EPS_Basic": 7,
+          "EPS_Diluted": 7
+        },
+        "BalanceSheet": {
+          "CashAndEquivalents": 10018000000,
+          "MarketableSecurities": null,
+          "TotalAssets": 57057000000,
+          "TotalLiabilities": 17709000000,
+          "ShareholdersEquity": 39348000000,
+          "LongTermDebt": null,
+          "CurrentAssets": 32336000000,
+          "CurrentLiabilities": 12229000000
+        },
+        "CashFlow": {
+          "OperatingCashFlow": 8111000000,
+          "CapEx": null,
+          "FreeCashFlow": null,
+          "Change_AR": -482000000,
+          "Change_AP": -18000000,
+          "Change_Inventory": 183000000,
+          "Change_OtherAssets": -149000000,
+          "Change_OtherLiabilities": -287000000,
+          "EarningsQuality": 1.26
+        }
+      }
+    }
+  },
+  "metadata": {
+    "total_quarters": 47,
+    "date_range": {
+      "earliest": "2009-09-27 00:00:00",
+      "latest": "2025-06-28 00:00:00"
+    },
+    "last_updated": "2025-08-17"
+  }
+}

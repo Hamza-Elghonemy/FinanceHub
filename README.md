@@ -207,7 +207,7 @@ We welcome contributions to FinanceHub! Please follow these guidelines:
 ## 🗺️ Roadmap
 
 - [ ] **Real-time Data Integration**: Connect to financial APIs
-- [ ] **Enhanced AI Models**: More sophisticated analysis algorithms
+- [ ] **Enhanced AI Models**: More sophisticated analysis algorithm
 - [ ] **Export Functionality**: Excel report generation
 
 ## 🙏 Acknowledgments
@@ -216,7 +216,7 @@ We welcome contributions to FinanceHub! Please follow these guidelines:
 - **Plotly** for powerful visualization capabilities
 - **Deloitte** for design inspiration and color schemes
 - **Open Source Community** for various Python packages used
-
+- 
 **Made with ❤️ for the financial analysis community**
 
 *Last updated: August 2025*

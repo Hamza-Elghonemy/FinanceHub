@@ -1,0 +1,7 @@
+*venv
+.env
+apikey.env
+frontend
+backend
+output
+*.pyc

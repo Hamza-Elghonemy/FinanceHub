@@ -1,0 +1,122 @@
+{
+  "company": "IBM",
+  "topic": "Balance Sheet",
+  "quarters": [
+    {
+      "quarter": "2023 Q4",
+      "kpis": {
+        "Current Ratio": 0.964,
+        "Current Ratio Average": 1.12,
+        "Debt-to-Equity": 2.224,
+        "Debt-to-Equity Average": 0.75,
+        "Equity Growth %": 0.006,
+        "Equity Growth % Average": 0.05
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 135241000000,
+            "Total Liabilities": 112628000000,
+            "Shareholders Equity": 22533000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 13089000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "IBM's current ratio of 0.964 indicates that the company has slightly less current assets than current liabilities, which may pose liquidity risks. The debt-to-equity ratio of 2.224 suggests a high level of leverage, indicating that the company relies heavily on debt financing. The equity growth of 0.6% from the previous quarter shows a slight improvement in shareholder equity, but the overall financial health may be a concern due to high debt levels.",
+        "comparative_insights": "Compared to the average current ratio of 1.12, IBM's liquidity position is weaker, indicating potential challenges in meeting short-term obligations. The debt-to-equity ratio of 2.224 is significantly higher than the average of 0.75, highlighting a more aggressive capital structure. The equity growth percentage of 0.6% is below the average of 5%, suggesting that IBM is not growing its equity base as effectively as its peers."
+      }
+    },
+    {
+      "quarter": "2023 Q3",
+      "kpis": {
+        "Current Ratio": 0.905,
+        "Current Ratio Average": 1.12,
+        "Debt-to-Equity": 2.115,
+        "Debt-to-Equity Average": 0.75,
+        "Equity Growth %": 0.004,
+        "Equity Growth % Average": 0.05
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 129321000000,
+            "Total Liabilities": 106165000000,
+            "Shareholders Equity": 23081000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 7257000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "IBM's current ratio of 0.905 indicates a continued struggle to cover short-term liabilities with current assets. The debt-to-equity ratio of 2.115 remains high, reflecting a reliance on debt financing. The equity growth of 0.4% is minimal, suggesting limited progress in strengthening the balance sheet.",
+        "comparative_insights": "The current ratio is below the average of 1.12, indicating liquidity challenges. The debt-to-equity ratio of 2.115 is still significantly higher than the average of 0.75, which may raise concerns among investors regarding financial stability. The equity growth percentage of 0.4% is also below the average of 5%, indicating slower growth compared to peers."
+      }
+    },
+    {
+      "quarter": "2023 Q2",
+      "kpis": {
+        "Current Ratio": 1.06,
+        "Current Ratio Average": 1.12,
+        "Debt-to-Equity": 2.287,
+        "Debt-to-Equity Average": 0.75,
+        "Equity Growth %": -0.004,
+        "Equity Growth % Average": 0.05
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 132213000000,
+            "Total Liabilities": 109942000000,
+            "Shareholders Equity": 22201000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 9394000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "IBM's current ratio of 1.06 indicates a more favorable liquidity position compared to previous quarters, but it is still below the average. The debt-to-equity ratio of 2.287 is concerning, as it suggests a high level of financial leverage. The negative equity growth indicates a decline in shareholder equity, which could be a red flag for investors.",
+        "comparative_insights": "The current ratio is slightly below the average of 1.12, indicating potential liquidity issues. The debt-to-equity ratio of 2.287 is significantly higher than the average of 0.75, suggesting a more aggressive financial strategy. The negative equity growth percentage is a concern, especially when compared to the average growth of 5% among peers."
+      }
+    },
+    {
+      "quarter": "2023 Q1",
+      "kpis": {
+        "Current Ratio": 1.16,
+        "Current Ratio Average": 1.12,
+        "Debt-to-Equity": 2.49,
+        "Debt-to-Equity Average": 0.75,
+        "Equity Growth %": 0.008,
+        "Equity Growth % Average": 0.05
+      },
+      "charts": {
+        "Total Assets vs Total Liabilities vs Shareholders Equity": {
+          "metrics": {
+            "Total Assets": 133637000000,
+            "Total Liabilities": 111965000000,
+            "Shareholders Equity": 21604000000
+          }
+        },
+        "Cash and Equivalents": {
+          "metrics": {
+            "Cash and Equivalents": 9337000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "IBM's current ratio of 1.16 indicates a reasonable liquidity position, allowing it to cover its short-term liabilities. However, the debt-to-equity ratio of 2.49 is concerning, indicating a high reliance on debt. The equity growth of 0.8% shows some improvement in shareholder equity, but the overall leverage remains a risk.",
+        "comparative_insights": "The current ratio is above the average of 1.12, suggesting a better liquidity position than peers. However, the debt-to-equity ratio of 2.49 is significantly higher than the average of 0.75, indicating a more aggressive financial strategy. The equity growth percentage of 0.8% is slightly above the average of 5%, but still indicates limited growth compared to peers."
+      }
+    }
+  ]
+}

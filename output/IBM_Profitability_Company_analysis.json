@@ -1,0 +1,126 @@
+{
+  "company": "IBM",
+  "topic": "Profitability",
+  "quarters": [
+    {
+      "quarter": "2023 Q4",
+      "kpis": {
+        "Net Income": 3288000000,
+        "Net Income Average": 15500000000,
+        "Operating Margin %": 0.229,
+        "Operating Margin % Average": 0.295,
+        "Return on Equity (ROE)": 0.146,
+        "Return on Equity (ROE) Average": 0.227
+      },
+      "charts": {
+        "Revenue & Gross Profit": {
+          "metrics": {
+            "Revenue": 17380000000,
+            "Gross Profit": 10267000000
+          }
+        },
+        "Revenue, Operating Income, Net Income": {
+          "metrics": {
+            "Revenue": 17380000000,
+            "Operating Income": 3995000000,
+            "Net Income": 3288000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q4 2023, IBM reported a net income of $3.29 billion, reflecting a net income margin of approximately 18.9%. The operating margin of 22.9% indicates a solid operational efficiency, although it is lower than the average of its peers. The return on equity (ROE) of 14.6% suggests that IBM is generating a reasonable return for its shareholders, but there is room for improvement compared to industry standards.",
+        "comparative_insights": "When compared to the average metrics of its peers, IBM's net income is significantly lower than the average of $15.5 billion, indicating potential challenges in profitability. The operating margin of 22.9% is also below the average of 29.5%, suggesting that IBM may need to enhance its operational efficiency. The ROE of 14.6% is below the average of 22.7%, indicating that IBM is not utilizing its equity as effectively as its competitors."
+      }
+    },
+    {
+      "quarter": "2023 Q3",
+      "kpis": {
+        "Net Income": 1704000000,
+        "Net Income Average": 15500000000,
+        "Operating Margin %": 0.144,
+        "Operating Margin % Average": 0.295,
+        "Return on Equity (ROE)": 0.074,
+        "Return on Equity (ROE) Average": 0.227
+      },
+      "charts": {
+        "Revenue & Gross Profit": {
+          "metrics": {
+            "Revenue": 14752000000,
+            "Gross Profit": 8023000000
+          }
+        },
+        "Revenue, Operating Income, Net Income": {
+          "metrics": {
+            "Revenue": 14752000000,
+            "Operating Income": 2104000000,
+            "Net Income": 1704000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q3 2023, IBM's net income decreased to $1.70 billion, resulting in a net income margin of approximately 11.5%. The operating margin of 14.4% indicates a decline in operational efficiency compared to the previous quarter. The ROE of 7.4% suggests that the company is facing challenges in generating returns for its shareholders.",
+        "comparative_insights": "IBM's net income in Q3 is significantly below the average of $15.5 billion for its peers, highlighting ongoing profitability challenges. The operating margin of 14.4% is also below the average of 29.5%, indicating that IBM's operational efficiency is lagging behind competitors. The ROE of 7.4% is considerably lower than the average of 22.7%, suggesting that IBM is not effectively utilizing its equity."
+      }
+    },
+    {
+      "quarter": "2023 Q2",
+      "kpis": {
+        "Net Income": 1583000000,
+        "Net Income Average": 15500000000,
+        "Operating Margin %": 0.102,
+        "Operating Margin % Average": 0.295,
+        "Return on Equity (ROE)": 0.071,
+        "Return on Equity (ROE) Average": 0.227
+      },
+      "charts": {
+        "Revenue & Gross Profit": {
+          "metrics": {
+            "Revenue": 15475000000,
+            "Gross Profit": 8501000000
+          }
+        },
+        "Revenue, Operating Income, Net Income": {
+          "metrics": {
+            "Revenue": 15475000000,
+            "Operating Income": 2278000000,
+            "Net Income": 1583000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q2 2023, IBM's net income was $1.58 billion, resulting in a net income margin of approximately 10.2%. The operating margin of 10.2% indicates a decline in operational efficiency. The ROE of 7.1% suggests that the company is struggling to generate adequate returns for its shareholders.",
+        "comparative_insights": "IBM's net income in Q2 is significantly lower than the average of $15.5 billion for its peers, indicating ongoing profitability challenges. The operating margin of 10.2% is below the average of 29.5%, suggesting that IBM's operational efficiency is lagging behind competitors. The ROE of 7.1% is considerably lower than the average of 22.7%, indicating that IBM is not effectively utilizing its equity."
+      }
+    },
+    {
+      "quarter": "2023 Q1",
+      "kpis": {
+        "Net Income": 927000000,
+        "Net Income Average": 15500000000,
+        "Operating Margin %": 0.065,
+        "Operating Margin % Average": 0.295,
+        "Return on Equity (ROE)": 0.043,
+        "Return on Equity (ROE) Average": 0.227
+      },
+      "charts": {
+        "Revenue & Gross Profit": {
+          "metrics": {
+            "Revenue": 14252000000,
+            "Gross Profit": 7509000000
+          }
+        },
+        "Revenue, Operating Income, Net Income": {
+          "metrics": {
+            "Revenue": 14252000000,
+            "Operating Income": 1436000000,
+            "Net Income": 927000000
+          }
+        }
+      },
+      "insights": {
+        "company_insights": "In Q1 2023, IBM's net income was $927 million, resulting in a net income margin of approximately 6.5%. The operating margin of 6.5% indicates a significant decline in operational efficiency. The ROE of 4.3% suggests that the company is struggling to generate adequate returns for its shareholders.",
+        "comparative_insights": "IBM's net income in Q1 is significantly lower than the average of $15.5 billion for its peers, indicating ongoing profitability challenges. The operating margin of 6.5% is below the average of 29.5%, suggesting that IBM's operational efficiency is lagging behind competitors. The ROE of 4.3% is considerably lower than the average of 22.7%, indicating that IBM is not effectively utilizing its equity."
+      }
+    }
+  ]
+}
