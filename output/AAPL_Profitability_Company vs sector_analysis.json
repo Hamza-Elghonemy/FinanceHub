@@ -6,7 +6,7 @@
       "quarter": "2023 Q4",
       "kpis": {
         "Net Income": 33916000000,
-        "Net Income Average": 18600000000,
+        "Net Income Average": 19400000000,
         "Operating Margin %": 0.337,
         "Operating Margin % Average": 0.227,
         "Return on Equity (ROE)": 0.457,
@@ -28,16 +28,16 @@
         }
       },
       "insights": {
-        "company_insights": "In Q4 2023, AAPL demonstrated strong profitability with a net income of $33.92 billion, reflecting a robust operating margin of 33.7%. The return on equity (ROE) of 45.7% indicates effective utilization of shareholders' equity, showcasing operational efficiency and strong market positioning. The revenue growth from the previous quarter signifies a positive trend in consumer demand and product sales.",
-        "comparative_insights": "Compared to the average profitability metrics across peers, AAPL's operating margin and ROE significantly outperform the average, indicating superior operational efficiency and profitability management. The net income also exceeds the average, highlighting AAPL's strong market presence and effective cost management strategies."
+        "company_insights": "In Q4 2023, AAPL demonstrated strong profitability with a net income of $33.92 billion, reflecting a robust operating margin of 33.7%. The return on equity (ROE) of 45.7% indicates effective utilization of shareholders' equity, showcasing AAPL's operational efficiency and profitability strength. The revenue growth from the previous quarter signifies a positive trend in sales performance.",
+        "comparative_insights": "Compared to the average profitability metrics across peers, AAPL's operating margin of 33.7% significantly outperforms the average of 22.7%. Additionally, the ROE of 45.7% is substantially higher than the average of 22.7%, indicating AAPL's superior ability to generate profit from equity investments."
       }
     },
     {
       "quarter": "2023 Q3",
       "kpis": {
         "Net Income": 22956000000,
-        "Net Income Average": 18600000000,
-        "Operating Margin %": 0.301,
+        "Net Income Average": 19400000000,
+        "Operating Margin %": 0.303,
         "Operating Margin % Average": 0.227,
         "Return on Equity (ROE)": 0.370,
         "Return on Equity (ROE) Average": 0.227
@@ -58,15 +58,15 @@
         }
       },
       "insights": {
-        "company_insights": "In Q3 2023, AAPL maintained a strong profitability profile with a net income of $22.96 billion and an operating margin of 30.1%. The ROE of 37.0% reflects effective management of equity, indicating strong returns for shareholders. The revenue growth from the previous quarter suggests a consistent demand for AAPL's products.",
-        "comparative_insights": "AAPL's operating margin and ROE in Q3 2023 are above the average metrics for its peers, showcasing its competitive advantage in profitability. The net income also surpasses the average, reinforcing AAPL's position as a leader in the tech industry."
+        "company_insights": "In Q3 2023, AAPL's net income reached $22.96 billion, with an operating margin of 30.3%. The ROE of 37.0% reflects strong profitability and efficient capital management. The revenue growth indicates a solid demand for AAPL's products, contributing to its overall financial health.",
+        "comparative_insights": "AAPL's operating margin of 30.3% exceeds the average of 22.7%, showcasing its competitive edge in profitability. The ROE of 37.0% also surpasses the average, highlighting AAPL's effective use of equity to generate profits."
       }
     },
     {
       "quarter": "2023 Q2",
       "kpis": {
         "Net Income": 19881000000,
-        "Net Income Average": 18600000000,
+        "Net Income Average": 19400000000,
         "Operating Margin %": 0.281,
         "Operating Margin % Average": 0.227,
         "Return on Equity (ROE)": 0.329,
@@ -88,15 +88,15 @@
         }
       },
       "insights": {
-        "company_insights": "In Q2 2023, AAPL reported a net income of $19.88 billion, with an operating margin of 28.1%. The ROE of 32.9% indicates strong profitability and efficient use of equity. The revenue figures suggest a solid performance in product sales, contributing to the overall profitability.",
-        "comparative_insights": "AAPL's profitability metrics in Q2 2023 are above the average for its peers, particularly in terms of operating margin and ROE, indicating a strong competitive position in the market."
+        "company_insights": "In Q2 2023, AAPL reported a net income of $19.88 billion, with an operating margin of 28.1%. The ROE of 32.9% indicates strong profitability and efficient use of equity. The revenue performance reflects AAPL's ability to maintain a solid market presence.",
+        "comparative_insights": "AAPL's operating margin of 28.1% is above the average of 22.7%, demonstrating its strong profitability relative to peers. The ROE of 32.9% also indicates superior performance compared to the average."
       }
     },
     {
       "quarter": "2023 Q1",
       "kpis": {
         "Net Income": 24160000000,
-        "Net Income Average": 18600000000,
+        "Net Income Average": 19400000000,
         "Operating Margin %": 0.256,
         "Operating Margin % Average": 0.227,
         "Return on Equity (ROE)": 0.389,
@@ -118,128 +118,8 @@
         }
       },
       "insights": {
-        "company_insights": "In Q1 2023, AAPL achieved a net income of $24.16 billion, with an operating margin of 25.6%. The ROE of 38.9% reflects strong profitability and effective equity management. The revenue performance indicates a solid demand for AAPL's products, contributing to its overall financial health.",
-        "comparative_insights": "AAPL's profitability metrics in Q1 2023 are significantly above the average for its peers, particularly in terms of net income and ROE, showcasing its strong market position and operational efficiency."
-      }
-    },
-    {
-      "quarter": "2024 Q1",
-      "kpis": {
-        "Net Income": 23636000000,
-        "Net Income Average": 18600000000,
-        "Operating Margin %": 0.260,
-        "Operating Margin % Average": 0.227,
-        "Return on Equity (ROE)": 0.352,
-        "Return on Equity (ROE) Average": 0.227
-      },
-      "charts": {
-        "Revenue & Gross Profit": {
-          "metrics": {
-            "Revenue": 90753000000,
-            "Gross Profit": 42271000000
-          }
-        },
-        "Revenue, Operating Income, Net Income": {
-          "metrics": {
-            "Revenue": 90753000000,
-            "Operating Income": 27900000000,
-            "Net Income": 23636000000
-          }
-        }
-      },
-      "insights": {
-        "company_insights": "In Q1 2024, AAPL reported a net income of $23.64 billion, with an operating margin of 26.0%. The ROE of 35.2% indicates effective management of equity and strong profitability. The revenue figures suggest continued demand for AAPL's products, contributing to its financial stability.",
-        "comparative_insights": "AAPL's profitability metrics in Q1 2024 remain above the average for its peers, particularly in terms of net income and ROE, reinforcing its competitive advantage in the tech industry."
-      }
-    },
-    {
-      "quarter": "2024 Q2",
-      "kpis": {
-        "Net Income": 21448000000,
-        "Net Income Average": 18600000000,
-        "Operating Margin %": 0.295,
-        "Operating Margin % Average": 0.227,
-        "Return on Equity (ROE)": 0.321,
-        "Return on Equity (ROE) Average": 0.227
-      },
-      "charts": {
-        "Revenue & Gross Profit": {
-          "metrics": {
-            "Revenue": 85777000000,
-            "Gross Profit": 39678000000
-          }
-        },
-        "Revenue, Operating Income, Net Income": {
-          "metrics": {
-            "Revenue": 85777000000,
-            "Operating Income": 25352000000,
-            "Net Income": 21448000000
-          }
-        }
-      },
-      "insights": {
-        "company_insights": "In Q2 2024, AAPL achieved a net income of $21.45 billion, with an operating margin of 29.5%. The ROE of 32.1% reflects strong profitability and effective equity management. The revenue performance indicates a solid demand for AAPL's products, contributing to its overall financial health.",
-        "comparative_insights": "AAPL's profitability metrics in Q2 2024 are above the average for its peers, particularly in terms of operating margin and ROE, indicating a strong competitive position in the market."
-      }
-    },
-    {
-      "quarter": "2024 Q3",
-      "kpis": {
-        "Net Income": 14736000000,
-        "Net Income Average": 18600000000,
-        "Operating Margin %": 0.313,
-        "Operating Margin % Average": 0.227,
-        "Return on Equity (ROE)": 0.259,
-        "Return on Equity (ROE) Average": 0.227
-      },
-      "charts": {
-        "Revenue & Gross Profit": {
-          "metrics": {
-            "Revenue": 94930000000,
-            "Gross Profit": 43879000000
-          }
-        },
-        "Revenue, Operating Income, Net Income": {
-          "metrics": {
-            "Revenue": 94930000000,
-            "Operating Income": 29591000000,
-            "Net Income": 14736000000
-          }
-        }
-      },
-      "insights": {
-        "company_insights": "In Q3 2024, AAPL reported a net income of $14.74 billion, with an operating margin of 31.3%. The ROE of 25.9% indicates effective management of equity, showcasing operational efficiency. The revenue growth from the previous quarter suggests a positive trend in consumer demand and product sales.",
-        "comparative_insights": "Compared to the average profitability metrics across peers, AAPL's operating margin is above average, indicating superior operational efficiency and profitability management. However, the net income is slightly below the average, suggesting potential areas for improvement."
-      }
-    },
-    {
-      "quarter": "2024 Q4",
-      "kpis": {
-        "Net Income": 36330000000,
-        "Net Income Average": 18600000000,
-        "Operating Margin %": 0.345,
-        "Operating Margin % Average": 0.227,
-        "Return on Equity (ROE)": 0.545,
-        "Return on Equity (ROE) Average": 0.227
-      },
-      "charts": {
-        "Revenue & Gross Profit": {
-          "metrics": {
-            "Revenue": 124300000000,
-            "Gross Profit": 58275000000
-          }
-        },
-        "Revenue, Operating Income, Net Income": {
-          "metrics": {
-            "Revenue": 124300000000,
-            "Operating Income": 42832000000,
-            "Net Income": 36330000000
-          }
-        }
-      },
-      "insights": {
-        "company_insights": "In Q4 2024, AAPL demonstrated exceptional profitability with a net income of $36.33 billion, reflecting a robust operating margin of 34.5%. The return on equity (ROE) of 54.5% indicates effective utilization of shareholders' equity, showcasing operational efficiency and strong market positioning. The revenue growth from the previous quarter signifies a positive trend in consumer demand and product sales.",
-        "comparative_insights": "Compared to the average profitability metrics across peers, AAPL's operating margin and ROE significantly outperform the average, indicating superior operational efficiency and profitability management. The net income also exceeds the average, highlighting AAPL's strong market presence and effective cost management strategies."
+        "company_insights": "In Q1 2023, AAPL achieved a net income of $24.16 billion, with an operating margin of 25.6%. The ROE of 38.9% reflects strong profitability and effective capital management. The revenue performance indicates a solid demand for AAPL's products.",
+        "comparative_insights": "AAPL's operating margin of 25.6% is above the average of 22.7%, showcasing its competitive edge in profitability. The ROE of 38.9% also surpasses the average, highlighting AAPL's effective use of equity to generate profits."
       }
     }
   ]

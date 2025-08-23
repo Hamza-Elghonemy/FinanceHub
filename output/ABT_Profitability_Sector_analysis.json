@@ -9,13 +9,13 @@
             "name": "Net Income",
             "source": "profitability.net_income",
             "growth": {
-              "qoq": -0.64,
+              "qoq": 0.0,
               "yoy": 0.0
             }
           },
           {
             "name": "Operating Margin %",
-            "calculation": 0.181
+            "calculation": 0.0
           },
           {
             "name": "Return on Equity (ROE)",
@@ -91,10 +91,10 @@
           "value": 1594000000,
           "growth": {
             "qoq": 0.0,
-            "yoy": null
+            "yoy": 0.0
           }
         },
-        "Operating Margin %": 0.181,
+        "Operating Margin %": 0.182,
         "Return on Equity (ROE)": 0.309,
         "Free Cash Flow": {
           "value": 2283000000,
@@ -106,10 +106,10 @@
         "FCF Margin": 0.222
       },
       "insights": {
-        "profitability": "Abbott Laboratories reported a net income of $1,594,000,000 with an operating margin of 18.1%.",
+        "profitability": "Abbott Laboratories reported a net income of $1,594,000,000 with an operating margin of 18.2%.",
         "financial_standing": "The company has total assets of $73,214,000,000 and total liabilities of $34,387,000,000, resulting in equity of $38,603,000,000.",
-        "cash_flow": "Abbott Laboratories generated a free cash flow of $2,283,000,000.",
-        "ratios": "The PE ratio stands at 16.53, with a profit margin of 32.4%."
+        "cash_flow": "Abbott's free cash flow stands at $2,283,000,000, indicating strong cash generation.",
+        "ratios": "The PE ratio is 16.53, and the return on equity is 30.9%."
       }
     },
     {
@@ -176,8 +176,8 @@
       "insights": {
         "profitability": "CVS Health Corporation reported a net income of $2,046,000,000 with an operating margin of 3.6%.",
         "financial_standing": "The company has total assets of $249,728,000,000 and total liabilities of $173,092,000,000, resulting in equity of $76,461,000,000.",
-        "cash_flow": "CVS Health Corporation reported a negative free cash flow of $3,547,000,000.",
-        "ratios": "The PE ratio stands at 19.11, with a profit margin of 1.18%."
+        "cash_flow": "CVS's free cash flow is negative at -$3,547,000,000, indicating cash outflows exceeding inflows.",
+        "ratios": "The PE ratio is 19.11, and the return on equity is 5.88%."
       }
     },
     {
@@ -244,8 +244,8 @@
       "insights": {
         "profitability": "Johnson & Johnson reported a net income of $4,049,000,000 with an operating margin of 21.6%.",
         "financial_standing": "The company has total assets of $167,558,000,000 and total liabilities of $98,784,000,000, resulting in equity of $68,774,000,000.",
-        "cash_flow": "Johnson & Johnson generated a free cash flow of $6,274,000,000.",
-        "ratios": "The PE ratio stands at 18.91, with a profit margin of 25%."
+        "cash_flow": "Johnson & Johnson's free cash flow stands at $6,274,000,000, indicating strong cash generation.",
+        "ratios": "The PE ratio is 18.91, and the return on equity is 30.2%."
       }
     },
     {
@@ -312,8 +312,8 @@
       "insights": {
         "profitability": "Pfizer Inc. reported a net loss of $3,343,000,000 with an operating margin of -8.7%.",
         "financial_standing": "The company has total assets of $226,501,000,000 and total liabilities of $137,213,000,000, resulting in equity of $89,014,000,000.",
-        "cash_flow": "Pfizer Inc. generated a free cash flow of $4,196,000,000.",
-        "ratios": "The PE ratio stands at 13.3, with a profit margin of 16.8%."
+        "cash_flow": "Pfizer's free cash flow stands at $4,196,000,000, indicating strong cash generation despite the net loss.",
+        "ratios": "The PE ratio is 13.3, and the return on equity is 12.2%."
       }
     },
     {
@@ -380,8 +380,8 @@
       "insights": {
         "profitability": "UnitedHealth Group Incorporated reported a net income of $5,455,000,000 with an operating margin of 8.1%.",
         "financial_standing": "The company has total assets of $273,720,000,000 and total liabilities of $174,801,000,000, resulting in equity of $88,756,000,000.",
-        "cash_flow": "UnitedHealth Group Incorporated reported a negative free cash flow of $6,152,000,000.",
-        "ratios": "The PE ratio stands at 13.16, with a profit margin of 5.04%."
+        "cash_flow": "UnitedHealth's free cash flow is negative at -$6,152,000,000, indicating cash outflows exceeding inflows.",
+        "ratios": "The PE ratio is 13.16, and the return on equity is 21.6%."
       }
     }
   ],
@@ -402,12 +402,12 @@
           "value": 0.168
         },
         {
-          "company": "UNH",
-          "value": 0.0504
-        },
-        {
           "company": "CVS",
           "value": 0.0118
+        },
+        {
+          "company": "UNH",
+          "value": 0.0504
         }
       ],
       "balance_sheet.long_term_debt": [
@@ -438,20 +438,20 @@
           "value": 13.3
         },
         {
-          "company": "CVS",
-          "value": 19.11
+          "company": "ABT",
+          "value": 16.53
         },
         {
           "company": "JNJ",
           "value": 18.91
         },
         {
-          "company": "UNH",
-          "value": 13.16
+          "company": "CVS",
+          "value": 19.11
         },
         {
-          "company": "ABT",
-          "value": 16.53
+          "company": "UNH",
+          "value": 13.16
         }
       ],
       "cash_flow.fcf_margin": [

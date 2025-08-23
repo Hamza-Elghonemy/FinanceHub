@@ -25,7 +25,7 @@ except Exception:
 # -----------------------------
 st.set_page_config(
     page_title="Financial Insights Hub",
-    page_icon="📊",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -234,7 +234,7 @@ def apply_custom_css():
     }
     
     .ai-insight-box::before {
-        content: "🤖 AI";
+        content: "AI";
         position: absolute;
         top: 0.5rem;
         right: 1rem;
@@ -679,7 +679,7 @@ def load_real_financial_data() -> tuple[pd.DataFrame, dict[str, dict[str, str]]]
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce')
         
-        st.success(f"✅ Loaded {len(df)} records from real financial data")
+        #st.success(f" Loaded {len(df)} records from real financial data")
         return df.sort_values(['sector', 'company', 'Year', 'Quarter']), sector_map
         
     except Exception as e:
@@ -728,7 +728,7 @@ def generate_ai_insights(ticker: str, analysis_type: str, analysis_scope: str) -
         input_data = f"{sector}\n{ticker}\n{metric}\n{scope}\n"
 
         # Execute the script with simulated input
-        with st.spinner(f"🤖 Generating {analysis_type} insights for {ticker}..."):
+        with st.spinner(f"Generating {analysis_type} insights for {ticker}..."):
             result = subprocess.run(
                 [sys.executable, str(llm_script)],
                 input=input_data,
@@ -739,7 +739,7 @@ def generate_ai_insights(ticker: str, analysis_type: str, analysis_scope: str) -
             )
         
         if result.returncode == 0:
-            st.success(f"✅ {analysis_type} analysis completed for {ticker}")
+            #st.success(f"{analysis_type} analysis completed for {ticker}")
             
             # Try to load the generated JSON file
             output_file = project_root / "output" / f"{ticker}_{metric}_{scope}_analysis.json"
@@ -761,14 +761,14 @@ def generate_ai_insights(ticker: str, analysis_type: str, analysis_scope: str) -
                 return {"status": "completed", "message": "Analysis generated successfully"}
         else:
             error_msg = result.stderr if result.stderr else "Unknown error occurred"
-            st.error(f"❌ Error generating insights: {error_msg}")
+            st.error(f"Error generating insights: {error_msg}")
             return None
             
     except subprocess.TimeoutExpired:
-        st.error("⏱️ Analysis timed out. Please try again.")
+        st.error("Analysis timed out. Please try again.")
         return None
     except Exception as e:
-        st.error(f"❌ Error running analysis: {str(e)}")
+        st.error(f"Error running analysis: {str(e)}")
         return None
 
 # -----------------------------
@@ -1011,7 +1011,7 @@ def display_company_analysis(insights_data, company_name, ticker, analysis_type)
                 border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
                 border-left: 6px solid var(--primary-color);">
         <h2 style="color: var(--text-primary); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-            🤖 AI {analysis_type} Analysis: Company Focus
+                AI {analysis_type} Analysis: Company Focus
             <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; 
                        border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
                 {company_name} ({ticker})
@@ -1026,7 +1026,7 @@ def display_company_analysis(insights_data, company_name, ticker, analysis_type)
     quarters_data = insights_data.get("quarters", [])
     
     # Create tabs for different views
-    tab1, tab2 = st.tabs(["📊 Overview", "📈 Quarterly Analysis"])
+    tab1, tab2 = st.tabs(["Overview", "Quarterly Analysis"])
     
     with tab1:
         # Overview metrics from KPIs (ignore averages)
@@ -1138,7 +1138,7 @@ def display_company_analysis(insights_data, company_name, ticker, analysis_type)
             # Filter out average KPIs
             company_kpis = {k: v for k, v in kpis.items() if "Average" not in k}
             
-            with st.expander(f"📊 {quarter} - Detailed Analysis", expanded=(i < 2)):
+            with st.expander(f"{quarter} - Detailed Analysis", expanded=(i < 2)):
                 col1, col2 = st.columns([1, 2])
                 
                 with col1:
@@ -1180,7 +1180,7 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
                 border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
                 border-left: 6px solid var(--primary-color);">
         <h2 style="color: var(--text-primary); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-            🤖 AI {analysis_type} Analysis: Sector Overview
+            AI {analysis_type} Analysis: Sector Overview
             <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; 
                        border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
                 {insights_data.get("sector_comparison", {}).get("sector", "Healthcare")} Sector
@@ -1193,7 +1193,7 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
     """, unsafe_allow_html=True)
     
     # Create tabs for sector analysis
-    tab1, tab2, tab3 = st.tabs(["📊 Sector Overview", "🏢 Company Profiles", "📈 Rankings"])
+    tab1, tab2, tab3 = st.tabs(["Sector Overview", "Company Profiles", "Rankings"])
     
     companies_data = insights_data.get("companies", [])
     sector_comparison = insights_data.get("sector_comparison", {})
@@ -1314,7 +1314,7 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
             symbol = comp_info.get("symbol", "N/A")
             name = comp_info.get("name", "Unknown Company")
             
-            with st.expander(f"🏢 {name} ({symbol})", expanded=(symbol == ticker)):
+            with st.expander(f"{name} ({symbol})", expanded=(symbol == ticker)):
                 col1, col2 = st.columns([1, 2])
                 
                 with col1:
@@ -1396,7 +1396,7 @@ def display_sector_analysis(insights_data, company_name, ticker, analysis_type):
                     fig = style_fig(fig)
                     fig.update_layout(
                         height=300,
-                        title=f"{metric_name.replace('_', ' ').title()} Rankings",
+                        title="",
                         xaxis_title="Company",
                         yaxis_title="Value"
                     )
@@ -1417,7 +1417,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
                 border-radius: 16px; padding: 2rem; margin: 1.5rem 0; 
                 border-left: 6px solid var(--primary-color);">
         <h2 style="color: var(--text-primary); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-            🤖 AI Financial Analysis: {analysis_type}
+             AI Financial Analysis: {analysis_type}
             <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; 
                        border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
                 {company_name} ({ticker})
@@ -1430,7 +1430,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
     """, unsafe_allow_html=True)
     
     # Create tabs for different views
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "📈 Quarterly Analysis", "🎯 Key Metrics", "💡 Strategic Insights"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Quarterly Analysis", "Key Metrics", "Strategic Insights"])
     
     with tab1:
         # Overview metrics
@@ -1537,7 +1537,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
             insights = quarter_data['insights']
             
             performance = ((revenue - sector_avg) / sector_avg) * 100
-            performance_icon = "📈" if performance > 0 else "📉" if performance < 0 else "➡️"
+            performance_icon = "" if performance > 0 else "" if performance < 0 else ""
             performance_class = "positive" if performance > 0 else "negative" if performance < 0 else "neutral"
             
             with st.expander(f"{performance_icon} {quarter} - {fmt_money(revenue)} ({performance:+.1f}% vs sector)", expanded=(i < 2)):
@@ -1569,7 +1569,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
                 with col2:
                     st.markdown(f"""
                     <div class="ai-insight-box">
-                        <h4 style="color: var(--text-primary); margin: 0 0 1rem 0;">💡 AI Strategic Analysis</h4>
+                        <h4 style="color: var(--text-primary); margin: 0 0 1rem 0;">AI Strategic Analysis</h4>
                         <p style="color: var(--text-primary); line-height: 1.6; margin: 0;">
                             {insights}
                         </p>
@@ -1717,11 +1717,11 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
         # Action items and recommendations
         st.markdown("#### AI-Generated Action Items")
         action_items = [
-            "📊 Continue monitoring quarterly performance against sector benchmarks",
-            "🎯 Focus on maintaining competitive advantages identified in the analysis",
-            "⚠️ Address potential risks highlighted across multiple quarters",
-            "🚀 Leverage identified growth drivers for strategic planning",
-            "🔍 Deep-dive into quarters with exceptional performance for best practices"
+            "Continue monitoring quarterly performance against sector benchmarks",
+            "Focus on maintaining competitive advantages identified in the analysis",
+            "Address potential risks highlighted across multiple quarters",
+            "Leverage identified growth drivers for strategic planning",
+            "Deep-dive into quarters with exceptional performance for best practices"
         ]
         
         for item in action_items:
@@ -1735,7 +1735,7 @@ def display_quarterly_format(insights_data, company_name, ticker, analysis_type)
 def display_legacy_format(insights_data, company_name, ticker, analysis_type):
     """Display legacy format (fallback)"""
     st.markdown('<div class="ai-insight-box">', unsafe_allow_html=True)
-    st.markdown("#### 🤖 AI Analysis Results")
+    st.markdown("#### AI Analysis Results")
     if isinstance(insights_data, dict):
         for key, value in insights_data.items():
             if key not in ['type', 'status', 'message']:
@@ -1755,12 +1755,12 @@ def load_data():
     panel, sector_map = load_real_financial_data()
     return add_ratios(panel), sector_map
 
-with st.spinner("🔄 Loading real financial data..."):
+with st.spinner("Loading real financial data..."):
     PANEL, SECTOR_MAP = load_data()
 
 if PANEL.empty:
-    st.error("❌ No financial data available. Please check your data files and try again.")
-    st.info("💡 To fix this issue:")
+    st.error("No financial data available. Please check your data files and try again.")
+    st.info("To fix this issue:")
     st.markdown("""
     1. Ensure `combined_financial_data_yearly_ratios.json` exists in the `data/` directory
     2. Verify the JSON structure matches the expected format
@@ -1779,7 +1779,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Show data source information
-data_info = st.expander("ℹ️ Data Source Information")
+data_info = st.expander("Data Source Information")
 with data_info:
     st.write(f"**Companies loaded:** {len(PANEL['company'].unique())}")
     st.write(f"**Sectors:** {', '.join(PANEL['sector'].unique())}")
@@ -1802,7 +1802,7 @@ with st.sidebar:
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:  # Center the button
         if st.button(
-            "🌓" if st.session_state.theme == "light" else "☀️",
+            "Dark" if st.session_state.theme == "light" else "Light",
             help="Toggle light/dark theme",
             key="theme_toggle_sidebar",
             use_container_width=True
@@ -1841,16 +1841,16 @@ if "current_page" not in st.session_state:
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    if st.button("📊 Dashboards", use_container_width=True):
+    if st.button("Dashboards", use_container_width=True):
         st.session_state.current_page = "Dashboards"
 with col2:
-    if st.button("🧾 Data Table", use_container_width=True):
+    if st.button("Data Table", use_container_width=True):
         st.session_state.current_page = "Data Table"
 with col3:
-    if st.button("📈 Insights", use_container_width=True):
+    if st.button("Insights", use_container_width=True):
         st.session_state.current_page = "Insights"
 with col4:
-    if st.button("🤖 AI Analysis", use_container_width=True):
+    if st.button("AI Analysis", use_container_width=True):
         st.session_state.current_page = "AI Analysis"
 
 st.divider()
@@ -2046,7 +2046,7 @@ if st.session_state.current_page == "Dashboards":
                     <h3>Free Cash Flow</h3>
                     <div class="value">{fmt_money(fcf_cur)}</div>
                     <div class="delta {'positive' if (fcf_change or 0) >= 0 else 'negative'}">
-                        {f"{fcf_change*100:+.1f}%" if pd.notna(fcf_change) else "–"}
+                        {f"{fcf_change:+.1f}%" if pd.notna(fcf_change) else "–"}
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -2431,18 +2431,18 @@ elif st.session_state.current_page == "Insights":
 # PAGE 4 — AI ANALYSIS
 # =====================================================
 else:
-    st.markdown(f"## 🤖 AI-Powered Financial Analysis — {SC_LABEL}")
+    st.markdown(f"## AI-Powered Financial Analysis — {SC_LABEL}")
     
     if company == "All":
-        st.warning("⚠️ Please select a specific company to generate AI insights.")
+        st.warning("Please select a specific company to generate AI insights.")
         
         # Show available companies for AI analysis with improved selection
         st.markdown("### Available Companies for Analysis")
         for sector_name, companies_dict in SECTOR_MAP.items():
-            with st.expander(f"📊 {sector_name} Sector"):
+            with st.expander(f"{sector_name} Sector"):
                 for comp_name, ticker in companies_dict.items():
                     if st.button(
-                        f"🔍 Analyze {comp_name} ({ticker})",
+                        f"Analyze {comp_name} ({ticker})",
                         key=f"analyze_{ticker}",
                         use_container_width=True
                     ):
@@ -2468,13 +2468,13 @@ else:
         with col2:
             analysis_scope = st.selectbox(
                 "Analysis Scope",
-                ["Sector-wide Analysis", "Company Analysis", "Company vs Sector"],
+                ["Sector-wide Analysis", "Company Analysis"],
                 key="analysis_scope"
             )
         with col3:  
             st.markdown("<br>", unsafe_allow_html=True)  # Spacing
             generate_clicked = st.button(
-                "🤖 Generate AI Insights",
+                "Generate AI Insights",
                 use_container_width=True,
                 help=f"Generate {analysis_type} insights for {company}"
             )
@@ -2483,7 +2483,7 @@ else:
             st.markdown("<br>", unsafe_allow_html=True)  # Spacing
             # Demo button to show sample data
             demo_clicked = st.button(
-                "📋 Load Demo Data",
+                " Load Demo Data",
                 use_container_width=True,
                 help="Load sample AI insights for demonstration"
             )
@@ -2503,7 +2503,7 @@ else:
                 {"quarter":"2025-Q1","required_fields":{"revenue":95359000000,"sector_avg":91000000000},"insights":"AAPL's revenue for Q1 2025 reached $95.36 billion, exceeding the sector average of $91 billion. This strong performance reflects AAPL's successful product launches and expanding customer base. The company's focus on enhancing its services revenue stream is a positive indicator for future growth. However, AAPL must navigate potential headwinds from global economic uncertainties and supply chain challenges. Continued investment in R&D and strategic partnerships will be crucial for maintaining its competitive advantage."}
             ]
             st.session_state[f"insights_{ticker}_{analysis_type}"] = demo_insights
-            st.success("✅ Demo AI insights loaded successfully!")
+            #st.success("Demo AI insights loaded successfully!")
         
         if generate_clicked:
             insights = generate_ai_insights(ticker, analysis_type,analysis_scope)
@@ -2516,27 +2516,27 @@ else:
             display_ai_insights(insights, company, ticker, analysis_type)
             
             # Export tools
-            st.markdown("### 📥 Export Analysis")
+            st.markdown("### Export Analysis")
             col1, col2 = st.columns(2)
             with col1:
                 json_str = json.dumps(insights, indent=2)
                 st.download_button(
-                    label="💾 Download JSON",
+                    label="Download JSON",
                     data=json_str,
                     file_name=f"{ticker}_{analysis_type}_{analysis_scope}_insights_{datetime.now().strftime('%Y%m%d')}.json",
                     mime="application/json",
                     use_container_width=True
                 )
             with col2:
-                if st.button("🔄 Clear Analysis", use_container_width=True):
+                if st.button("Clear Analysis", use_container_width=True):
                     del st.session_state[insights_key]
                     st.rerun()
         else:
-            st.info(f"💡 Click 'Generate AI Insights' to analyze {company}'s {analysis_type.lower()} performance, or 'Load Demo Data' to preview.")
+            st.info(f"Click 'Generate AI Insights' to analyze {company}'s {analysis_type.lower()} performance, or 'Load Demo Data' to preview.")
             
             # Preview: recent financial rows
             if not df_scope.empty:
-                st.markdown("#### 📊 Recent Financials Preview")
+                st.markdown("#### Recent Financials Preview")
                 recent_data = df_scope.tail(4)
                 if analysis_type == "Profitability":
                     display_cols = ['Year', 'Quarter', 'revenue', 'gross_margin', 'operating_margin', 'net_margin']

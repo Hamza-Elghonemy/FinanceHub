@@ -108,8 +108,8 @@
       "insights": {
         "profitability": "Apple Inc. reported a net income of $36.33 billion with an operating margin of 43.3%.",
         "financial_standing": "The company has total assets of $344.09 billion and total liabilities of $277.33 billion, resulting in equity of $66.76 billion.",
-        "cash_flow": "Apple generated a free cash flow of $26.99 billion.",
-        "ratios": "The PE ratio stands at 35.09, indicating the market's valuation of the company's earnings."
+        "cash_flow": "Apple's free cash flow stands at $26.99 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 149.8%, reflecting effective management of shareholder funds."
       }
     },
     {
@@ -176,8 +176,8 @@
       "insights": {
         "profitability": "Alphabet Inc. reported a net income of $26.54 billion with an operating margin of 32.1%.",
         "financial_standing": "The company has total assets of $450.26 billion and total liabilities of $125.17 billion, resulting in equity of $325.08 billion.",
-        "cash_flow": "Alphabet generated a free cash flow of $24.84 billion.",
-        "ratios": "The PE ratio stands at 21.74, indicating the market's valuation of the company's earnings."
+        "cash_flow": "Alphabet's free cash flow stands at $24.84 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 34.8%, reflecting effective management of shareholder funds."
       }
     },
     {
@@ -244,8 +244,8 @@
       "insights": {
         "profitability": "IBM reported a net income of $2.91 billion with an operating margin of 22.2%.",
         "financial_standing": "The company has total assets of $137.18 billion and total liabilities of $109.78 billion, resulting in equity of $27.31 billion.",
-        "cash_flow": "IBM generated a free cash flow of $3.89 billion.",
-        "ratios": "The PE ratio stands at 38.6, indicating the market's valuation of the company's earnings."
+        "cash_flow": "IBM's free cash flow stands at $3.89 billion, indicating moderate cash generation.",
+        "ratios": "The return on equity is 22.7%, reflecting effective management of shareholder funds."
       }
     },
     {
@@ -298,7 +298,7 @@
             "yoy": null
           }
         },
-        "Operating Margin %": 0.482,
+        "Operating Margin %": 0.483,
         "Return on Equity (ROE)": 0.406,
         "Free Cash Flow": {
           "value": 13563000000,
@@ -307,13 +307,13 @@
             "yoy": null
           }
         },
-        "FCF Margin": 0.280
+        "FCF Margin": 0.28
       },
       "insights": {
-        "profitability": "Meta Platforms, Inc. reported a net income of $20.84 billion with an operating margin of 48.2%.",
+        "profitability": "Meta Platforms, Inc. reported a net income of $20.84 billion with an operating margin of 48.3%.",
         "financial_standing": "The company has total assets of $276.05 billion and total liabilities of $93.42 billion, resulting in equity of $182.64 billion.",
-        "cash_flow": "Meta generated a free cash flow of $13.56 billion.",
-        "ratios": "The PE ratio stands at 28.49, indicating the market's valuation of the company's earnings."
+        "cash_flow": "Meta's free cash flow stands at $13.56 billion, indicating strong cash generation.",
+        "ratios": "The return on equity is 40.6%, reflecting effective management of shareholder funds."
       }
     },
     {
@@ -380,8 +380,8 @@
       "insights": {
         "profitability": "Microsoft Corporation reported a net income of $24.11 billion with an operating margin of 45.4%.",
         "financial_standing": "The company has total assets of $533.90 billion and total liabilities of $231.20 billion, resulting in equity of $302.70 billion.",
-        "cash_flow": "Microsoft generated a free cash flow of $6.49 billion.",
-        "ratios": "The PE ratio stands at 38.16, indicating the market's valuation of the company's earnings."
+        "cash_flow": "Microsoft's free cash flow stands at $6.49 billion, indicating moderate cash generation.",
+        "ratios": "The return on equity is 33.3%, reflecting effective management of shareholder funds."
       }
     }
   ],
@@ -442,12 +442,12 @@
           "value": 28.49
         },
         {
-          "company": "MSFT",
-          "value": 38.16
-        },
-        {
           "company": "AAPL",
           "value": 35.09
+        },
+        {
+          "company": "MSFT",
+          "value": 38.16
         },
         {
           "company": "IBM",
@@ -465,7 +465,7 @@
         },
         {
           "company": "META",
-          "value": 0.280
+          "value": 0.28
         },
         {
           "company": "MSFT",

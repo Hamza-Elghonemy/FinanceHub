@@ -6,6 +6,7 @@ Objective: Analyze the financial data of the company "{company}" for the selecte
 Instructions:
 - Work only on the selected company: {company}.
 - Focus *exclusively* on the selected topic: {topic}.
+- Analyse all quarters in all provided years.
 - Compute any derived metrics manually where not provided:
   - If topic is Profitability: Operating Margin % = profitability.operating_income / profitability.revenue
   - If topic is Financial Standing: Current Ratio = balance_sheet.current_assets / balance_sheet.current_liabilities; Debt-to-Equity = balance_sheet.long_term_debt / balance_sheet.shareholders_equity; Equity Growth % = (shareholders_equity_t - shareholders_equity_t-1) / shareholders_equity_t-1
