@@ -208,14 +208,7 @@ We welcome contributions to FinanceHub! Please follow these guidelines:
 
 - [ ] **Real-time Data Integration**: Connect to financial APIs
 - [ ] **Enhanced AI Models**: More sophisticated analysis algorithms
-- [ ] **Export Functionality**: PDF and Excel report generation
-- [ ] **User Authentication**: Multi-user support with role-based access
-- [ ] **Database Integration**: PostgreSQL/MongoDB support
-- [ ] **Mobile App**: React Native companion app
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [ ] **Export Functionality**: Excel report generation
 
 ## 🙏 Acknowledgments
 
