@@ -43,7 +43,7 @@ A sophisticated financial analysis platform that provides comprehensive insights
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/FinanceHub.git
+   git clone https://github.com/Hamza-Elghonemy/FinanceHub.git
    cd FinanceHub
    ```
 
